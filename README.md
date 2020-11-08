@@ -1,8 +1,5 @@
-# Manage Project
+# 넷플릭스 고정형 UI 디자인
 
-File type | name | extension
---- | --- | ---
-HTML | index.html | `.html`
-CSS | index.css | `.css`
-JavaScript | index.js | `.js`
-images | image.jpg | `.jpg`
+- 반응형이 아닌 고정형 디자인으로 페이지 제작
+  - 모바일 버전
+  - 데스크탑 버전
