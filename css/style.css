@@ -68,9 +68,10 @@
     font: normal 1.3rem spoqaHanSans;
     color: var(--netflix-white);
     line-height: 135%;
+    text-align: center;
 }
 
-.ourStory__promotionInformation { 
+.ourStory__promotionInfo { 
     margin-top: 1.5rem;
     margin-bottom: 5.1rem;
     font: normal 1.2rem spoqaHanSans;
@@ -108,7 +109,6 @@
     margin-right: auto;
     margin-top: 1rem;
     border-radius: 90px;
-
 }
 
 @media (min-width: 750px) {
@@ -176,10 +176,14 @@
 .netflixIntro__watchOnTV {
     display: flex;
     flex-flow: column wrap;
+    padding: 8rem 0;
+}
+
+.netflixIntro__figure {
+    position: relative;
 }
 
 .netflixIntro__watchOnTV img {
-    position: relative;
     z-index: 100;
     width: 338px;
 }
@@ -197,6 +201,7 @@
 .netflixIntro__downLoadAndWatch--reverse {
     display: flex;
     flex-flow: column wrap;
+    padding: 8rem 0;
 }
 
 .netflixIntro__downLoadAndWatch--reverse .girlImage {
@@ -255,6 +260,7 @@ p .stateMessage {
 .netflixIntro__watchOnDevice {
     display: flex;
     flex-flow: column wrap;
+    padding: 8rem 0;
 }
 
 .netflixIntro__watchOnDevice img {
@@ -271,3 +277,119 @@ p .stateMessage {
     width: 207px;
 }
 
+/* --------------------- netflixFAQ */
+
+.netflixFAQ {
+    color: var(--netflix-white);
+}
+
+.netflixFAQ .container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.netflixFAQ h3 {
+    font: bold 2.4rem spoqaHanSans;
+    line-height: 120%;
+    margin-bottom: 3rem;
+}
+
+.FAQListContainer {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+
+.netflixFAQ__FAQList {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.FAQListItem {
+    margin-bottom: 0.5rem;
+}
+
+.FAQListItem dt {
+    font: normal 1.5rem spoqaHanSans;
+    line-height: 120%;
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+    padding-left: 3rem;
+    position: relative;
+    margin-bottom: 0.1rem;
+    background-color: var(--netflix-dark-gray);
+}
+
+.FAQListItem dt img {
+    width: 0.85rem;
+    display: inline-block;
+    position: absolute;
+    right: 3rem;
+}
+
+.FAQListItem dd {
+    padding: 2.1rem 3rem;
+    font: normal 1.4rem spoqaHanSans;
+    line-height: 150%;
+    background-color: var(--netflix-dark-gray);
+}
+
+.FAQComponentContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+/* --------------------- netflixFooter */
+
+.netflixFooter {
+    color: var(--netflix-gray);
+}
+
+.netflixFooter p {
+    font: bold 2rem spoqaHanSans;
+    line-height: 140%;
+}
+
+.netflixFooter__infoList {
+    display: flex;
+    flex-flow: row wrap;
+    font: normal 1.3rem spoqaHanSans;
+    line-height: 120%;
+    padding-right: 1.9rem;
+    width: 33.9rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.netflixFooter__infoList li {
+    width: 16rem;
+    margin-bottom: 1.3rem;
+}
+
+.netflixFooter__infoList li:last-child {
+    margin-bottom: 0;
+}
+
+.addressInfoHead {
+    font: bold 1.6rem spoqaHanSans;
+    line-height: 120%;
+    margin-bottom: 2rem;
+}
+
+.addressInfo {
+    font: normal 1.3rem spoqaHanSans;
+    line-height: 200%;
+    width: 28rem;
+}
+
+.addressInfo a {
+    display: inline;
+}
+
+.addressInfo {
+    display: inline-block;
+    margin-bottom: 4rem;
+}
