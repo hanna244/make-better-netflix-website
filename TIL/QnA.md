@@ -9,6 +9,12 @@
 1. [감춤 스타일링 하는 방법](#q5-질문)
 1. [브라우저의 크기를 줄일 때 보이는 여백의 차이는 왜 생기는 건가요?](#q6-질문)
 1. [`<input>`과 `<button>`의 레이아웃을 잡을 때 높이를 딱 맞게 맞추는 방법이 있나요?](#q7-질문)
+1. [컴포넌트의 사이즈 기준이 데스크탑일 경우 모바일 버전에서는 폰트 사이즈를 어떻게 설정해야 할까요?](#q8-질문)
+1. [마크업을 재사용할 때 재사용에 관련된 클래스 명으로 변경해 주는 것이 맞을까요?](#q9-질문)
+1. [주석을 설정할 때는 어떤 식으로 스타일을 적용하나요?](#q10-질문)
+1. [css 스타일 코드를 정렬할 때 대부분 어떤 순서로 정렬하나요?](#q11-질문)
+1. [`<option>` 태그에 이미지를 삽입하는 방법이 있나요?](#q12-질문)
+1. [`::after` 또는 `:last-child`를 사용해서 `margin-botton`값을 적용할 수 없나요?](#q13-질문)
 
 ## Q1. 질문
 
@@ -42,7 +48,8 @@
   <summary>A2. 답변</summary>
   <br/>
 
-답변 내용을 작성합니다.
+추가 사항!
+`ourStory` 뿐만 아니라 `footer` 부분에서도 "질문이 있으신가요? 문의 전화:" 이 단락에서 줄 바꿈 하는 방법을 모르겠어요!
 
 </details>
 
@@ -56,11 +63,14 @@
   <summary>A3. 답변</summary>
   <br/>
   
-  `<input>` 자식 요소인 `<label>`요소에 `position: absolute; left: 2rem;` 주었는데 `<input>`컨텐츠 밖으로 나갑니다 왜그럴까요?
+ 질문 추가 설명: `<input>` 자식 요소인 `<label>`요소에 `position: absolute; left: 2rem;` 주었는데 `<input>`컨텐츠 밖으로 나갑니다 왜그럴까요?
 
-답변 : `<input>`요소를 기준으로 `<label>`의 위치를 고정 하고 싶다면 `<input>`과 `<label>`를 랩핑해주면 된다. 즉, `<input>`
+A : `<input>`요소를 기준으로 `<label>`의 위치를 고정 하고 싶다면 `<input>`과 `<label>`를 또 다른 컨테이너로 랩핑해주면 된다. 즉, `<input>`
 에 `p:r`, `<label>`에 `p:a`를 적용한다.
-![](./assets/netflix_TIL_attached_file1.jpg)
+
+<br />
+
+![](./assets/netflix_QnA_attached_file1.jpg)
 
 ```css
 input {
@@ -96,50 +106,36 @@ input {
   <summary>A4. 답변</summary>
   <br/>
 
-- 이미지와 비디오에 `absolute`가 설정되어 있기때문에 뒤에 요소가 이미지의 자리를 인식하지 못한다. 그러면 피규어에 마지막 자식 가상요소를 사용해야 할까?
+질문 추가 설명: 이미지와 비디오에 `absolute`가 설정되어 있기때문에 뒤에 요소가 이미지의 자리를 인식하지 못한다. 그러면 피규어에 마지막 자식 가상요소를 사용해야 할까?
 
-![](./assets/netflix_TIL_attached_file2.jpg)
+A:
+
+![](./assets/netflix_QnA_attached_file5.jpg)
+
+- 위의 사진을 참고해서 보면 `<figure>`안에 `<img>`가 있고 `<img>` 아래에 `<video>`가 있다. 즉, `<img>`와 `<video>`를 감싸고 있는 컨테이너는 `<figure>`라는 것이다.
+- 내가 실수 한 것은 이미지에 `absolute`를 적용하는 바람에 뒷 요소 뿐만 아니라 `<figure>`조차 `<img>`와 `<video>`의 공간을 인식하지 못하게 한 것이다.
+- 그러므로 `<img>`에 `p:r`를 주는 것이 아니라 `<figure>`에 `p:r` 주고 `<video>`에 `p:a`를 주어 위치를 잡으면 해결~!  
+  이미지는 이미 초기화 속성으로 `vertical-align: middle;`을 주었기 때문에 부모 요소 크기에 딱 맞춰져 있다. 이미지에는 `position`속성을 줄 필요가 없음!
 
 ```css
-article {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 8rem 0;
+[해결] .netflixIntro__figure {
+  position: relative;
 }
 
-figure {
-  margin: 0;
+.netflixIntro__watchOnTV img {
+  vertical-align: middle;
 }
 
-/* --------------------- netflixIntro */
-
-.netflixIntro {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--netflix-white);
+.netflixIntro__watchOnTV video {
+  position: absolute;
 }
+```
 
-.netflixIntro h4 {
-  font: bold 2.4rem spoqaHanSans;
-  line-height: 120%;
-  color: var(--netflix-white);
-}
+---
 
-.netflixIntro p {
-  margin-top: 30px;
-  font: normal 1.6rem spoqaHanSans;
-  line-height: 150%;
-  color: var(--netflix-white);
-}
+![](./assets/netflix_QnA_attached_file2.jpg)
 
-.netflixIntro__watchOnTV {
-  display: flex;
-  flex-flow: column wrap;
-}
-
+```css
 .netflixIntro__figure {
   position: relative;
 }
@@ -167,7 +163,7 @@ figure {
 
 감춤 스타일링 하는 방법
 
-<details>
+<details open>
   <summary>A5. 답변</summary>
   <br/>
   
@@ -184,9 +180,11 @@ figure {
       white-space: nowrap;
   }
   ```
-
+* 속성 분석해 보기
 ```css
-white-space: nowrap;
+.a11yHidden {
+  white-space: nowrap;
+}
 ```
 
 - `text`가 많을 때 개행 된다면 아래의 공간으로 `text`가 보일 수 있다. 그래서 `norwrap` 속성을 사용하면 텍스트가 개행되지 않아 감출 수 있게 된다.
@@ -222,7 +220,7 @@ position: absolute;
 
 [참고 -> 깃허브 코드 저장](https://github.com/hanna244/netflix_fixed_design/commit/cc299eae00e98ef38a9e7bc071699d590f1f4281)
 
-![](./assets/netflix_TIL_attached_file3.jpg)
+![](./assets/netflix_QnA_attached_file3.jpg)
 
 </details>
 
@@ -240,7 +238,7 @@ position: absolute;
 
 [참고 -> 깃허브 코드 저장](https://github.com/hanna244/netflix_fixed_design/commit/cc299eae00e98ef38a9e7bc071699d590f1f4281)
 
-![](./assets/netflix_TIL_attached_file4.jpg)
+![](./assets/netflix_QnA_attached_file4.jpg)
 
 ```css
 .promotion input {
@@ -278,6 +276,118 @@ position: absolute;
   }
 }
 ```
+
+</details>
+
+<br/>
+
+## Q8. 질문
+
+모바일 사이즈를 기준으로 제작을 하고 있을 때 컴포넌트의 사이즈 기준이 데스크탑일 경우 폰트 사이즈를 어떻게 설정해야 할까요?
+
+<details open>
+  <summary>A8. 답변</summary>
+  <br/>
+  
+  사진에 보이는 본문의 폰트 사이즈는 데스크탑 기준인 26px 입니다 지금 기준을 잡고 스타일링 하는 것은 모바일 버전으로 하고 있을 때 모바일 버전에서 해당 본문의 폰트 사이즈는 어떻게 해야할까요?
+
+![](./assets/netflix_QnA_attached_file6.jpg)
+
+</details>
+
+<br/>
+
+## Q9. 질문
+
+프로모션 마크업을 재사용할 때 재사용에 관련된 클래스 명으로 변경해 주는 것이 맞을까요?
+
+<details open>
+  <summary>A9. 답변</summary>
+  <br/>
+  
+  ![](./assets/netflix_QnA_attached_file7.jpg)
+
+</details>
+
+<br/>
+
+## Q10. 질문
+
+주석을 설정할 때는 어떤 식으로 스타일을 적용하나요?
+
+<details open>
+  <summary>A10. 답변</summary>
+  <br/>
+  
+    `투자 정보(IR)<abbr>Investor Relations</abbr>`
+
+</details>
+
+<br/>
+
+## Q11. 질문
+
+css 스타일 코드를 정렬할 때 대부분 어떤 순서로 정렬하나요?
+
+<details open>
+  <summary>A11. 답변</summary>
+  <br/>
+  
+  1. `size`와 `position`
+  2. `style`
+  3. `font style`
+</details>
+
+<br/>
+
+## Q12. 질문
+
+`<option>` 태그에 이미지를 삽입하는 방법이 있나요?
+
+<details open>
+  <summary>A12. 답변</summary>
+  <br/>
+  
+  실패!
+
+```html
+<select class="dropdown" aria-label="언어 변경">
+  <option value="ko" selected>
+    <span class="dropdown__icon"></span>한국어
+  </option>
+  <option value="en">English</option>
+  <option value="zh">中文</option>
+</select>
+```
+
+```css
+.dropdown {
+  width: 11.3rem;
+  padding: 1.2rem 1rem;
+  margin: 0 auto;
+  background-color: var(--netflix-black);
+  color: var(--netflix-white);
+  cursor: pointer;
+}
+
+.dropdown__icon {
+  background-image: url(../assets/select_global.svg);
+}
+```
+
+</details>
+
+<br/>
+
+## Q13. 질문
+
+`::after` 또는 `:last-child`를 사용해서 `margin-botton`값을 적용할 수 없나요?
+
+<details>
+  <summary>A13. 답변</summary>
+  <br/>
+  
+  `<address>`요소에 `margin-botton: 4rem`을 주는 방법 말고 `::after` 또는 `:last-child`를 사용해서 요소같은 공간 값을 줄 없을까요?
 
 </details>
 
