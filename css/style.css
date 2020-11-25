@@ -111,39 +111,6 @@
     border-radius: 90px;
 }
 
-@media (min-width: 750px) {
-    .container {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-    }
-
-    .promotion {
-        width: 74rem;
-    }
-
-    .promotion label {
-        font-size: 1.6rem;
-    }    
-
-    .promotion input {
-        width: 54rem;
-        border-radius: 0;        
-    }
-    .promotion button {
-        display: inline;
-        margin: 0;
-        border-radius: 0;
-        margin-left: -0.4rem;
-        height: 4rem;
-        padding-top: 0.8em;
-        /* font-size: 2.2rem; */
-        width: 20rem;
-    }
-}
-
 /* --------------------- netflixIntro */
 
 .netflixIntro {
@@ -392,4 +359,61 @@ p .stateMessage {
 .addressInfo {
     display: inline-block;
     margin-bottom: 4rem;
+}
+
+
+/* --------------------- 반응형 웹 */
+@media (min-width: 750px) {
+    .container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+
+    /* ---------- ourStory 인풋 디자인 */
+    .promotion {
+        width: 74rem;
+    }
+
+    .promotion label {
+        font-size: 1.6rem;
+    }    
+
+    .promotion input {
+        width: 54rem;
+        border-radius: 0;        
+    }
+    .promotion button {
+        display: inline;
+        margin: 0;
+        border-radius: 0;
+        margin-left: -0.4rem;
+        height: 4rem;
+        padding-top: 0.8em;
+        /* font-size: 2.2rem; */
+        width: 20rem;
+    }
+
+    /* ---------- netflixFooter */
+    .netflixFooter {
+        padding: 7rem 4.5rem 0 4.5rem;
+    }
+
+    .netflixFooter p {
+        display: inline;
+    }
+
+    .netflixFooter p a {
+        display: inline;
+    }
+
+    .netflixFooter__infoList {
+        width: 100%;
+    }
+
+    .addressInfo {
+        width: 100%;
+    }
 }
