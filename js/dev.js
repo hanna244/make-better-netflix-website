@@ -17,5 +17,20 @@ console.log(
 )
 /* -------------------------------------------------------------------------- */
 
-const hiddenContents = document.querySelectorAll('main, footer')
-hiddenContents.forEach((content) => content.setAttribute('hidden', 'hidden'))
+// const hiddenContents = document.querySelectorAll(
+//   'main > *:not(.ourStory), footer'
+// )
+
+// hiddenContents.forEach((content) => content.setAttribute('hidden', 'hidden'))
+
+// function htmlHidden(content) {
+//   hiddenContents.forEach((content) => content.setAttribute('hidden', 'hidden'))
+// }
+
+// function htmlHidden(content) {
+//   hiddenContents.forEach(function (content) {
+//     content.setAttribute('hidden', 'hidden')
+//   })
+// }
+
+hiddenHTMLlements('main > *:not(.ourStory), footer')
