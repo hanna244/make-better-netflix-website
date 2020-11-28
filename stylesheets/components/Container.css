@@ -1,0 +1,29 @@
+.Container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 calc(18 / 375 * 100%);
+}
+
+.Container--column {
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60rem /* 960px/16 */ ) {
+  .Container {
+    min-width: 90rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 90rem /* 1440px/16 */ ) {
+  .Container {
+    max-width: 120rem;
+  }
+}
+
+ 

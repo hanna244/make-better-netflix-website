@@ -1,0 +1,23 @@
+.Link {
+  /* a 요소 초기화 */
+  text-decoration: none;
+  color: inherit;
+
+  /* Link (버튼 모양처럼 꾸밈) */
+  padding: 0.5em 0.6818em 0.7rem;
+  border-radius: 0.4rem;
+  background: var(--colorRed);
+  color: var(--colorWhite);
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.Link:hover {
+  background: var(--colorVividRed);
+}
+/* 
+.Link:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+} */

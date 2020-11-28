@@ -59,3 +59,18 @@ body *::after {
   padding:inherit;
   white-space: inherit;
 }
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+}
+
+/* 마우스로 클릭했을 때 */
+:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+/* 키보드로 포커싱 되어 화면에 표시 되어야 하는 경우 */
+:focus-visible {
+  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+}

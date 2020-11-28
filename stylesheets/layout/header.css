@@ -1,0 +1,24 @@
+.netflixHeader--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.netflixHeader .Container {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60rem /* 960px/16 */ ) {
+  .netflixHeader .Container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+ 

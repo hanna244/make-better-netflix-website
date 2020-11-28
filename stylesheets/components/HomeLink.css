@@ -1,0 +1,31 @@
+.HomeLink {
+  /* 제목 초기화 */
+  margin: 0;
+  /* 컴포넌트 스타일링 */
+  width: 7.4rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.HomeLink a {
+  display: block;
+}
+
+.HomeLink img {
+  /* 이미지 초기화 */
+  border: 0;
+  vertical-align: middle;
+
+  /* 컴포넌트 이미지 스타일링 */
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60rem /* 960 */ ) {
+  .HomeLink {
+    width: 14rem;
+    height: 3.8rem;
+  }
+}
