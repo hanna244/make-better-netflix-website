@@ -16,6 +16,23 @@
 1. [`<option>` 태그에 이미지를 삽입하는 방법이 있나요?](#q12-질문)
 1. [`::after` 또는 `:last-child`를 사용해서 `margin-botton`값을 적용할 수 없나요?](#q13-질문)
 
+## Q14. 질문
+
+비디오에 `autoplay`를 적용했으나 자동재생이 안될까?
+
+<details open>
+  <summary>A14. 답변</summary>
+  <br/>
+  
+  `muted` 속성을 설정하지 않았기 때문이다. 접근성의 문제로 소리가 나는 비디오가 자동으로 재생됐을 경우 소리 때문에 사용자가 놀랄 수 있다. 그래서 자동 재생 설정시에 소리가 나지 않도록 `muted`를 함께 적용해야 한다. 
+
+  ```html
+  <video src="assets/video-tv-0819.m4v" autoplay muted></video>
+  ```
+</details>
+
+<br/>
+
 ## Q1. 질문
 
 `:root`에 적용한 속성이 왜 전체(다른 요소)에 적용이 안되나요?
