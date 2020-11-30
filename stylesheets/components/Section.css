@@ -71,7 +71,7 @@
   background: var(--colorWhite);
 }
 
-.promotion__emailContainer--focused label {
+.promotion__emailContainer input:focus+label {
   top: 6px;
   left: 23px;
   font-size: 1.1rem;
