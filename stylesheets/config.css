@@ -1,0 +1,14 @@
+/* 컬러 스킴 (Scheme) -------------------------------------------------------------------- */
+
+/* 글로벌 변수(CSS 커스텀 속성 정의) */
+:root {
+  --colorRed: #E50914;
+  --colorVividRed: #FF000D;
+  --colorBlack: #010101;
+  --colorGray: #757575;
+  --colorDarkGray: #303030;
+  --colorWhite: #FFFFFF;
+  --colorFocusable: #3af13d;
+
+  --viewportWidth : 375;
+}
