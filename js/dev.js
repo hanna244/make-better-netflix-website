@@ -1,47 +1,14 @@
-// const COLOR_SCHEME = {
-//   red: '#E50914',
-//   black: '#010101',
-// }
-
-/* -------------------------------------------------------------------------- */
-
-// const { red, black } = COLOR_SCHEME
-
-// console.log(
-//   '%cMake Better! Netflix Website Homepage',
-//   'color: white; font-size: 1rem; background: #E50914; padding: 0.45em 0.82em'
-// )
-// console.log(
-//   '%cHanna244(hanna244@euid.dev)',
-//   'color: white; font-size: 0.2rem; background: #111; padding: 1em 2em'
-// )
-
+/* console.log 실행 ----------------------------------------------------------- */
 printConsole({
-  title: '넷플릭스 프로젝트',
-  author: 'Hanna244^^',
+  title: '넷플릭스 고정형 프로젝트입니다!',
+  author: 'Hanna244@euid.dev',
 })
-/* -------------------------------------------------------------------------- */
 
-// const hiddenContents = document.querySelectorAll(
-//   'main > *:not(.ourStory), footer'
-// )
-
-// hiddenContents.forEach((content) => content.setAttribute('hidden', 'hidden'))
-
-// function htmlHidden(content) {
-//   hiddenContents.forEach((content) => content.setAttribute('hidden', 'hidden'))
-// }
-
-// function htmlHidden(content) {
-//   hiddenContents.forEach(function (content) {
-//     content.setAttribute('hidden', 'hidden')
-//   })
-// }
+/* hiddenHTMLlements 실행 ----------------------------------------------------- */
 
 hiddenHTMLlements('main > *:not(.ourStory), footer')
 
-/* -------------------------------------------------------------------------- */
-
+/* input label 인터렉션 --------------------------------------------------------- */
 const emailContainer = document.querySelector('.promotion__emailContainer')
 const emailInput = emailContainer.querySelector('input')
 

@@ -1,3 +1,6 @@
+@import "../components/HomeLink.css";
+
+
 .netflixHeader--fixed {
   position: fixed;
   top: 0;
