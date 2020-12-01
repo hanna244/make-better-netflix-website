@@ -4,7 +4,6 @@
 <img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
 
 <br />
-<br />
 
 - 반응형이 아닌 고정형 디자인으로 페이지 제작 
   - 모바일 버전 (기준)
