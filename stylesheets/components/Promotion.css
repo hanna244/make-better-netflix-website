@@ -1,0 +1,78 @@
+/* promotion --------------------------------------------------- */
+.promotion {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.promotion__emailContainer{
+  position: relative;
+}
+
+.promotion__emailContainer label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+  font-size: 1.3rem;
+  color: var(--colorGray);
+  transition: all 0.35s ease-out;
+}
+
+.promotion__emailContainer input {
+  min-width: 22.8rem;
+  border: 0;
+  border-radius: 50px;
+  padding: 1.3em 1.5384em 0.8461em;
+  font-size: 1.3rem;
+  background: var(--colorWhite);
+}
+
+.promotion__emailContainer input:focus+label {
+  top: 6px;
+  left: 23px;
+  font-size: 1.1rem;
+}
+
+.promotion__emailContainer input:valid {
+  color: var(--colorBlack);
+}
+
+.promotion__emailContainer input:invalid {
+  border-bottom: 3px solid var(--colorRed);
+}
+
+.promotion__emailContainer [role="alert"] {
+  display: none;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+  color: var(--colorRed);
+}
+
+.promotion__emailContainer--invalid [role="alert"] {
+  display: block;
+}
+ 
+.promotion__button {
+  /* 버튼 초기화 */
+  border: 0;
+  /* 컴포넌트 스타일 */
+  margin-top: 1rem;
+  border-radius: 20px;
+  padding: 0.75em 1.1666em ;
+  line-height: 1.35;
+  font-size: 1.2rem;
+  background: var(--colorRed);
+  color: var(--colorWhite);
+}
+
+.promotion__button img {
+  margin-left: 1rem;
+}
+
