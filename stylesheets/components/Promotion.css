@@ -31,7 +31,9 @@
   background: var(--colorWhite);
 }
 
-.promotion__emailContainer input:focus+label {
+.promotion__emailContainer input:focus+label, 
+.promotion__emailContainer--valid label, 
+.promotion__emailContainer--invalid label{
   top: 6px;
   left: 23px;
   font-size: 1.1rem;

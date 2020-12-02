@@ -47,3 +47,26 @@
   font-size: 1.2rem;
   line-height: 1.35;
 }
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em /* 960px/16 */ ) {
+  .ourStory__headline {
+    margin-top: 8.3rem;
+    font-size: 6rem;
+  }
+  
+  .ourStory__description {
+    width: auto;
+    font-size: 2rem;
+  }
+
+  .ourStory__emailRegistration{
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .ourStory__promotionInfo {
+    margin-top: 4rem;
+  }
+}

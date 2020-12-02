@@ -15,7 +15,7 @@
 
 /* -------------------------------------------------------------------------- */
 
-@media (min-width: 60rem /* 960px/16 */ ) {
+@media (min-width: 60em /* 960px/16 */ ) {
   .netflixHeader .Container {
     margin-top: 4rem;
     margin-bottom: 4rem;

@@ -13,16 +13,16 @@
 
 /* -------------------------------------------------------------------------- */
 
-@media (min-width: 60rem /* 960px/16 */ ) {
+@media (min-width: 60em /* 960px/16 */ ) {
   .Container {
-    min-width: 90rem;
+    min-width: 92vw;
     margin: 0 auto;
   }
 }
 
-@media (min-width: 90rem /* 1440px/16 */ ) {
+@media (min-width: 90em /* 1440px/16 */ ) {
   .Container {
-    max-width: 120rem;
+    max-width: 132rem;
   }
 }
 
