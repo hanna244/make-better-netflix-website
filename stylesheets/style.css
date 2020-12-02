@@ -10,6 +10,3 @@
 /* global components --------------------------------------------------------------- */
 @import "./components/Link.css";
 @import "./components/Container.css";
-
-/* pages --------------------------------------------------------------------- */
-@import "./pages/home.css";
