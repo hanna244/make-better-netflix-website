@@ -1,0 +1,26 @@
+.HomeLink {
+  margin: 0;
+  width: 7.4rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.HomeLink a {
+  display: block;
+}
+
+.HomeLink img {
+  border: 0;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .HomeLink{
+    width: 14rem;
+    height: 3.8rem;
+  }
+}
