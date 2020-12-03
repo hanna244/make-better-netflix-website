@@ -67,7 +67,7 @@
   /* 컴포넌트 스타일 */
   margin-top: 1rem;
   border-radius: 20px;
-  padding: 0.75em 1.1666em ;
+  padding: 0.75em 1.1666em;
   line-height: 1.35;
   font-size: 1.2rem;
   background: var(--colorRed);
@@ -78,3 +78,29 @@
   margin-left: 1rem;
 }
 
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em /* 960px/16 */ ) {
+  .promotion {
+    flex-flow: row nowrap;  
+  }
+
+  .promotion__emailContainer input {
+    min-width: 54rem;
+    border-radius: 0;
+    padding: 1.3em 1.5384em 1.1875em;
+    font-size: 1.6rem;
+  }
+
+  .promotion__button {
+    padding: 0.6818em 0.909em;
+    margin-top: 0;
+    border-radius: 0;
+    font-size: 2.2rem;
+  }
+
+  .promotion__button img {
+    width: 20px;
+    height: 30px;
+  }
+}

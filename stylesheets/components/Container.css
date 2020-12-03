@@ -15,7 +15,7 @@
 
 @media (min-width: 60em /* 960px/16 */ ) {
   .Container {
-    min-width: 92vw;
+    max-width: 92vw;
     margin: 0 auto;
   }
 }

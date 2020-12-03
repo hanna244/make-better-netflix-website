@@ -69,4 +69,9 @@
   .ourStory__promotionInfo {
     margin-top: 4rem;
   }
+
+  .ourStory__promotionInfo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
 }
