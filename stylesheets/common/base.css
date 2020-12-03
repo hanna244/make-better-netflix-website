@@ -60,6 +60,7 @@ body *::after {
   white-space: inherit;
 }
 
+/* 포커스 적용한 경우 */
 :focus {
   outline: none;
   box-shadow: 0 0 0 0.3rem var(--colorFocusable);
