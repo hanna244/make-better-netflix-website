@@ -75,3 +75,8 @@ body *::after {
 :focus-visible {
   box-shadow: 0 0 0 0.3rem var(--colorFocusable);
 }
+
+button:focus-visible {
+  position: relative;
+  z-index: 100;
+}

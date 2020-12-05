@@ -45,6 +45,7 @@
 
 .promotion__emailContainer input:invalid {
   border-bottom: 3px solid var(--colorRed);
+  color: var(--colorRed);
 }
 
 .promotion__emailContainer [role="alert"] {
@@ -68,39 +69,59 @@
   margin-top: 1rem;
   border-radius: 20px;
   padding: 0.75em 1.1666em;
-  line-height: 1.35;
+  line-height: 1.35; /* line-height: 1; */
   font-size: 1.2rem;
   background: var(--colorRed);
   color: var(--colorWhite);
 }
 
 .promotion__button img {
-  margin-left: 1rem;
+  margin-left: 1rem; /* margin-left: 0.5rem; */
 }
 
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em /* 960px/16 */ ) {
   .promotion {
-    flex-flow: row nowrap;  
+    flex-direction: row;
+    align-items: flex-start; 
   }
 
   .promotion__emailContainer input {
-    min-width: 54rem;
     border-radius: 0;
-    padding: 1.3em 1.5384em 1.1875em;
+    min-width: 31.25em; /* 33.75 - 1.25*2 = 31.25 */
+    padding: 1.1875em 1.25em;
     font-size: 1.6rem;
   }
 
+  .promotion__emailContainer label {
+    font-size: 1.6rem;
+    top: 16px;
+  }
+
+  .promotion__emailContainer input:focus + label,
+  .promotion__emailContainer--valid label,
+  .promotion__emailContainer--invalid label {
+    top: 6px;
+    left: 19px;
+    font-size: 1.1rem;
+  }
+
   .promotion__button {
-    padding: 0.6818em 0.909em;
-    margin-top: 0;
     border-radius: 0;
+    user-select: none;
+    cursor: pointer;
+    padding: 0.64em 0.9090em;
+    margin-top: 0;
     font-size: 2.2rem;
+  }
+
+  .promotion__button:hover {
+    background: var(--colorVividRed);
   }
 
   .promotion__button img {
     width: 20px;
-    height: 30px;
+    height: auto;
   }
 }
