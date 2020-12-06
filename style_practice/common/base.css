@@ -1,0 +1,84 @@
+/* 박스 크기 조정 ----------------------------------------------------------------- */
+
+:root {
+  box-sizing: border-box;
+}
+
+body,
+body *,
+body::before,
+body::after,
+body *::before,
+body *::after {
+  box-sizing: inherit;
+}
+
+/* 사용자 정의 초기화 (reset) ------------------------------------------------------- */
+
+.resetBox {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.resetImg{
+  border: 0;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+.resetList {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/* 접근성 ---------------------------------------------------------------------- */
+
+.a11yHidden {
+  overflow: hidden; 
+  position: absolute;
+  clip: rect(0,0,0,0);
+  clip-path: circle(0);
+  width: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* 위의 요소가 보이지 않더라도 포커스가 되었을 때 보인다. */
+.a11yHidden.focusable:focus {
+  overflow: inherit; 
+  position: inherit;
+  clip: inherit;
+  clip-path: inherit;
+  width: inherit;
+  margin: inherit;
+  border: inherit;
+  padding:inherit;
+  white-space: inherit;
+}
+
+/* 포커스 적용한 경우 */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+}
+
+/* 마우스로 클릭했을 때 */
+:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+/* 키보드로 포커싱 되어 화면에 표시 되어야 하는 경우 */
+:focus-visible {
+  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+}
+
+button:focus-visible {
+  position: relative;
+  z-index: 100;
+}
