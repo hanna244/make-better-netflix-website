@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
     <link rel="stylesheet" href="style_practice/style_practice.css" />
     <link rel="stylesheet" href="style_practice/pages/home.css" />
+    <!-- <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/pages/home.css" /> -->
     <link rel="icon" href="assets/Favicon.png" />
     <script src="polyfill/matches.js"></script>
     <script src="utils/printConsole.js"></script>
@@ -42,33 +44,42 @@
                 <p class="ourStory__promotionInfo">신규 회원만 이 프로모션을 이용하실 수 있습니다.</p>
             </div>
         </section>
-        <section class="netflixIntro">
+        <!-- Container--column -->
+        <section class="netflixIntro Container Container--column">
             <h3 class="a11yHidden">넷플릭스의 놀라운 기능</h3>
             <article class="netflixIntro__watchOnTV">
-                <h4>TV로 즐기세요.</h4>
-                <p>스마트 TV, PlayStation, Xbox, <br /> Chromecast, Apple TV, 블루레이 플레이어 등 <br /> 다양한 디바이스에서 시청하세요.</p>
+                <div class="netflixIntro__description">
+                  <h4>TV로 즐기세요.</h4>
+                  <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+                </div>
                 <figure class="netflixIntro__figure">
-                    <img src="assets/category=TV.png" alt="" />
+                    <img class="resetImg" src="assets/category=TV.png" alt="" />
                     <video src="assets/video-tv-0819.m4v" autoplay muted></video>
                 </figure>
             </article>
             <article class="netflixIntro__downLoadAndWatch--reverse">
-                <h4>즐겨 보는 콘텐츠를 저장해 <br /> 오프라인으로 시청하세요.</h4>
-                <p>간편하게 저장하고 빈틈없이 즐겨보세요.</p>
+                <div class="netflixIntro__description">
+                  <h4 role="text">즐겨 보는 콘텐츠를 저장해 <br /> 오프라인으로 시청하세요.</h4>
+                  <p>간편하게 저장하고 빈틈없이 즐겨보세요.</p>
+                </div>
                 <figure class="netflixIntro__figure">
-                    <img class="girlImage" src="assets/category=Download.jpg" alt="" />
-                    <div class="netflixIntro__downloadContent" role="group">
+                    <img class="resetImg girlImage" src="assets/category=Download.jpg" alt="" />
+                    <div class="netflixIntro__downloadContent">
                         <img class="posterStrangerThings" src="assets/poster_stranger_things.jpg" alt="" />
-                        <p>기묘한 이야기<br /><span class="stateMessage">저장 중...</span></p>
+                        <div class="downloadContent__text">
+                          <p role="text">기묘한 이야기<br /><span class="stateMessage">저장 중...</span></p>
+                        </div>
                         <img class="downloadIcon" src="assets/download-icon.gif" alt="" width="33" height="33" />
                     </div>
                 </figure>
             </article>
             <article class="netflixIntro__watchOnDevice">
-                <h4>다양한 디바이스에서 시청하세요.</h4>
-                <p>각종 영화와 TV 프로그램을 스마트폰, 태블릿, <br /> 노트북, TV에서 무제한으로 스트리밍하세요. <br /> 추가 요금이 전혀 없습니다.</p>
+                <div class="netflixIntro__description">
+                  <h4>다양한 디바이스에서 시청하세요.</h4>
+                  <p>각종 영화와 TV 프로그램을 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                </div>
                 <figure class="netflixIntro__figure">
-                    <img src="assets/category=Device.png" alt="" />
+                    <img class="resetImg" src="assets/category=Device.png" alt="" />
                     <video src="assets/video-devices.m4v" autoplay muted></video>
                 </figure>
             </article>
