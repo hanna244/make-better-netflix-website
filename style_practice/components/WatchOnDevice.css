@@ -1,0 +1,26 @@
+/* watchOnDevice ------------------------------------------------------------ */
+.netflixIntro__watchOnDevice p {
+  width: 28rem;
+}
+
+.netflixIntro__watchOnDevice img {
+  position: relative;
+  z-index: 100;
+}
+
+.netflixIntro__watchOnDevice video {
+  position: absolute;
+  top: 28px;
+  left: 64px;
+  width: 20.9rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .netflixIntro__watchOnDevice video {
+    top: 39px;
+    left: 90px;
+    width: 29.5rem;
+  }
+}

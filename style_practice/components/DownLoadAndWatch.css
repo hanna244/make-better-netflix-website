@@ -1,0 +1,79 @@
+/* downLoadAndWatch --------------------------------------------------------- */
+.netflixIntro__downloadContent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1.4rem;
+  width: 21.2rem;
+  height: auto;
+  margin-right: 6.3rem;
+  margin-left: 6.3rem;
+  border: 0.702778px solid var(--colorGray);
+  border-radius: 4.96989px;
+  padding: 0.375em 0.75em; /* /16px */
+  background: var(--colorBlack);
+}
+
+.netflixIntro__downloadContent img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.downloadContent__text{
+  display: inline;
+  margin-left: 1.1rem;
+  flex-grow: 1;
+}
+
+.netflixIntro__downloadContent p {
+  margin-top: 0.8rem;
+  text-align: left;
+  line-height: 1.2;
+  font-size: 0.9838rem;
+  font-weight: bold;
+}
+
+.netflixIntro__downloadContent span {
+  margin-top: 0.1rem;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  font-size: 0.8433rem;
+  font-weight: bold;
+  color: #074C9E;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .netflixIntro__downloadContent {
+    padding: 1em 0.75em; /* /16px */
+    width: 30.2rem;
+    margin-right: 8.9rem;
+    margin-left: 8.9rem;  
+  }
+
+  .posterStrangerThings {
+    width: 60px;
+    height: 85px;
+  }
+
+  .downloadContent__text{
+    margin-left: 1.6rem;
+  }
+
+  .netflixIntro__downloadContent p {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .netflixIntro__downloadContent span {
+    margin-top: 0.2rem;
+  }
+
+  .downloadIcon {
+    width: 47px;
+    height: 47px;
+  }
+}

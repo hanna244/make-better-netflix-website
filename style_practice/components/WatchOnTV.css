@@ -1,0 +1,27 @@
+/* watchOnTV ---------------------------------------------------------------- */
+
+.netflixIntro__watchOnTV p {
+  width: 27rem;
+}
+
+.netflixIntro__watchOnTV img {
+  position: relative;
+  z-index: 100;
+}
+
+.netflixIntro__watchOnTV video {
+  position: absolute;
+  top: 53px;
+  left: 44px;
+  width: 24.8rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .netflixIntro__watchOnTV video {
+    top: 75px;
+    left: 63px;
+    width: 35rem;
+  }
+}
