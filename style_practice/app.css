@@ -1,0 +1,8 @@
+body {
+  background-color: var(--colorBlack, #fff);
+  color: var(--colorWhite, #000);
+}
+
+main {
+  padding-top: 6.6rem;
+}
