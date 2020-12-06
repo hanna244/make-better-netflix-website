@@ -62,7 +62,7 @@
   margin-left: 6.3rem;
   border: 0.702778px solid var(--colorGray);
   border-radius: 4.96989px;
-  padding: 0.375em 0.75em; /* /9.838px */
+  padding: 0.375em 0.75em; /* /16px */
   background: var(--colorBlack);
 }
 
@@ -73,7 +73,7 @@
 
 .downloadContent__text{
   display: inline;
-  margin-left: 1rem;
+  margin-left: 1.1rem;
   flex-grow: 1;
 }
 
@@ -95,6 +95,10 @@
 }
 
 /* watchOnDevice ------------------------------------------------------------ */
+
+.netflixIntro__watchOnDevice p {
+  width: 28rem;
+}
 
 .netflixIntro__watchOnDevice img {
   position: relative;
@@ -157,10 +161,41 @@
 
   /* downLoadAndWatch --------------------------------------------------------- */
   .netflixIntro__downloadContent {
+    padding: 1em 0.75em; /* /16px */
     width: 30.2rem;
+    margin-right: 8.9rem;
+    margin-left: 8.9rem;  
   }
 
   .posterStrangerThings {
     width: 60px;
+    height: 85px;
+  }
+
+  .downloadContent__text{
+    margin-left: 1.6rem;
+  }
+
+  .netflixIntro__downloadContent p {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .netflixIntro__downloadContent span {
+    margin-top: 0.2rem;
+  }
+
+  .downloadIcon {
+    width: 47px;
+    height: 47px;
+  }
+
+  /* watchOnDevice ------------------------------------------------------------ */
+
+  .netflixIntro__watchOnDevice video {
+    top: 39px;
+    left: 90px;
+    width: 29.5rem;
   }
 }
