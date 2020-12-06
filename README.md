@@ -24,19 +24,20 @@ stylesheets
 │   ├── base.css       # 기본 스타일 (reset, a11y, ...)
 │   └── typography.css # 타이포그래피 스타일
 │
-├── components/        # 컴포넌트 모듈
-│   ├── Container.css  # 콘테이너
-│   ├── HomeLink.css   # 홈 링크
-│   ├── Link.css       # 링크
-│   ├── OurStory.css   # OurStory 컴포넌트
-│   └── Promotion.css  # Promotion 컴포넌트
+├── components/              # 컴포넌트 모듈
+│   ├── Container.css        # 콘테이너
+│   ├── DownLoadAndWatch.css # 다운로드 앤 왓치
+│   ├── HomeLink.css         # 홈 링크
+│   ├── Link.css             # 링크
+│   ├── OurStory.css         # 아워스토리 
+│   ├── Promotzion.css       # 프로모션 
+│   ├── WatchOnDevice.css    # 왓치온디바이스 
+│   └── WatchOnTV.css        # 왓치온티비
 │
-├── containers/        # 컨테이너 모듈
-│   ├── ourstory.css 
-│   ├── watchOnTV.css 
-│   ├── downLoadAndWatch.css 
-│   ├── watchOnDevice.css  
-│   └── netflixFAQ.css  
+├── containers/          # 컨테이너 모듈
+│   ├── ourstory.css     # 아워스토리
+│   ├── netflixIntro.css # 넷플릭스 인트로
+│   └── netflixFAQ.css   # 넷플릭스 FAQ
 │
 ├── layout/            # 레이아웃 모듈 
 │   ├── header.css     # 헤더 
