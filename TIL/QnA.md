@@ -141,6 +141,7 @@ A:
 
 .netflixIntro__watchOnTV img {
   vertical-align: middle;
+  width: 100%
 }
 
 .netflixIntro__watchOnTV video {
