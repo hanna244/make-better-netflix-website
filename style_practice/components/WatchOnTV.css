@@ -20,8 +20,12 @@
 
 @media (min-width: 60em) {
   .netflixIntro__watchOnTV video {
-    top: 75px;
+    /* top: 75px;
     left: 63px;
-    width: 35rem;
+    width: 35rem; */
+    top: 21%;
+    left: 13%;
+    width: 100%;
+    max-width: 73%;
   }
 }

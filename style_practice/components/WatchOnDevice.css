@@ -1,6 +1,6 @@
 /* watchOnDevice ------------------------------------------------------------ */
 .netflixIntro__watchOnDevice p {
-  width: 28rem;
+  width: 27.5rem;
 }
 
 .netflixIntro__watchOnDevice img {
@@ -18,9 +18,17 @@
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em) {
+  .netflixIntro__watchOnDevice h4 {
+    width: 40rem;
+  }
+
   .netflixIntro__watchOnDevice video {
-    top: 39px;
+    /* top: 39px;
     left: 90px;
-    width: 29.5rem;
+    width: 29.5rem; */
+    top: 11%;
+    left: 19%;
+    width: 100%;
+    max-width: 61%;
   }
 }
