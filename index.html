@@ -26,7 +26,7 @@
         </div>
     </header> 
     <main>
-        <section   class="ourStory">
+        <section class="ourStory Divider">
             <h2 class="a11yHidden">넷플릭스 서비스 이용 안내</h2>
             <div class="Container Container--column">
                 <h3 class="a11yHidden">넷플릭스 스토리</h3>
@@ -37,126 +37,124 @@
                     <div class="promotion__emailContainer">
                       <input type="email" id="promotionEmail" />
                       <label for="userEmail">이메일 주소</label>
-                      <!-- <span role="alert" aria-live="off">정확한 이메일 주소를 입력하세요.</span> -->
+                      <span role="alert" aria-live="off">정확한 이메일 주소를 입력하세요.</span>
                     </div>
                     <button class="promotion__button" type="button">30일 무료 이용<img src="assets/Arrow.svg" alt="" width="14" height="10" /></button>
                 </div>
                 <p class="ourStory__promotionInfo">신규 회원만 이 프로모션을 이용하실 수 있습니다.</p>
             </div>
         </section>
-        <!-- Container--column -->
-        <section class="netflixIntro Container Container--column">
+        <section class="netflixIntro Divider">
             <h3 class="a11yHidden">넷플릭스의 놀라운 기능</h3>
-            <article class="netflixIntro__watchOnTV">
+            <article class="netflixIntro__watchOnTV Container Container--column">
                 <div class="netflixIntro__description">
                   <h4>TV로 즐기세요.</h4>
                   <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
                 </div>
                 <figure class="netflixIntro__figure">
-                    <img class="resetImg" src="assets/category=TV.png" alt="" />
+                    <img class="resetImg rwdImg" src="assets/category=TV.png" alt="" />
                     <video src="assets/video-tv-0819.m4v" autoplay muted></video>
                 </figure>
             </article>
-            <article class="netflixIntro__downLoadAndWatch--reverse">
+          <div class="Divider"></div>
+            <article class="netflixIntro__downLoadAndWatch--reverse Container Container--column">
                 <div class="netflixIntro__description">
                   <h4 role="text">즐겨 보는 콘텐츠를 저장해 <br /> 오프라인으로 시청하세요.</h4>
                   <p>간편하게 저장하고 빈틈없이 즐겨보세요.</p>
                 </div>
                 <figure class="netflixIntro__figure">
-                    <img class="resetImg girlImage" src="assets/category=Download.jpg" alt="" />
+                    <img class="resetImg rwdImg" src="assets/category=Download.jpg" alt="" />
                     <div class="netflixIntro__downloadContent">
-                        <img class="posterStrangerThings" src="assets/poster_stranger_things.png" alt="" width="30" height="43" />
-                        <div class="downloadContent__text">
-                          <p>기묘한 이야기<br /><span class="stateMessage">저장 중...</span></p>
-                        </div>
+                        <img class="posterStrangerThings" src="assets/poster_stranger_things.jpg" alt="" width="30" height="43" />
+                        <p role="text" class="downloadContent__text">기묘한 이야기<br /><span class="stateMessage">저장 중...</span></p>
                         <img class="downloadIcon" src="assets/download-icon.gif" alt="" width="33" height="33" />
                     </div>
                 </figure>
             </article>
-            <article class="netflixIntro__watchOnDevice">
+            <div class="Divider"></div>
+            <article class="netflixIntro__watchOnDevice Container Container--column">
                 <div class="netflixIntro__description">
                   <h4>다양한 디바이스에서 시청하세요.</h4>
                   <p>각종 영화와 TV 프로그램을 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
                 </div>
                 <figure class="netflixIntro__figure">
-                    <img class="resetImg" src="assets/category=Device.png" alt="" />
+                    <img class="resetImg rwdImg" src="assets/category=Device.png" alt="" />
                     <video src="assets/video-devices.m4v" autoplay muted></video>
                 </figure>
             </article>
         </section>
-        <section class="netflixFAQ">
-            <div class="container">
+        <section class="netflixFAQ Divider">
+            <div class="Container Container--column">
                 <h3>자주 묻는 질문</h3>
-                <div class="FAQListContainer">
-                    <dl class="netflixFAQ__FAQList resetList">
-                        <div class="netflixFAQ__FAQListItem-1 FAQListItem">
-                            <dt>넷플릭스란 무엇인가요?<button type="button"><img src="./assets/plusIcon.svg" alt="" /></button></dt>
-                            <dd>
-                                <p>넷플릭스는 각종 수상 경력에 빛나는 TV 프로그램, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍
-                                    서비스입니다.</p>
-                                <p>저렴한 월 요금으로 일체의 광고 없이 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 TV 프로그램과 영화가 제공됩니다.</p>
-                            </dd>
-                        </div>
-                        <div class="netflixFAQ__FAQListItem-2 FAQListItem">
-                            <dt>넷플릭스 요금은 얼마인가요?<img src="./assets/plusIcon.svg" alt="" /></dt>
-                            <dd>
-                                <p>스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로 넷플릭스를 시청하세요. 멤버십 요금은 월 9,500원부터 14,500원까지
-                                    다양합니다. 추가
-                                    비용이나 약정이 없습니다.</p>
-                            </dd>
-                        </div>
-                        <div class="netflixFAQ__FAQListItem-3 FAQListItem">
-                            <dt>어디에서 시청할 수 있나요?<img src="./assets/plusIcon.svg" alt="" /></dt>
-                            <dd>
-                                <p>다양한 디바이스에서 언제 어디서나 시청할 수 있습니다. 넷플릭스 계정으로 로그인하면 PC에서 netflix.com을 통해 바로 시청할 수 있으며, 인터넷이 연결되어 있고 넷플릭스
-                                    앱을 지원하는
-                                    디바이스(스마트 TV, 스마트폰, 태블릿, 스트리밍 미디어 플레이어, 게임 콘솔 등)에서도 언제든지 시청할 수 있습니다.</p>
-                                <p>iOS, Android, Windows 10용 앱에서는 좋아하는 프로그램을 저장할 수도 있습니다. 저장 기능을 이용해 이동 중이나 인터넷에 연결할 수 없는 곳에서도 시청하세요.
-                                    넷플릭스는 어디서든
-                                    함께니까요.</p>
-                            </dd>
-                        </div>
-                        <div class="netflixFAQ__FAQListItem-4 FAQListItem">
-                            <dt>맴버십을 해지하려면 어떻게 하나요?<img src="./assets/plusIcon.svg" alt="" /></dt>
-                            <dd>
-                                <p>넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요. 멤버십 해지도 온라인에서 클릭 두 번이면 완료할 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을
-                                    시작하거나
-                                    종료하세요.</p>
-                            </dd>
-                        </div>
-                        <div class="netflixFAQ__FAQListItem-5 FAQListItem">
-                            <dt>넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?<img src="./assets/plusIcon.svg" alt="" /></dt>
-                            <dd>
-                                <p>넷플릭스는 장편 영화, 다큐멘터리, TV 프로그램, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는
-                                    만큼
-                                    시청하세요. 30일 무료 이용으로 넷플릭스의 무한한 콘텐츠 세상을 만나보세요.</p>
-                            </dd>
-                        </div>
-                        <div class="netflixFAQ__FAQListItem-6 FAQListItem">
-                            <dt>무료 이용에 관해 자세히 알 수 있을까요?<img src="./assets/plusIcon.svg" alt="" /></dt>
-                            <dd>
-                                <p>넷플릭스를 30일 동안 무료로 이용해 보세요. 마음에 드는 경우 계속 이용하시면 됩니다. 별도로 해지하지 않는 한, 멤버십이 자동으로 유지됩니다. 무료 이용 기간이 끝나기 전에
-                                    멤버십을 해지하면
-                                    요금이 청구되지 않습니다. 복잡한 계약, 약정, 해지 수수료가 없습니다. 언제든 온라인으로 해지하세요.</p>
-                            </dd>
-                        </div>
-                    </dl>
-                </div>
-                <div class="FAQComponentContainer">
-                    <p class="ourStory__emailRegistration">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
-                    <div class="promotion">
-                        <div class="promotion__emailContainer">
-                            <label for="userEmail">이메일 주소</label>
-                            <input type="email" id="userEmail" />
-                        </div>
-                        <button type="button">30일 무료 이용 &rarr;<img src="assets/Arrow.svg" alt="" /></button>
+                <dl class="netflixFAQ__FAQList FaQList resetList">
+                    <div class="netflixFAQ__FAQListItem-1 FAQListItem">
+                        <dt>넷플릭스란 무엇인가요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>넷플릭스는 각종 수상 경력에 빛나는 TV 프로그램, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍
+                                서비스입니다.</p>
+                            <p>저렴한 월 요금으로 일체의 광고 없이 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 TV 프로그램과 영화가 제공됩니다.</p>
+                        </dd>
                     </div>
+                    <div class="netflixFAQ__FAQListItem-2 FAQListItem">
+                        <dt>넷플릭스 요금은 얼마인가요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로 넷플릭스를 시청하세요. 멤버십 요금은 월 9,500원부터 14,500원까지
+                                다양합니다. 추가
+                                비용이나 약정이 없습니다.</p>
+                        </dd>
+                    </div>
+                    <div class="netflixFAQ__FAQListItem-3 FAQListItem">
+                        <dt>어디에서 시청할 수 있나요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>다양한 디바이스에서 언제 어디서나 시청할 수 있습니다. 넷플릭스 계정으로 로그인하면 PC에서 netflix.com을 통해 바로 시청할 수 있으며, 인터넷이 연결되어 있고 넷플릭스
+                                앱을 지원하는
+                                디바이스(스마트 TV, 스마트폰, 태블릿, 스트리밍 미디어 플레이어, 게임 콘솔 등)에서도 언제든지 시청할 수 있습니다.</p>
+                            <p>iOS, Android, Windows 10용 앱에서는 좋아하는 프로그램을 저장할 수도 있습니다. 저장 기능을 이용해 이동 중이나 인터넷에 연결할 수 없는 곳에서도 시청하세요.
+                                넷플릭스는 어디서든
+                                함께니까요.</p>
+                        </dd>
+                    </div>
+                    <div class="netflixFAQ__FAQListItem-4 FAQListItem">
+                        <dt>맴버십을 해지하려면 어떻게 하나요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요. 멤버십 해지도 온라인에서 클릭 두 번이면 완료할 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을
+                                시작하거나
+                                종료하세요.</p>
+                        </dd>
+                    </div>
+                    <div class="netflixFAQ__FAQListItem-5 FAQListItem">
+                        <dt>넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>넷플릭스는 장편 영화, 다큐멘터리, TV 프로그램, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는
+                                만큼
+                                시청하세요. 30일 무료 이용으로 넷플릭스의 무한한 콘텐츠 세상을 만나보세요.</p>
+                        </dd>
+                    </div>
+                    <div class="netflixFAQ__FAQListItem-6 FAQListItem">
+                        <dt>무료 이용에 관해 자세히 알 수 있을까요?<button type="button" class="resetButton Button"><img class="resetImg" src="./assets/plusIcon.svg" alt="" /></button></dt>
+                        <dd>
+                            <p>넷플릭스를 30일 동안 무료로 이용해 보세요. 마음에 드는 경우 계속 이용하시면 됩니다. 별도로 해지하지 않는 한, 멤버십이 자동으로 유지됩니다. 무료 이용 기간이 끝나기 전에
+                                멤버십을 해지하면
+                                요금이 청구되지 않습니다. 복잡한 계약, 약정, 해지 수수료가 없습니다. 언제든 온라인으로 해지하세요.</p>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="FAQComponentContainer">
+                  <p class="ourStory__emailRegistration--nobr">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
+                  <div class="promotion">
+                    <div class="promotion__emailContainer">
+                      <input type="email" id="promotionEmailFAQ" />
+                      <label for="userEmail">이메일 주소</label>
+                      <span role="alert" aria-live="off">정확한 이메일 주소를 입력하세요.</span>
+                    </div>
+                    <button class="promotion__button" type="button">30일 무료 이용<img src="assets/Arrow.svg" alt="" width="14" height="10" /></button>
+                  </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="netflixFooter">
-        <div class="container">
+        <div class="Container Container--column">
             <p>질문이 있으신가요? 문의 전화: <a href="tel:00-308-321-0058">00-308-321-0058</a></p>
             <nav class="netflixFooter__links">
                 <h2 class="a11yHidden">넷플릭스 서비스</h2>

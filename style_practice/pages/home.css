@@ -1,3 +1,4 @@
-@import "../layout/header.css";
-@import "../containers/ourstory.css";
-@import "../containers/netflixIntro.css";
+@import '../layout/header.css';
+@import '../containers/ourstory.css';
+@import '../containers/netflixIntro.css';
+@import '../containers/netflixFAQ.css';

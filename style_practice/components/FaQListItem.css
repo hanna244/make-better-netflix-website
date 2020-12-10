@@ -1,0 +1,36 @@
+.FAQListItem dt {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  background: var(--colorDarkGray);
+  height: 4rem;
+  padding: 1.1rem 1.1rem;
+  font-size: 1.5rem;
+}
+
+.netflixFAQ__FAQListItem-1 dt {
+  margin-top: 0;
+}
+
+.FAQListItem dd {
+  background: var(--colorDarkGray);
+  margin-top: 0.1rem;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 2.1rem 3rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em /* 960px/16 */) {
+  .FAQListItem dt {
+    padding: 2.1rem 3rem;
+    font-size: 3.2rem;
+    height: 8rem;
+  }
+
+  .FAQListItem dd {
+    font-size: 2.6rem;
+  }
+}

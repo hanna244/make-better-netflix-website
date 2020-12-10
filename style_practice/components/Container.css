@@ -1,4 +1,4 @@
-.Container{
+.Container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em) {
-  .Container{
+  .Container {
     /* max-width: 90rem; */
     max-width: 92vw;
     margin: 0 auto;
@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 90em) {
-  .Container{
+  .Container {
     max-width: 120rem;
   }
 }

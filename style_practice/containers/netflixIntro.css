@@ -1,6 +1,5 @@
-@import "../components/WatchOnTV.css";
-@import "../components/DownLoadAndWatch.css";
-@import "../components/WatchOnDevice.css";
+@import '../components/WatchOnTV.css';
+@import '../components/DownLoadAndWatch.css';
+@import '../components/WatchOnDevice.css';
 
-
-@import "../components/NetflixIntro.css";
+@import '../components/NetflixIntro.css';

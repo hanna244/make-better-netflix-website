@@ -1,0 +1,25 @@
+.Button {
+  position: absolute;
+  padding: 0.205em;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  top: 12px;
+  right: 12px;
+}
+
+.netflixFAQ dt {
+  position: relative;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em /* 960px/16 */) {
+  .Button {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5468em;
+    top: 20px;
+    right: 30px;
+  }
+}

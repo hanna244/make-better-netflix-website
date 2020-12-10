@@ -1,13 +1,14 @@
-
 /* common ------------------------------------------------------------------ */
-@import "../stylesheets/common/normalize.css";
-@import "../stylesheets/common/typography.css";
-@import "common/base.css";
+@import '../stylesheets/common/normalize.css';
+@import '../stylesheets/common/typography.css';
+@import 'common/base.css';
 
 /* app config -------------------------------------------------------------- */
-@import "../style_practice/app.css";
-@import "../stylesheets/config.css";
+@import '../style_practice/app.css';
+@import '../stylesheets/config.css';
 
 /* global components ------------------------------------------------------- */
-@import "components/Container.css";
-@import "components/Link.css";
+@import 'components/Container.css';
+@import 'components/Link.css';
+@import 'components/Divider.css';
+@import 'components/Button.css';

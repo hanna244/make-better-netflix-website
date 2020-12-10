@@ -6,7 +6,7 @@ printConsole({
 
 /* hiddenHTMLlements 실행 ----------------------------------------------------- */
 /* main, footer과 같은 태그는 `.`과 같은 클래스 선택자를 붙이지 않는다. */
-hiddenHTMLlements('main > *:not(.netflixIntro), footer')
+hiddenHTMLlements('footer')
 
 /* input label 인터렉션 --------------------------------------------------------- */
 const emailContainer = document.querySelector('.promotion__emailContainer')
