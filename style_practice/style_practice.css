@@ -2,6 +2,8 @@
 @import '../stylesheets/common/normalize.css';
 @import '../stylesheets/common/typography.css';
 @import 'common/base.css';
+@import 'common/selection.css';
+@import 'common/scrollbar.css';
 
 /* app config -------------------------------------------------------------- */
 @import '../style_practice/app.css';

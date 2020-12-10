@@ -1,0 +1,10 @@
+::selection {
+  background: var(--colorWhite);
+  color: var(--colorBlack);
+}
+
+img::selection,
+.Link::selection {
+  background: transparent;
+  color: inherit;
+}

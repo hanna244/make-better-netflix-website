@@ -1,0 +1,19 @@
+/* only -webkit- browser: chrome, safari, edge, opera, whale ---------------- */
+
+::-webkit-scrollbar {
+  width: 1rem;
+  background: var(--colorBlack);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--colorRed);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--colorRed) 35%,
+    var(--colorRed) 65%,
+    transparent
+  );
+  border-radius: 50px;
+}
