@@ -21,9 +21,13 @@ body *::after {
   padding: 0;
 }
 
-.resetImg{
+.resetImg {
   border: 0;
   vertical-align: middle;
+}
+
+/* 반응형을 위한 이미지 설정 (Responsive Web Design)*/
+.rwdImg {
   width: 100%;
   height: auto;
 }
@@ -35,12 +39,20 @@ body *::after {
   list-style-type: none;
 }
 
+.resetButton {
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
 /* 접근성 ---------------------------------------------------------------------- */
 
 .a11yHidden {
-  overflow: hidden; 
+  overflow: hidden;
   position: absolute;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   clip-path: circle(0);
   width: 1px;
   margin: -1px;
@@ -51,14 +63,14 @@ body *::after {
 
 /* 위의 요소가 보이지 않더라도 포커스가 되었을 때 보인다. */
 .a11yHidden.focusable:focus {
-  overflow: inherit; 
+  overflow: inherit;
   position: inherit;
   clip: inherit;
   clip-path: inherit;
   width: inherit;
   margin: inherit;
   border: inherit;
-  padding:inherit;
+  padding: inherit;
   white-space: inherit;
 }
 
