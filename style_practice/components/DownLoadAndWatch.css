@@ -23,7 +23,7 @@
 .downloadContent__text {
   margin-left: 1.1rem;
   flex-grow: 1;
-  /* font-size: 0.9838rem; */
+  font-size: 0.9838rem;
 }
 
 .netflixIntro__downloadContent p {
@@ -32,14 +32,6 @@
   line-height: 1.2;
   font-weight: bold;
 }
-
-/* .netflixIntro p {
-  font-size: 0.9838rem;
-}
-
-.netflixIntro p:not(.downloadContent__text) {
-  font-size: 1.6rem;
-} */
 
 .netflixIntro__downloadContent span {
   margin-top: 0.1rem;
