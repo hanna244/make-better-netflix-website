@@ -30,7 +30,7 @@ stylesheets
 │   ├── HomeLink.css         # 홈 링크
 │   ├── Link.css             # 링크
 │   ├── OurStory.css         # 아워스토리 
-│   ├── Promotzion.css       # 프로모션 
+│   ├── Promotion.css       # 프로모션 
 │   ├── WatchOnDevice.css    # 왓치온디바이스 
 │   └── WatchOnTV.css        # 왓치온티비
 │
