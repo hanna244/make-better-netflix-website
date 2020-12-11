@@ -1,6 +1,6 @@
-@import "../components/HomeLink.css";
+@import '../components/HomeLink.css';
 
-.netflixHeader--fixed{
+.netflixHeader--fixed {
   position: fixed;
   z-index: 10000;
   /* width: 100%; */

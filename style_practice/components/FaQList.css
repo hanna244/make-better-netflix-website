@@ -1,13 +1,14 @@
 .FaQList {
-  width: 33.9rem;
+  width: 100%;
+  min-width: 33.9rem;
   margin-top: 3rem;
 }
 
 /* -------------------------------------------------------------------------- */
 
-@media (min-width: 60em /* 960px/16 */) {
+@media (min-width: 60em) {
   .FaQList {
-    margin-top: 5rem;
     width: 90rem;
+    margin-top: 5rem;
   }
 }

@@ -1,16 +1,17 @@
 .Link {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.5rem 0.6818rem;
   border-radius: 0.4rem;
+  padding: 0.5rem 0.6818rem;
   line-height: 1;
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
   background: var(--colorRed);
+  color: inherit;
   color: var(--colorWhite);
 }
 
-.Link:hover, .Link:focus {
+.Link:hover,
+.Link:focus {
   background: var(--colorVividRed);
 }
 
@@ -18,7 +19,7 @@
 
 @media (min-width: 60em) {
   .Link {
-    font-size: 1.6rem;
     padding: 0.75rem 1.25rem;
+    font-size: 1.6rem;
   }
 }

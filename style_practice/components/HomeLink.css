@@ -1,7 +1,7 @@
 .HomeLink {
-  margin: 0;
   width: 7.4rem;
   height: 2rem;
+  margin: 0;
   font-size: 1rem;
 }
 
@@ -10,16 +10,16 @@
 }
 
 .HomeLink img {
-  border: 0;
-  vertical-align: middle;
   width: 100%;
   height: auto;
+  border: 0;
+  vertical-align: middle;
 }
 
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em) {
-  .HomeLink{
+  .HomeLink {
     width: 14rem;
     height: 3.8rem;
   }
