@@ -10,10 +10,13 @@
 }
 
 .netflixIntro__watchOnTV video {
+  --figureWidth: 339;
+  --figureHeight: 255;
+
   position: absolute;
-  top: 53px;
-  left: 44px;
-  width: 24.8rem;
+  top: calc(53 / var(--figureHeight) * 100%);
+  left: calc(44 / var(--figureWidth) * 100%);
+  width: calc(248 / var(--figureWidth) * 100%);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -23,9 +26,10 @@
     /* top: 75px;
     left: 63px;
     width: 35rem; */
-    top: 21%;
+    /* top: 21%;
     left: 13%;
     width: 100%;
     max-width: 73%;
+  } */
   }
 }
