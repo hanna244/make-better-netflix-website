@@ -52,10 +52,6 @@
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em /* 960px/16 */) {
-  .ourStory {
-    padding-top: 14rem;
-  }
-
   .ourStory__headline {
     margin-top: 8.3rem;
     font-size: 6rem;
