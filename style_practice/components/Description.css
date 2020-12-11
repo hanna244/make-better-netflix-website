@@ -1,0 +1,24 @@
+.Description {
+  margin-top: 4rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.description__haveQuestion {
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .Description--row {
+    margin-top: 5rem;
+    line-height: 1.2;
+  }
+
+  .description__haveQuestion--lineBreak {
+    display: inline-block;
+  }
+}

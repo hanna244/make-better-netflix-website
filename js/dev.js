@@ -6,7 +6,7 @@ printConsole({
 
 /* hiddenHTMLlements 실행 ----------------------------------------------------- */
 /* main, footer과 같은 태그는 `.`과 같은 클래스 선택자를 붙이지 않는다. */
-hiddenHTMLlements('footer')
+hiddenHTMLlements('')
 
 /* input label 인터렉션 --------------------------------------------------------- */
 const emailContainer = document.querySelector('.promotion__emailContainer')
@@ -62,4 +62,30 @@ emailInputNode.addEventListener('focus', (e) => {
   if (e.target.value.trim().length === 0) {
     window.setTimeout(() => e.target.select())
   }
+})
+
+/* 아코디언 메뉴 ------------------------------------------------------------------ */
+// 1. offsetHeight 메서드를 사용하는 방법
+// 2. toggleAttribute() 함수와 함께 toggle 이벤트를 사용하는 방법
+// 2-1. 다른 요소를 선택 했을 떄 이미 열려있던 아코디언은 자동으로 어떻게 닫히지? 화면의 다른 곳을 클릭했을 떄 높이가 0이 도되록하는 방법?
+// 2-2. 전에 배운 이벤트 캡처링을 사용해서 질문을 클릭 했을 때 부모요소부터 클릭이벤트가 적용되면 열려있더 다른 아코디언들도 닫히지 않을까?
+
+// 정리
+
+/* 유사배열 → 배열 */
+const makeArray = function (arrayLikeObject) {
+  return [].slice.call(arrayLikeObject)
+}
+
+const FaQListHead = document.querySelectorAll('.FaQListHead')
+const FaQListItem = document.querySelectorAll('.FaQListItem')
+
+const FaQListHeadArray = makeArray(FaQListHead)
+const FaQListItemArray = makeArray(FaQListItem)
+
+console.log(FaQListHeadArray)
+console.log(FaQListItemArray)
+
+FaQListHeadArray.forEach(function (item, index) {
+  FaQListHeadArray[index].addEventListener('click', function () {})
 })

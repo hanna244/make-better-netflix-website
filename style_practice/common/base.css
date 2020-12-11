@@ -47,6 +47,15 @@ body *::after {
   background: transparent;
 }
 
+.resetLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.resetLink:hover {
+  text-decoration: underline dotted;
+}
+
 /* 접근성 ---------------------------------------------------------------------- */
 
 .a11yHidden {

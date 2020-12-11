@@ -1,0 +1,19 @@
+.AddressInfo {
+  width: 75.8%;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding-bottom: 4rem;
+  line-height: 2;
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .AddressInfo {
+    margin-top: 1.6rem;
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+  }
+}
