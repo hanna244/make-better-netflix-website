@@ -1,0 +1,12 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  /* 1.6rem/1.5 size/line-height */
+  font: 1.6rem/1.5 SpoqaHanSans, Helvetica, Arial, Sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+  margin-top: 0;
+}
