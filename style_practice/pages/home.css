@@ -1,8 +1,0 @@
-/* layout ------------------------------------------------------------------- */
-@import '../layout/header.css';
-@import '../layout/footer.css';
-
-/* containers --------------------------------------------------------------- */
-@import '../containers/ourstory.css';
-@import '../containers/netflixIntro.css';
-@import '../containers/netflixFAQ.css';

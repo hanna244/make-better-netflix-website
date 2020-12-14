@@ -1,13 +1,13 @@
 /* common ------------------------------------------------------------------ */
-@import '../stylesheets/common/normalize.css';
-@import '../stylesheets/common/typography.css';
+@import 'common/normalize.css';
+@import 'common/typography.css';
 @import 'common/base.css';
 @import 'common/selection.css';
 @import 'common/scrollbar.css';
 
 /* app config -------------------------------------------------------------- */
-@import '../style_practice/app.css';
-@import '../stylesheets/config.css';
+@import 'app.css';
+@import 'config.css';
 
 /* global components ------------------------------------------------------- */
 @import 'components/Container.css';

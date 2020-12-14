@@ -1,23 +1,25 @@
 .Link {
-  /* a 요소 초기화 */
-  text-decoration: none;
-  color: inherit;
-
-  /* Link (버튼 모양처럼 꾸밈) */
-  padding: 0.7em 0.6818em 0.5em;
   border-radius: 0.4rem;
-  background: var(--colorRed);
-  color: var(--colorWhite);
-  font-size: 1.3rem;
-  font-weight: bold;
+  padding: 0.5rem 0.6818rem;
   line-height: 1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: var(--colorRed);
+  color: inherit;
+  color: var(--colorWhite);
 }
 
-.Link:hover {
+.Link:hover,
+.Link:focus {
   background: var(--colorVividRed);
 }
-/* 
-.Link:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
-} */
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 60em) {
+  .Link {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.6rem;
+  }
+}

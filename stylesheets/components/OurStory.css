@@ -1,8 +1,5 @@
-/* ourStory ------------------------------------------------------------------ */
+/* main에 적용 */
 .ourStory {
-  /* background: url("../../assets/Cover.jpg") no-repeat center / cover; */
-  /* background-size: auto, cover; */
-
   background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.9) 5.68%,
@@ -10,12 +7,12 @@
         rgba(0, 0, 0, 0.8) 79.3%
       )
       center / auto,
-    url('../../assets/Cover.jpg') no-repeat center / cover;
+    url('../../assets/Cover.jpg') center / cover;
 }
 
 .ourStory .Container {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.8rem;
   text-align: center;
 }
 
@@ -55,10 +52,6 @@
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 60em /* 960px/16 */) {
-  .ourStory {
-    padding-top: 14rem;
-  }
-
   .ourStory__headline {
     margin-top: 8.3rem;
     font-size: 6rem;
