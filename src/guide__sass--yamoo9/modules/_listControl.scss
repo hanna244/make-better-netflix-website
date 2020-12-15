@@ -1,0 +1,13 @@
+@use "sass:list";
+
+// Sass List data type
+$valid-sides: top bottom left right z-index;
+
+@mixin attach($side) {
+  @debug list.index($valid-sides, $side);
+  @if not list.index($valid-sides, $side) {
+    @error "#{$side}는 유효한 사이드 값이 아니에요. 사이드 값으로 기대되는 것은 '#{$valid-sides} 중 하나입니다.'";
+  }
+
+  // ...
+}

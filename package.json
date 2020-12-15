@@ -1,8 +1,7 @@
 {
   "name": "netflix_fixed_design",
   "version": "1.0.0",
-  "description": "<img style=\"vertical-align: -3px\" src=\"https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com\" alt=\"Netflix 개선 프로젝트\" />",
-  "main": "index.js",
+  "description": "Netflex 개선 프로젝트 Sass 버전",
   "scripts": {
     "start": "parcel src/index.html"
   },
@@ -12,13 +11,5 @@
   },
   "keywords": [],
   "author": "hannakim <hanna244@euid.dev>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hanna244/netflix_fixed_design/issues"
-  },
-  "homepage": "https://github.com/hanna244/netflix_fixed_design#readme",
-  "dependencies": {
-    "parcel": "^1.12.4",
-    "sass": "^1.30.0"
-  }
+  "license": "ISC"
 }
