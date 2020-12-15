@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hanna244/netflix_fixed_design#readme",
   "dependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "sass": "^1.30.0"
   }
 }
