@@ -1,14 +1,14 @@
-# 넷플릭스 고정형 UI 디자인 
+# Make better netflix website 
 
-<img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
+<img style="vertical-align: -3px" src="https://img.shields.io/badge/Make%20better%20netflix!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
 
 <br />
 
-- 기존의 넷플릭스 페이지에서 더 개선된 페이지를 만듭니다. 
+- 기존의 넷플릭스 페이지보다 더 개선된 페이지를 만듭니다. 
   - 시멘틱 마크업, 접근성 등
-- 반응형이 아닌 고정형 디자인으로 페이지 제작합니다. 
-  - 모바일 버전 (기준)
-  - 데스크탑 버전 (`media query`를 사용해서 반응형으로 제작)
+- 다양한 방식으로 페이지를 제작하거나 스타일링 합니다. 
+  - Pure Modular CSS, Sass, Tailwind CSS, React
+
 
 ## 스타일 구조
 `React`의 모듈화 방식을 참고하여 구조를 구성했습니다.   
@@ -29,7 +29,7 @@ stylesheets
 │   └── scrollbar.css   # 스크롤바 스타일
 │
 ├── components/              # 컴포넌트 모듈
-│       ## Header
+│   │   ## Header
 │   ├── HomeLink.css         # 홈링크
 │   │
 │   │   ## ourstory
@@ -71,11 +71,7 @@ stylesheets
 │
 └── pages/       # 페이지 모듈  
     └── home.css # 홈
-
-
 ```
-
-
 
 ## 네이밍 작성 규칙
 
@@ -105,3 +101,7 @@ stylesheets
 
 .a11yHidden { /* ... */ }
 ```
+
+## 웹 최적화 결과
+
+<img src="./TIL/assets/Improvement_attached_file5.jpg" width="800">
