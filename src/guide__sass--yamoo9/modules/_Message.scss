@@ -1,0 +1,61 @@
+// %message-shared {
+//   border: 1px solid #ccc;
+//   padding: 10px;
+//   color: #333;
+// }
+
+// // This CSS won't print because %equal-heights is never extended.
+// %equal-heights {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .message {
+//   @extend %message-shared;
+// }
+
+// .success {
+//   @extend %message-shared;
+//   border-color: green;
+// }
+
+// .error {
+//   @extend %message-shared;
+//   border-color: red;
+// }
+
+// .warning {
+//   @extend %message-shared;
+//   border-color: yellow;
+// }
+
+// 모든 메시지가 가지는 공통 코드
+@mixin message($borderColor: #ccc) {
+  border: 1px solid $borderColor;
+  padding: 10px;
+  color: #333;
+}
+
+@mixin equalHeights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @include equalHeights();
+  &--normal {
+    @include message();
+  }
+
+  &--success {
+    @include message(green);
+  }
+
+  &--error {
+    @include message(red);
+  }
+
+  &--warning {
+    @include message(yellow);
+  }
+}
