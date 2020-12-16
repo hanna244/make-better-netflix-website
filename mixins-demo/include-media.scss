@@ -1,0 +1,52 @@
+// 공식 사이트
+// https://eduardoboucas.github.io/include-media/
+
+// codepen 예제
+// https://codepen.io/yamoo9/pen/MWedKEJ?editors=0100
+
+// include-media.scss 호출
+// https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss
+
+// ----------------------------------------------------------------------------
+// 박스 디자인
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #62d0c0;
+  color: #fff;
+  height: 40px;
+}
+
+// ----------------------------------------------------------------------------
+// 중단점 설계
+
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1024px,
+);
+
+// ----------------------------------------------------------------------------
+// 미디어 쿼리 예시
+
+@include media('>=medium') {
+  .box {
+    width: 50%;
+    height: 50vh;
+    margin: 0 auto;
+    background: #627a83;
+    color: #cbeef5;
+  }
+}
+
+@include media('>=large') {
+  .box {
+    width: 1000px;
+    height: 100vh;
+    background: #614174;
+    color: #f4cfa9;
+    font-size: 20px;
+  }
+}
