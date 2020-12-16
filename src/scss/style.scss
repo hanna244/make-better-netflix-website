@@ -1,0 +1,11 @@
+/* common, config, modules(mixin, function) -------------- */
+@import 'common/index.scss';
+@import 'config/index';
+@import 'modules/mixins/index';
+@import 'modules/functions/index';
+
+/* Global Components ------------------------------------- */
+@import 'components/Container.scss';
+
+/* pages ------------------------------------------------- */
+@import 'pages/home.scss';
