@@ -1,0 +1,21 @@
+.Container {
+  @include margin(left 18 / 375 * 100% right 18 / 375 * 100%);
+  min-width: 33.8rem;
+  background-color: aqua;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@include media('>=desktop') {
+  .Container {
+    @include margin(left 120 / 960 * 100% right 120 / 960 * 100%);
+    background-color: pink;
+  }
+}
+
+@include media('>=wideScreen') {
+  .Container {
+    max-width: 120rem;
+    @include margin(left auto right auto);
+  }
+}
