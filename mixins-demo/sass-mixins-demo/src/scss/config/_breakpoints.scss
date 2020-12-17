@@ -1,5 +1,8 @@
+@import '../modules/functions/px2em';
+
+// 반응형 웹 중단점 설정
 $breakpoints: (
-  small: 320px,
-  medium: 768px,
-  large: 1024px,
+  small: px2em(320px),
+  medium: px2em(768px),
+  large: px2em(1024px),
 );

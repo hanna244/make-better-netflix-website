@@ -1,4 +1,6 @@
+@include normalize;
+
 body {
   margin: 0;
-  font: 1rem/1.5 Verdana, Sans-Serif;
+  font: #{px2rem(16px)} / 1.5 Verdana, Sans-Serif;
 }

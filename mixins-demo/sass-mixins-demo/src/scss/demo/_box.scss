@@ -3,21 +3,15 @@
   background: #62d0c0;
   color: #fff;
   height: 40px;
-}
 
-/* -------------------------------------------------------------------------- */
-
-@include media('>=medium') {
-  .box {
+  @include media('>=medium') {
     @include size(80% 50vh);
     @include margin(left auto right auto);
     background: #627a83;
     color: #cbeef5;
   }
-}
 
-@include media('>=large') {
-  .box {
+  @include media('>=large') {
     @include size(1000px 100vh);
     background: #614174;
     color: #f4cfa9;
