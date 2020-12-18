@@ -1,0 +1,14 @@
+/* 박스 크기 조정 ----------------------------------------------------------------- */
+
+:root {
+  box-sizing: border-box;
+}
+
+body,
+body *,
+body::before,
+body::after,
+body *::before,
+body *::after {
+  box-sizing: inherit;
+}

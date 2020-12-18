@@ -1,0 +1,41 @@
+/* 사용자 정의 초기화 (reset) ------------------------------------------------------- */
+
+.resetBox {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.resetImg {
+  border: 0;
+  vertical-align: middle;
+}
+
+.rwdImg {
+  width: 100%;
+  height: auto;
+}
+
+.resetList {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.resetButton {
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.resetLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.resetLink:hover {
+  text-decoration: underline dotted;
+}
