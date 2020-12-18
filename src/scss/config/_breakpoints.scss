@@ -1,0 +1,7 @@
+@import '../modules/functions/px2em';
+
+$breakpoints: (
+  md: em(640px),
+  lg: em(960px),
+  x-lg: em(1300px),
+);

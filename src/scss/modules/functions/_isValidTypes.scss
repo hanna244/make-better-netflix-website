@@ -1,0 +1,11 @@
+@function isValideTypes($data, $typeCollection) {
+  $data-type: type-of($data);
+
+  @each $validType in $typeCollection {
+    @if $data-type == $validType {
+      @return true;
+    }
+  }
+
+  @return false;
+}

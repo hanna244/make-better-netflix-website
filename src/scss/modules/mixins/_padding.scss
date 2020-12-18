@@ -63,16 +63,12 @@
   }
 }
 
-@mixin paddingLR($value: auto) {
-  padding: {
-    left: $value;
-    right: $value;
-  }
+@mixin px($value) {
+  padding-left: $value;
+  padding-right: $value;
 }
 
-@mixin paddingTB($value: auto) {
-  padding: {
-    top: $value;
-    bottom: $value;
-  }
+@mixin py($value) {
+  padding-top: $value;
+  padding-bottom: $value;
 }

@@ -1,0 +1,18 @@
+@import './deUnit';
+
+$base-em-size: 16px !default;
+
+// px → em 함수
+@function px2em($px, $base: $base-em-size) {
+  @return (deUnit($px / $base)) * 1em;
+}
+
+// em → px 함수
+@function em2px($em, $base: $base-em-size) {
+  @return (deUnit($em * $base)) * 1px;
+}
+
+// 별칭 함수
+@function em($px, $base: $base-em-size) {
+  @return px2em($px, $base);
+}
