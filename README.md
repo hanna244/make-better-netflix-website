@@ -1,80 +1,11 @@
-# 넷플릭스 고정형 UI 디자인 
+# Sass를 사용한 Netflix 개선 프로젝트
 
 <img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
 
 <br />
 
-- 기존의 넷플릭스 페이지에서 더 개선된 페이지를 만듭니다. 
-  - 시멘틱 마크업, 접근성 등
-- 반응형이 아닌 고정형 디자인으로 페이지 제작합니다. 
-  - 모바일 버전 (기준)
-  - 데스크탑 버전 (`media query`를 사용해서 반응형으로 제작)
-
-## 스타일 구조
-`React`의 모듈화 방식을 참고하여 구조를 구성했습니다.   
-  - `엔트리`, `앱`, `구성`, `공통`, `컴포넌트`, `컨테이너`, `레이아웃`, `페이지`
-
-```
-stylesheets
-│
-├── style.css  # 엔트리 파일
-├── app.css    # 앱 파일 
-├── config.css # 구성 파일 (Color Scheme,...) 
-│
-├── common/             # 공통 모듈
-│   ├── base.css        # 기본 스타일 (reset, a11y, ...)
-│   ├── normalize.css   # 브라우저 기본 스타일 일반화
-│   ├── typography.css  # 타이포그래피 스타일
-│   ├── selection.css   # 셀렉션 스타일(::selection)
-│   └── scrollbar.css   # 스크롤바 스타일
-│
-├── components/              # 컴포넌트 모듈
-│       ## Header
-│   ├── HomeLink.css         # 홈링크
-│   │
-│   │   ## ourstory
-│   ├── OurStory.css         # 아워스토리
-│   ├── Promotion.css        # 프로모션
-│   │
-│   │   ## NetflixIntro
-│   ├── NetflixIntro.css     # 넷플릭스 인트로
-│   ├── WatchOnTV.css        # 왓치 온 티비
-│   ├── DownLoadAndWatch.css # 다운로드 앤 왓치
-│   ├── WatchOnDevice.css    # 왓치 온 디바이스 
-│   │
-│   │   ## NetflixFaQ
-│   ├── NetflixFaQ.css       # 넷플릭스 질문과 답변
-│   ├── FaQList.css          # 질문과 답변 리스트
-│   ├── FaQListItem.css      # 문과 답변 리스트 아이템
-│   │
-│   │   ## Footer
-│   ├── AddressInfo.css      # 어드레스 인포
-│   ├── Link.css             # 링크
-│   ├── LinkList.css         # 링크 리스트
-│   ├── LinkListItem.css     # 링크 리스트 아이템
-│   │
-│   │   ## Global
-│   ├── Button.css           # 버튼
-│   ├── Container.css        # 콘테이너
-│   ├── Description.css      # 디스크립션
-│   ├── Divider.css          # 디바이더
-│   └── Dropdown.css         # 드롭다운
-│
-├── containers/           # 컨테이너 모듈  
-│   ├── ourstory.css      # 아워스토리 
-│   ├── netflixIntro.css  # 넷플릭스 인트로    
-│   └── netflixFaQ.css    # 넷플릭스 FAQ  
-│    
-├── layout/         # 레이아웃 모듈  
-│   ├── header.css  # 헤더   
-│   └── footer.css  # 푸터  
-│
-└── pages/       # 페이지 모듈  
-    └── home.css # 홈
-
-
-```
-
+- `Sass`를 사용해서 넷플릭스를 스타일링합니다. 
+- `Grid`를 사용해 레이아웃의 최신 기술를 사용합니다.  
 
 
 ## 네이밍 작성 규칙
@@ -104,4 +35,12 @@ stylesheets
 .netflixIntro__downLoadAndWatch--reverse { /* ... */ }
 
 .a11yHidden { /* ... */ }
+```
+
+## 파일 탐색시 상대경로 규칙 
+`./` 문구를 반드시 입력해준다. 
+
+```html
+<link href="./scss" />
+<img src="./src" />
 ```
