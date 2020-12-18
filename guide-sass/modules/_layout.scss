@@ -1,9 +1,0 @@
-$direction: left !default;
-$space: null !default;
-
-@mixin float($direction: $direction, $space: $space) {
-  float: $direction;
-  @if $space {
-    margin: $space;
-  }
-}
