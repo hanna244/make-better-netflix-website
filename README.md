@@ -3,38 +3,21 @@
 <img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
 
 <br />
+<br />
 
 - `Sass`를 사용해서 넷플릭스를 스타일링합니다. 
-- `Grid`를 사용해 레이아웃의 최신 기술를 사용합니다.  
+- `Grid`를 사용해 최신 레이아웃 기술을 사용합니다.  
 
 
 ## 네이밍 작성 규칙
 
-스타일을 위한 이름 작성 규칙입니다. 
+### 커밋 메세지 
 
-### 컴포넌트
-타이틀케이스(TitleCase) 방식으로 이름을 작성합니다.
-
-```css
-.Container { /* ... */ }
-.HomeLink { /* ... */ }
-.Link { /* ... */ }
-.OurStory { /* ... */ }
-.Promotion { /* ... */ }
 ```
-
-### 페이지/레이아웃/공통/기타
-카멜케이스(`camelCase`) 방식 + BEM 개발 방법론(`Block__Element--Modifier`)으로 이름을 작성합니다.
-
-```css
-.netflixHeader { /* ... */ }
-.netflixFooter { /* ... */ }
-
-.ourStory { /* ... */ }
-.ourStory__headline { /* ... */ }
-.netflixIntro__downLoadAndWatch--reverse { /* ... */ }
-
-.a11yHidden { /* ... */ }
+[구축]   ... 
+[개선]   ...
+[최적화]   ...
+[업데이트]   ...
 ```
 
 ## 파일 탐색시 상대경로 규칙 
