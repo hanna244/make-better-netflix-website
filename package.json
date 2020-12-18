@@ -1,15 +1,21 @@
 {
-  "name": "netflix_fixed_design",
+  "name": "make-better-netflix-website",
   "version": "1.0.0",
   "description": "Netflix 개선 프로젝트 Sass 버전",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "npm run compile:watch",
+    "compile": "sass src/scss:dist/css",
+    "compile:watch": "npm run compile -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanna244/netflix_fixed_design.git"
+    "url": "https://github.com/hanna244/make-better-netflix-website.git"
   },
   "keywords": [],
   "author": "hannakim <hanna244@euid.dev>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "sass": "^1.30.0"
+  }
 }
