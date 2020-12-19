@@ -2,6 +2,12 @@
 포트폴리오에 사용된 mixin 라이브러리의 사용 방법을 정리합니다.
 
 
+## fzp (fontsize-padding)
+
+`link`와 같이 `padding`을 `fontsize`에 따라 가변되게 하기 위해 `em`단위를 사용해야 한다.
+
+`fontsize`를 `px`로 입력하면 `rem`단위가 적용된다.` 
+
 ## margin
 
 ```scss
@@ -26,8 +32,19 @@ margin-left: 1.8rem; */
 
 ## include-media
 반응형 미디어 쿼리  `mixin`이다. 
-[include-media 라이브러리 홈페이지 바로가기](https://eduardoboucas.github.io/include-media/)
+[include-media 홈페이지 바로가기](https://eduardoboucas.github.io/include-media/)
 
+### 설치하기 
+[[npm] include-media](https://www.npmjs.com/package/include-media)
+
+npm을 이용해 설치한다. 
+```zsh
+npm i include-media
+```
+그리고 홈페이지에서 제공하는 `mixin`파일을 다운받아 사용하려는 프로젝트에 적용한다. 
+[include-media → download the file manually](https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss)
+
+### 사용하기 
 
 아래의 중단점 변수를 `config`(구성) 파일에 작성한다. 
 ```scss
@@ -51,6 +68,18 @@ $breakpoints: (
 ```scss
 @include meida('>=tablet') {
   .container {
+    width: 50%;
+  }
+}
+```
+
+또는 중첩해서 사용하면 더 위와 같은 오류를 방지 할 수 있다. 
+
+```scss
+.Container {
+  width: 80%;
+
+  @include media('>=lg') {
     width: 50%;
   }
 }
