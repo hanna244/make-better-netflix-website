@@ -1,7 +1,9 @@
+@import '../modules/';
+
 /* 포커스 적용한 경우 */
 :focus {
   outline: none;
-  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+  box-shadow: 0 0 0 rem(3px) getColor(focus);
 }
 
 /* 마우스로 클릭했을 때 */
@@ -11,7 +13,7 @@
 
 /* 키보드로 포커싱 되어 화면에 표시 되어야 하는 경우 */
 :focus-visible {
-  box-shadow: 0 0 0 0.3rem var(--colorFocusable);
+  box-shadow: 0 0 0 rem(3px) getColor(focus);
 }
 
 button:focus-visible {

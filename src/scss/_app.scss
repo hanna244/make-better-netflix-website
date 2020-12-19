@@ -1,0 +1,6 @@
+@import './modules/index';
+
+body {
+  background: getColor(black);
+  color: getColor(white);
+}
