@@ -1,0 +1,185 @@
+@import '../modules/index';
+
+.Promotion {
+  // OurStory grid 레이아웃에 대한 속성
+  grid-row: 3;
+  grid-column: 1 / -1;
+
+  @include media('>=lg') {
+    padding-bottom: rem(40px);
+  }
+
+  // Promotion__description
+  &__description {
+    margin: 0;
+    line-height: 1.35;
+    font-size: rem(13px);
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+
+    @include media('>=lg') {
+      font-size: rem(16px);
+      font-weight: bold;
+    }
+  }
+
+  &__description--lineBreak {
+    width: rem(240px);
+
+    @include media('>=lg') {
+      width: rem(300px);
+      @include mx(auto);
+    }
+  }
+
+  // Promotion__guide
+  &__guide {
+    margin-top: rem(15px);
+    margin-bottom: 0;
+    line-height: 1.35;
+    font-size: rem(12px);
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+
+    @include media('>=lg') {
+      font-size: rem(16px);
+      font-weight: bold;
+    }
+  }
+
+  &__guide--noShow {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Promotion → Email form 스타일링 ------------------------------------------------------ */
+.emailContainer {
+  &__block {
+    position: relative;
+    width: rem(228px);
+    margin-top: rem(30px);
+    margin-bottom: 0;
+    @include mx(auto);
+
+    @include media('>=lg') {
+      width: rem(540px);
+    }
+
+    label {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      line-height: 1.35;
+      letter-spacing: -0.04em;
+      font-size: rem(13px);
+      color: getColor(gray);
+      transition: all 0.2s ease-out;
+
+      @include media('>=lg') {
+        top: 18px;
+        font-size: rem(16px);
+      }
+    }
+
+    input {
+      width: 100%;
+      border: 0;
+      border-radius: rem(50px);
+      font-size: rem(13px);
+      background: getColor(white);
+      @include fzp(13px, 14px 20px 11px);
+
+      @include media('>=lg') {
+        border-radius: 0;
+        font-size: rem(16px);
+        @include fzp(16px, 19px 20px);
+      }
+    }
+
+    input:focus + label {
+      top: 3px;
+      left: 20px;
+      font-size: rem(11px);
+
+      @include media('>=lg') {
+        top: 5px;
+        left: 19px;
+        font-size: rem(12px);
+      }
+    }
+
+    input:valid {
+      color: getColor(black);
+    }
+
+    input:invalid {
+      border-bottom: 3px solid getColor(red);
+      color: getColor(red);
+    }
+
+    [role='alert'] {
+      display: none;
+      margin-top: rem(5px);
+      line-height: 1.35;
+      letter-spacing: -0.04em;
+      font-size: rem(14px);
+      font-weight: bold;
+      color: getColor(red);
+    }
+  }
+
+  // emailContainer____block--valid (--nvalid)
+  &__block--invalid [role='alert'] {
+    display: block;
+  }
+
+  &__block--valid label,
+  &__block--invalid label {
+    top: 3px;
+    left: 20px;
+    font-size: rem(11px);
+
+    @include media('>=lg') {
+      top: 5px;
+      left: 19px;
+      font-size: rem(12px);
+    }
+  }
+}
+
+/* Promotion → Email button 스타일링 -------------------------------------------- */
+
+.emailContainer {
+  button {
+    margin-top: rem(10px);
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 50px;
+    line-height: 1.35;
+    letter-spacing: -0.04em;
+    background: getColor(red);
+    color: getColor(white);
+    @include fzp(12px, 10px 14px 8px);
+
+    &:hover {
+      background: getColor(vividRed);
+    }
+
+    @include media('>=lg') {
+      border-radius: 0;
+      user-select: none;
+      cursor: pointer;
+      margin-top: 0;
+      @include fzp(22px, 15px 20px);
+    }
+
+    img {
+      width: rem(11.14px);
+      margin-left: rem(10px);
+
+      @include media('>=lg') {
+        width: rem(20px);
+      }
+    }
+  }
+}
