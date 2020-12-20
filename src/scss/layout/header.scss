@@ -1,0 +1,22 @@
+@import '../modules/index';
+
+// components
+@import '../components/HomeLink.scss';
+@import '../components/Link.scss';
+
+/* -------------------------------------------------------------------------- */
+.header {
+  .Container {
+    grid-template-columns: rem(74px) rem(46px);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    @include py(rem(22px));
+
+    @include media('>=lg') {
+      grid-template-columns: rem(140px) rem(85px);
+      @include my(rem(40px));
+      @include py(rem(11px));
+    }
+  }
+}
