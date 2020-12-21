@@ -1,0 +1,77 @@
+@import '../modules/index';
+
+.downloadContent {
+  display: grid;
+  position: absolute;
+  bottom: rem(16px);
+  left: 50%;
+  width: rem(212px);
+  border: 1px solid getColor(gray);
+  border-radius: 5px;
+  background: getColor(black);
+  transform: translateX(-50%);
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr rem(113px) 1fr;
+  @include py(rem(6px));
+  @include px(rem(12px));
+
+  @include media('>=x-lg') {
+    width: rem(302px);
+    grid-template-columns: 1fr rem(147px) 1fr;
+    @include py(rem(12px));
+    @include px(rem(16px));
+  }
+
+  .Section__title {
+    @include media('>=lg') {
+      max-width: rem(530px);
+    }
+
+    @include media('>=x-lg') {
+      max-width: rem(1200px);
+    }
+  }
+
+  .posterStrangerThings {
+    width: rem(30px);
+    height: auto;
+    margin-right: rem(11px);
+
+    @include media('>=x-lg') {
+      width: rem(60px);
+      margin-right: rem(16px);
+    }
+  }
+
+  .downloadMessage {
+    margin-top: rem(8px);
+    margin-bottom: 0;
+    font-size: rem(10px);
+    font-weight: bold;
+
+    @include media('>=x-lg') {
+      margin-top: rem(24px);
+      font-size: rem(14px);
+    }
+  }
+
+  .stateMessage {
+    letter-spacing: -0.04em;
+    font-size: rem(8px);
+    color: getColor(blue);
+
+    @include media('>=x-lg') {
+      font-size: rem(12px);
+    }
+  }
+
+  .downloadIcon {
+    margin-top: rem(5px);
+
+    @include media('>=x-lg') {
+      width: rem(47px);
+      height: auto;
+      margin-top: rem(19px);
+    }
+  }
+}
