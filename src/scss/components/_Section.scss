@@ -67,11 +67,16 @@
   @include media('>=lg') {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: rem(503px) rem(480px);
+    grid-template-columns: rem(423px) rem(464px);
     padding-bottom: rem(70px);
   }
 
+  @include media('>=x-lg') {
+    grid-template-columns: rem(530px) rem(480px);
+  }
+
   /* Section--row → Contents --------------- */
+
   .Section__contents {
     @include media('>=lg') {
       text-align: left;
@@ -86,5 +91,24 @@
       max-width: rem(480px);
       margin: 0;
     }
+  }
+}
+
+/* Section--reverse 스타일링 ---------------------------------------------------- */
+
+.Section--reverse {
+  grid-template-columns: rem(368px) rem(516px);
+
+  @include media('>=x-lg') {
+    grid-template-columns: rem(480px) rem(530px);
+  }
+
+  .Section__contents {
+    grid-column: 2;
+  }
+
+  .Section__media {
+    grid-row: 1;
+    grid-column: 1;
   }
 }
