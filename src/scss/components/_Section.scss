@@ -1,0 +1,62 @@
+@import '../modules/index';
+
+/* Section 스타일링 ------------------------------------------------------------ */
+
+.Section {
+  padding-top: rem(20px);
+  padding-bottom: rem(80px);
+  @include mx(rem(18px));
+
+  @include media('>=lg') {
+    max-width: 92vw;
+    padding-top: rem(50px);
+    @include mx(auto);
+  }
+
+  @include media('>=x-lg') {
+    max-width: rem(1200px);
+  }
+}
+
+/* Section → Contents 스타일링 --------------- */
+
+.Section {
+  &__contents {
+    margin-top: rem(60px);
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1.2;
+    font-size: rem(24px);
+    font-weight: bold;
+
+    @include media('>=lg') {
+      font-size: rem(48px);
+    }
+  }
+
+  &__description {
+    margin-top: rem(30px);
+    margin-bottom: 0;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+    font-size: rem(16px);
+
+    @include media('>=lg') {
+      margin-top: rem(20px);
+      font-size: rem(22px);
+    }
+  }
+}
+
+/* Section → Media 스타일링 --------------- */
+
+.Section {
+  &__media {
+    position: relative;
+    margin: rem(10px) 0 0;
+  }
+}
