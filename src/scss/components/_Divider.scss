@@ -1,0 +1,5 @@
+@import '../modules/index';
+
+.Divider {
+  border-bottom: solid rem(4px) getColor(DarkGray);
+}
