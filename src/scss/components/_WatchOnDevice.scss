@@ -1,0 +1,11 @@
+.WatchOnDevice {
+  video {
+    --figureWidth: 339;
+    --figureHeight: 255;
+
+    position: absolute;
+    top: calc(28 / var(--figureHeight) * 100%);
+    left: calc(64 / var(--figureWidth) * 100%);
+    width: calc(209 / var(--figureWidth) * 100%);
+  }
+}
