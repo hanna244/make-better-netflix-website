@@ -1,10 +1,9 @@
 @import '../modules/index';
 
 .Container {
-  display: grid;
+  @include mx(percentage(18/375));
   justify-content: center;
   justify-items: center;
-  @include mx(percentage(18/375));
 
   @include media('>=lg') {
     max-width: 92vw;

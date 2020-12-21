@@ -7,6 +7,7 @@
 /* -------------------------------------------------------------------------- */
 .header {
   .Container {
+    display: grid;
     grid-template-columns: rem(74px) rem(46px);
     justify-content: space-between;
     align-items: center;

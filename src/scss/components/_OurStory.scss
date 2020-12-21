@@ -11,6 +11,8 @@
     url('../../assets/Cover.jpg') center / cover no-repeat;
 
   .Container {
+    @include py(rem(20px));
+    display: grid;
     text-align: center;
     grid-template-rows: rem(122px) rem(68px) minmax(rem(172px), auto);
     grid-template-columns: 1fr rem(68px) rem(204px) rem(68px) 1fr;
@@ -58,6 +60,7 @@
 
     @include media('>=lg') {
       margin-top: rem(20px);
+      padding-bottom: rem(40px);
     }
   }
 }
