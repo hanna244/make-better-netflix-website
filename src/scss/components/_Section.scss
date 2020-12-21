@@ -60,3 +60,31 @@
     margin: rem(10px) 0 0;
   }
 }
+
+/* Section--row 스타일링 -------------------------------------------------------- */
+
+.Section--row {
+  @include media('>=lg') {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: rem(503px) rem(480px);
+    padding-bottom: rem(70px);
+  }
+
+  /* Section--row → Contents --------------- */
+  .Section__contents {
+    @include media('>=lg') {
+      text-align: left;
+      @include my(auto);
+    }
+  }
+
+  /* Section--row → Media --------------- */
+
+  .Section__media {
+    @include media('>=lg') {
+      max-width: rem(480px);
+      margin: 0;
+    }
+  }
+}
