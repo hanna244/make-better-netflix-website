@@ -5,8 +5,8 @@
 *.sketch
 *.ai
 .DS_Store
-build/**/*.css
-build/**/*.map
+dist/**/*.css
+dist/**/*.map
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,node
@@ -125,7 +125,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
