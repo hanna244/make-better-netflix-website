@@ -1,7 +1,7 @@
 # Sass를 사용한 Netflix 개선 프로젝트
 
-<img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
-<img style="vertical-align: -3px" src="https://img.shields.io/badge/Project%20Using%20Sass%20-%20-CC6699?style=flat&logo=sass&logoColor=CC6699&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />
+<img style="vertical-align: -3px" src="https://img.shields.io/badge/Netflix%20Make%20Better!%20-%20-E50914?style=flat&logo=netflix&logoColor=E50914&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />&nbsp;
+<img style="vertical-align: -3px" src="https://img.shields.io/badge/Project%20Using%20Sass%20-%20-CC6699?style=flat&logo=sass&logoColor=CC6699&labelColor=000&link=https://netflix.com" alt="Netflix 개선 프로젝트" />&nbsp;
 
 <br />
 
