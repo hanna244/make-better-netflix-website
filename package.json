@@ -4,7 +4,7 @@
   "description": "Netflix 개선 프로젝트 Sass 버전",
   "scripts": {
     "start": "npm run compile:watch",
-    "compile": "sass src/scss:build/css",
+    "compile": "sass src/scss:dist/css",
     "compile:watch": "npm run compile -- --watch"
   },
   "repository": {
