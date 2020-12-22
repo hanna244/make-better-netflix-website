@@ -5,8 +5,8 @@
 *.sketch
 *.ai
 .DS_Store
-dist/**/*.css
-dist/**/*.map
+build/**/*.css
+build/**/*.map
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,node
