@@ -3,10 +3,10 @@
 @import './modules/index';
 @include normalize;
 
-@import './common/index.scss';
+@import './common/index';
 
 @import './app';
 
 /* Global Components -------------------------------------------------------- */
-@import './components/Container.scss';
+@import './components/Container';
 @import './components/Divider';
