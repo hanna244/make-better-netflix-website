@@ -1,0 +1,13 @@
+@mixin font-and-line-height(
+  $size: $base-rem-size,
+  $weight: null,
+  $lineHeight: null
+) {
+  line-height: $lineHeight;
+  font-size: rem($size);
+  font-weight: $weight;
+}
+
+@mixin fal($size: $base-rem-size, $weight: null, $lineHeight: null) {
+  @include font-and-line-height($size, $weight, $lineHeight);
+}
