@@ -1,6 +1,11 @@
+/* Module, Config ----------------------------------------------------------- */
+@import './config/index';
+
+/* Layout ------------------------------------------------------------------- */
 @import '../layout/header';
-@import '../layout/footer';
+// @import '../layout/footer';
 
 /* Section ------------------------------------------------------------------ */
 @import './home/ourSroty';
 @import './home/netflixIntro';
+@import './home/netflixFAQ';

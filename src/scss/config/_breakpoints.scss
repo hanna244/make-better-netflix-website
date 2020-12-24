@@ -1,8 +1,0 @@
-@import '../modules/functions/px2em';
-
-$breakpoints: (
-  md: em(640px),
-  lg: em(960px),
-  x-lg: em(1300px),
-  // lg에서 컨테이너의 너비가 1200px일 때 브라우저의 너비가 1300px이다. (style_report 참고)
-);
