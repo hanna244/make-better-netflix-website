@@ -7,6 +7,8 @@
 
 - `Sass`를 사용해서 넷플릭스를 스타일링합니다. 
 - `Grid`를 사용해 최신 레이아웃 기술을 사용합니다.  
+- 스타일 기록과 TIL을 Gitbook에 정리합니다.
+  - [[gitbook] make better netflix website → sass version](https://shhn0509.gitbook.io/make-better-netflix-website/sass-version/report)
 
 ## 네이밍 작성 규칙
 
