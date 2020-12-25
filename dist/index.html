@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="icon" href="../src/assets/Favicon.png" />
     <script src="../src/utils/validStateDetection.js" defer></script>
+    <script src="../src/utils/accodionControl.js" defer></script>
     <!-- <script src="./javascript/dev.js" defer></script> -->
 </head>
 <body> 
@@ -44,7 +45,7 @@
       </div>
     </section>
     <div class="Divider"></div>
-    <section class="netflixIntro">
+    <section class="NetflixIntro">
       <h2 class="a11yHidden">넷플릭스 다양한 기능</h2>
       <article class="WatchOnTV Section Section--row">
         <div class="Section__contents">
@@ -88,9 +89,10 @@
       </article>
     </section>
     <div class="Divider"></div>
-    <!-- <section class="netflixFAQ">
-      <h2 class="netflixFAQ__title">자주 묻는 질문</h2>
-      <dl class="netflixFAQ__contianer Accordion">
+    <section class="NetflixFAQ Section">
+      <h2 class="NetflixFAQ__title">자주 묻는 질문</h2>
+      <dl class="NetflixFAQ__contianer resetDl Accordion">
+        <!-- AccordionItem--open 본문 펼침 상태 클래스 -->
         <div class="AccordionItem">
           <dt class="AccordionHead">넷플릭스란 무엇인가요? <button type="button" class="resetButton AccordionButton"><img src="./assets/plusIcon.svg" alt="펼침" width="24" height="24" /></button></dt>
           <dd class="AccordionBody">
@@ -144,7 +146,7 @@
         </div>
       </dl>
       <article class="Promotion">
-        <h4 class="a11yHidden">넷플릭스 프로모션</h4>
+        <h3 class="a11yHidden">넷플릭스 프로모션</h3>
         <p class="Promotion__description Promotion__description--lineBreak">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</p>
         <div class="emailContainer emailContainer--row">
           <div class="emailContainer__block">
@@ -156,8 +158,50 @@
         </div>
         <p class="Promotion__guide Promotion__guide--noShow">신규 회원만 이 프로모션을 이용하실 수 있습니다.</p>
       </article>
-    </section> -->
+    </section>
     <div class="Divider"></div>
   </main>
+  <footer class="netflixFooter Section">
+    <p class="question">질문이 있으신가요?</p>
+    <span class="phoneNumber"><b>문의 전화</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span>
+    <nav class="Info">
+      <h2 class="a11yHidden">넷플릭스 서비스</h2>
+      <ul class="InfoList resetList">
+        <li class="InfoItem"><a class="resetLink" href="#FAQ">자주 묻는 질문</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#service-center">고객센터</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#account">계정</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#media-center">미디어 센터</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#investor-relations">투자 정보(<abbr title="Investor Relations">IR</abbr>)</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#job-information">입사 정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#supported-devices">Netflix 지원 디바이스</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#terms-of-use">이용 약관</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#privacy">개인정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#cookie-settings">쿠키 설정</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#company-information">회사 정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#inquire">문의하기</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#speed ​​test">속도 테스트</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#legal-notice">법적 고지</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#netflix-original">Netflix 오리지널</a></li>
+      </ul>
+    </nav>
+    <label for="selectLanguage" class="a11yHidden">언어선택</label>
+    <select class="Dropdown" id="selectLanguage">
+      <option class="DropdownItem" value="korean" selected>한국어</option>
+      <option class="DropdownItem" value="english">English</option>
+      <option class="DropdownItem" value="chinese">中文</option>
+    </select>
+    <h2 class="addressInfoHead">Netflix 대한민국 <span class="a11yHidden">연락 정보</span></h2>
+    <address class="addressInfo resetAddress">
+      <span>넷플릭스서비시스코리아 유한회사</span><br />
+      <span><b>통신판매업신고번호</b>: 제2018-서울종로-0426호</span><br />
+      <span><b>전화번호</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span><br />
+      <span><b>대표</b>: 레지널드 숀 톰프슨</span><br />
+      <span><b>이메일 주소</b>: <a class="resetLink" href="mailto:korea@netflix.com">korea@netflix.com</a></span><br />
+      <span><b>주소</b>: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</span><br />
+      <span><b>클라우드 호스팅</b>: Amazon Web Services Inc.</span><br />
+      <a class="resetLink" href="http://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2018300016930200431&pageUnit=10&searchCnd=bup_nm&searchKrwd=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4&pageIndex=1"
+        target="_blank" rel="noopener noreferrer">공정거래위원회 통신 판매사업자 정보 보기</a>
+    </address>
+  </footer>
 </body>
 </html>
