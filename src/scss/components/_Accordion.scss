@@ -1,0 +1,72 @@
+.Accordion {
+  max-width: 90rem;
+  background: getColor(darkGray);
+
+  .AccordionHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+    @include fzp(15px, 11px 12px);
+
+    @include media('>=lg') {
+      font-size: rem(32px);
+      border-bottom: 3px solid getColor(black);
+    }
+  }
+
+  .AccordionButton {
+    padding: em(3.5px);
+    background: inherit;
+
+    img {
+      pointer-events: none;
+      width: rem(9px);
+      height: auto;
+      transition: all 0.3s ease;
+
+      @include media('>=lg') {
+        width: rem(22.5px);
+      }
+    }
+  }
+
+  .AccordionBody {
+    overflow: hidden;
+    height: 0;
+    border-top: 2px solid getColor(black);
+    border-bottom: 5px solid getColor(black);
+    padding: 0;
+    transition: all 0.3s ease;
+    @include font-and-line-height(13px, $line-height: 1.7);
+
+    p {
+      margin-bottom: 0;
+    }
+
+    P:first-child {
+      margin-top: 0;
+    }
+
+    @include media('>=lg') {
+      font-size: rem(26px);
+    }
+  }
+
+  .AccordionItem--open {
+    img {
+      transform: rotate(45deg);
+    }
+
+    .AccordionBody {
+      @include px(12px);
+      @include py(11px);
+      height: 100%;
+
+      @include media('>=lg') {
+        @include px(30px);
+        @include py(21px);
+      }
+    }
+  }
+}
