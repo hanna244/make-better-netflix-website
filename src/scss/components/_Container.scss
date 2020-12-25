@@ -1,9 +1,5 @@
-@import '../modules/index';
-
 .Container {
   @include mx(percentage(18/375));
-  justify-content: center;
-  justify-items: center;
 
   @include media('>=lg') {
     max-width: 92vw;
