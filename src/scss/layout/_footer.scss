@@ -1,0 +1,54 @@
+@import '../components/Info';
+@import '../components/Dropdown';
+
+.netflixFooter {
+  @include py(rem(20px) rem(60px));
+
+  @include media('>=lg') {
+    @include py(rem(50px));
+  }
+
+  a:hover {
+    color: getColor(white);
+  }
+
+  .question,
+  .phoneNumber {
+    @include my(rem(40px) 0);
+    @include font-and-line-height(20px, bold, 1.4);
+    color: getColor(gray);
+
+    @include media('>=md') {
+      line-height: 1.2;
+      display: inline-block;
+    }
+  }
+
+  .Info {
+    width: 100%;
+    margin-top: rem(30px);
+  }
+
+  .addressInfoHead {
+    @include my(rem(30px) 0);
+    @include font-and-line-height(16px, $line-height: 1.2);
+    color: getColor(gray);
+
+    @include media('>=md') {
+      margin-top: rem(40px);
+      font-size: rem(22px);
+    }
+  }
+
+  .addressInfo {
+    width: 79%;
+    margin-top: rem(20px);
+    @include font-and-line-height(13px, $line-height: 2);
+    color: getColor(gray);
+
+    @include media('>=md') {
+      margin-top: rem(16px);
+      font-size: rem(15px);
+    }
+  }
+}

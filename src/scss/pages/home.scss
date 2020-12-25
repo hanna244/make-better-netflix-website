@@ -1,9 +1,9 @@
 /* Module, Config ----------------------------------------------------------- */
-@import './config/index';
+@import '../modules/index';
 
 /* Layout ------------------------------------------------------------------- */
 @import '../layout/header';
-// @import '../layout/footer';
+@import '../layout/footer';
 
 /* Section ------------------------------------------------------------------ */
 @import './home/ourSroty';
