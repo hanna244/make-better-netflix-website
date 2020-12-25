@@ -8,6 +8,10 @@
 // 2. 리스트 (20px 43px 12px auto)
 // 3. 문자 (auto, initial, ...)
 
+// 참고
+// $p length가 1개라면 padding 전체에 같은 값이 적용된다.
+// $p length가 2개라면 padding 위/아래, 좌/우에 적용된다.
+
 // 2개의 매개변수는 필수 값이다
 @mixin fzp($fz, $p) {
   // 전달 받은 $p 유형 검사

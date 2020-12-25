@@ -63,12 +63,26 @@
   }
 }
 
+@mixin m($value) {
+  @include margin($value);
+}
+
 @mixin mx($value) {
-  margin-left: $value;
-  margin-right: $value;
+  $value_length: length($value);
+  @if $value_length == 1 {
+    @include margin(left $value right $value);
+  }
+  @if $value_length > 1 {
+    @include margin(left first($value) right last($value));
+  }
 }
 
 @mixin my($value) {
-  margin-top: $value;
-  margin-bottom: $value;
+  $value_length: length($value);
+  @if $value_length == 1 {
+    @include margin(top $value bottom $value);
+  }
+  @if $value_length > 1 {
+    @include margin(top first($value) bottom last($value));
+  }
 }

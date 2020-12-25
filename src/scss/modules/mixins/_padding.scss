@@ -63,12 +63,26 @@
   }
 }
 
+@mixin p($value) {
+  @include padding($value);
+}
+
 @mixin px($value) {
-  padding-left: $value;
-  padding-right: $value;
+  $value_length: length($value);
+  @if $value_length == 1 {
+    @include padding(left $value right $value);
+  }
+  @if $value_length > 1 {
+    @include padding(left first($value) right last($value));
+  }
 }
 
 @mixin py($value) {
-  padding-top: $value;
-  padding-bottom: $value;
+  $value_length: length($value);
+  @if $value_length == 1 {
+    @include padding(top $value bottom $value);
+  }
+  @if $value_length > 1 {
+    @include padding(top first($value) bottom last($value));
+  }
 }
