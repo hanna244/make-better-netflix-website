@@ -11,6 +11,11 @@
     color: getColor(white);
     @include font-and-line-height(24px, $line-height: 1.2);
     @include my(rem(60px) 0);
+
+    @include media('>=lg') {
+      font-size: rem(48px);
+      margin-top: rem(54px);
+    }
   }
 
   &__contianer {
@@ -21,6 +26,14 @@
   .Promotion {
     // AccordionHead의 border 값 7px 제외
     margin-top: rem(23px);
+
+    @include media('>=lg') {
+      margin-top: rem(60px);
+    }
+
+    &__description {
+      font-weight: normal;
+    }
 
     .emailContainer {
       @include my(rem(26px) 0);

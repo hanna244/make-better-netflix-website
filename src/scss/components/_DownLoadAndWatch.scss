@@ -54,11 +54,13 @@
   }
 
   .stateMessage {
+    margin-top: rem(1px);
     letter-spacing: -0.04em;
-    font-size: rem(8px);
     color: getColor(blue);
+    @include font-and-line-height(8px, $line-height: 1.5);
 
     @include media('>=x-lg') {
+      margin-top: rem(2px);
       font-size: rem(12px);
     }
   }

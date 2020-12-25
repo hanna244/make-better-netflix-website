@@ -53,6 +53,9 @@
   &__media {
     position: relative;
     margin: rem(10px) 0 0;
+    max-width: rem(337px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
