@@ -1,13 +1,10 @@
 /* Section 스타일링 ------------------------------------------------------------ */
 
 .Section {
-  padding-top: rem(20px);
-  padding-bottom: rem(80px);
   @include mx(rem(18px));
 
   @include media('>=lg') {
     max-width: 92vw;
-    padding-top: rem(50px);
     @include mx(auto);
   }
 
