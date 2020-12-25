@@ -60,5 +60,9 @@
       margin-top: rem(20px);
       padding-bottom: rem(40px);
     }
+
+    .emailContainer {
+      @include my(rem(30px) 0);
+    }
   }
 }
