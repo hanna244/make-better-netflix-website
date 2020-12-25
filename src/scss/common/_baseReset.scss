@@ -23,6 +23,11 @@
   list-style-type: none;
 }
 
+.resetDl dt,
+.resetDl dd {
+  margin-left: 0;
+}
+
 .resetButton {
   user-select: none;
   cursor: pointer;
@@ -32,4 +37,8 @@
 .resetLink {
   text-decoration: none;
   color: inherit;
+}
+
+.resetAddress {
+  font-style: normal;
 }
