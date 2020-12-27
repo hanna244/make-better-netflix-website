@@ -1,0 +1,10 @@
+::selection {
+  background: getColor(darkgray);
+  color: getColor(yellow);
+}
+
+img::selection,
+.Link::selection {
+  background: transparent;
+  color: inherit;
+}

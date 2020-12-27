@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  cursor: pointer;
+  width: rem(10px);
+  background: getColor(black);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #e50914 40%,
+    #e50914 20%,
+    transparent
+  );
+}
