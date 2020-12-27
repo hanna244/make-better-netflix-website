@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="영화 보기, 온라인 영화, 인터넷 영화, TV 시청, TV 온라인, 온라인 TV 프로그램, 인터넷 TV 프로그램, TV 프로그램 보기, 영화 스트리밍, 스트리밍 tv, 인스턴트 스트리밍, 온라인 시청, 인터넷 시청, 영화, 영화 보기 대한민국, 온라인 TV 보기, 다운로드 불필요, 영화 풀 버전, 전체 영화" name="keywords" />
+    <meta content="스마트 TV, 태블릿, 스마트폰, PC, 게임 콘솔 등 다양한 디바이스에서 영화와 TV 프로그램을 마음껏 즐기세요." name="description" />
+    <!-- 기존의 넷플릭스 로그인 페이지 title -->
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
+    <link rel="stylesheet" href="./css/pages/login.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="icon" href="../src/assets/Favicon.png" />
+    <script src="../src/utils/validStateDetection.js" defer></script>
+    <!-- <script src="./javascript/dev.js" defer></script> -->
+</head>
+<body> 
+  <header class="header">
+    <div class="Container">
+      <h1 class="brand HomeLink"><a class="resetLink" href="/"><img class="resetImg rwdContent" src="./assets/Logo.svg" alt="홈링크" width="870" height="236" /></a></h1>
+      <a class="Link resetLink" href="#-로그인">로그인</a>
+    </div>
+  </header>
+  <main class="login">
+    <!-- Container 컴포넌트를 사용하지 않고 Container mixin을 만들어 사용할 예정 -->
+    <section class="login__contianer">
+      <h2 class="login__headLine">로그인</h2>
+      <form class="login__Form" action="#" method="post">
+        <!-- 두 개의 input을 묶고 접근성을 위해 콘텐츠의 정보를 제공하기 위해 fiedset, legend 요소 사용 -->
+        <!-- https://developer.mozilla.org/ko/docs/Web/HTML/Element/legend -->
+        <fiedset>
+          <!-- 접근성을 위한 h11yHidden mixin 적용 -->
+          <legend>로그인 정보 입력</legend>
+          <div class="input__textBox input__textBox--dark">
+            <input type="email" id="userEmail__login" />
+            <label for="userEmail__login">이메일 주소 또는 폰 번호</label>
+            <span role="alert" aria-live="off">정확한 이메일 주소 또는 폰 번호를 입력하세요.</span>
+          </div>
+          <div class="input__textBox input__textBox--dark">
+            <input type="password" id="userPassword__login" />
+            <label for="userPassword__login">비밀번호</label>
+            <span role="alert" aria-live="off">비밀번호는 4 - 60자 사이여야 합니다.</span>
+          </div>
+          <a class="Link resetLink" href="#-로그인">로그인</a>
+          <!-- 스타일링(justify-content: space-between)을 위해 container로 묶어주었다 -->
+          <div class="loginCheckBoxContainer">
+            <div class="CheckBox">
+              <!-- check 상태일 때 색상 변경 -->
+              <input class="CheckBox__box" type="checkbox" id="CheckBox__login" />
+              <label for="CheckBox__login">로그인 정보 저장</label>
+            </div>
+            <span>도움이 필요하신가요?</span>
+          </div> 
+        </fiedset>
+      </form>
+    </section>
+  </main>
+  <!-- <footer class="netflixFooter Section">
+    <p class="question">질문이 있으신가요?</p>
+    <span class="phoneNumber"><b>문의 전화</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span>
+    <nav class="Info">
+      <h2 class="a11yHidden">넷플릭스 서비스</h2>
+      <ul class="InfoList resetList">
+        <li class="InfoItem"><a class="resetLink" href="#FAQ">자주 묻는 질문</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#service-center">고객센터</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#account">계정</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#media-center">미디어 센터</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#investor-relations">투자 정보(<abbr title="Investor Relations">IR</abbr>)</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#job-information">입사 정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#supported-devices">Netflix 지원 디바이스</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#terms-of-use">이용 약관</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#privacy">개인정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#cookie-settings">쿠키 설정</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#company-information">회사 정보</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#inquire">문의하기</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#speed ​​test">속도 테스트</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#legal-notice">법적 고지</a></li>
+        <li class="InfoItem"><a class="resetLink" href="#netflix-original">Netflix 오리지널</a></li>
+      </ul>
+    </nav>
+    <label for="selectLanguage" class="a11yHidden">언어선택</label>
+    <select class="Dropdown" id="selectLanguage">
+      <option class="DropdownItem" value="korean" selected>한국어</option>
+      <option class="DropdownItem" value="english">English</option>
+      <option class="DropdownItem" value="chinese">中文</option>
+    </select>
+    <h2 class="addressInfoHead">Netflix 대한민국 <span class="a11yHidden">연락 정보</span></h2>
+    <address class="addressInfo resetAddress">
+      <span>넷플릭스서비시스코리아 유한회사</span><br />
+      <span><b>통신판매업신고번호</b>: 제2018-서울종로-0426호</span><br />
+      <span><b>전화번호</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span><br />
+      <span><b>대표</b>: 레지널드 숀 톰프슨</span><br />
+      <span><b>이메일 주소</b>: <a class="resetLink" href="mailto:korea@netflix.com">korea@netflix.com</a></span><br />
+      <span><b>주소</b>: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</span><br />
+      <span><b>클라우드 호스팅</b>: Amazon Web Services Inc.</span><br />
+      <a class="resetLink" href="http://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2018300016930200431&pageUnit=10&searchCnd=bup_nm&searchKrwd=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4&pageIndex=1"
+        target="_blank" rel="noopener noreferrer">공정거래위원회 통신 판매사업자 정보 보기</a>
+    </address>
+  </footer> -->
+</body>
+</html>
