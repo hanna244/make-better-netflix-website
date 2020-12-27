@@ -3,6 +3,8 @@
   background: getColor(darkGray);
 
   .AccordionHead {
+    position: relative;
+    // @include flex-c(justify-between items-center);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,16 +18,23 @@
   }
 
   .AccordionButton {
-    padding: em(3.5px);
+    display: flex;
+    // padding: em(3.5px);
+    justify-content: flex-end;
+    align-items: center;
     background: inherit;
+    width: 100%;
+    @include position(absolute, top 0 right 0 bottom 0 z-index 100);
 
     img {
+      margin-right: rem(9px);
       pointer-events: none;
       width: rem(9px);
       height: auto;
       transition: all 0.3s ease;
 
       @include media('>=lg') {
+        margin-right: rem(32px);
         width: rem(22.5px);
       }
     }
