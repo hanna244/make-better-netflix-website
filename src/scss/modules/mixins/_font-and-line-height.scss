@@ -3,9 +3,9 @@
   $weight: null,
   $line-height: null
 ) {
-  line-height: $line-height;
   font-size: rem($size);
   font-weight: $weight;
+  line-height: $line-height;
 }
 
 @mixin fal($size: $base-rem-size, $weight: null, $line-height: null) {
