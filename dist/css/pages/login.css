@@ -1,0 +1,306 @@
+@charset "UTF-8";
+.HomeLink {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 4.625rem;
+  height: 1.25rem;
+  font-size: 0.625rem;
+}
+@media (min-width: 60em) {
+  .HomeLink {
+    width: 8.75rem;
+    height: 2.375rem;
+  }
+}
+.HomeLink a {
+  display: block;
+}
+
+.Link {
+  border-radius: 3px;
+  line-height: 1;
+  font-weight: bold;
+  background: #e50914;
+  padding: 0.5em 0.6818181818em;
+  font-size: 0.6875rem;
+}
+.Link:focus {
+  background: #ff000d;
+}
+@media (min-width: 60em) {
+  .Link {
+    padding: 0.75em 1.25em;
+    font-size: 1rem;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.header .Container {
+  display: grid;
+  grid-template-columns: 4.625rem 2.875rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+}
+@media (min-width: 60em) {
+  .header .Container {
+    grid-template-columns: 8.75rem 5.3125rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding-top: 0.6875rem;
+    padding-bottom: 0.6875rem;
+  }
+}
+
+.Info .InfoList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-columns: minmax(0, 1fr);
+  /* 유지 보수를 위해 설정 */
+}
+@media (min-width: 40em) {
+  .Info .InfoList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.Info .InfoItem {
+  padding-bottom: 0.8125em;
+  color: #757575;
+}
+.Info .InfoItem a {
+  display: inline-block;
+  padding: 0.2307692308em;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+}
+@media (min-width: 60em) {
+  .Info .InfoItem a {
+    font-size: 1rem;
+  }
+}
+
+.Dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 1.875rem;
+  border: 1px solid #454545;
+  border-radius: 2px;
+  padding: 0.75em 2em;
+  font-size: 1rem;
+  line-height: 1.2;
+  background: url("../../assets/select_global.svg") no-repeat 0.5rem center, url("../../assets/select_arrow.svg") no-repeat 5.25rem center, #010101;
+  color: #757575;
+}
+@media (min-width: 60em) {
+  .Dropdown {
+    margin-top: 5rem;
+  }
+}
+
+.netflixFooter {
+  padding-top: 1.25rem;
+  padding-bottom: 3.75rem;
+}
+@media (min-width: 60em) {
+  .netflixFooter {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
+.netflixFooter a:hover {
+  color: #ffffff;
+}
+.netflixFooter .question,
+.netflixFooter .phoneNumber {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #757575;
+}
+@media (min-width: 40em) {
+  .netflixFooter .question,
+.netflixFooter .phoneNumber {
+    line-height: 1.2;
+    display: inline-block;
+  }
+}
+.netflixFooter .Info {
+  width: 100%;
+  margin-top: 1.875rem;
+}
+.netflixFooter .addressInfoHead {
+  margin-top: 1.875rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #757575;
+}
+@media (min-width: 40em) {
+  .netflixFooter .addressInfoHead {
+    margin-top: 2.5rem;
+    font-size: 1.375rem;
+  }
+}
+.netflixFooter .addressInfo {
+  width: 79%;
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 2;
+  color: #757575;
+}
+@media (min-width: 40em) {
+  .netflixFooter .addressInfo {
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .main {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.68%, rgba(0, 0, 0, 0.3) 42.95%, rgba(0, 0, 0, 0.8) 79.3%) center/auto, url("../../assets/Cover.jpg") center/cover no-repeat;
+  }
+}
+
+.login {
+  max-width: 23.4375rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4.125rem;
+  padding-bottom: 0;
+}
+@media (min-width: 60em) {
+  .login {
+    max-width: 27.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10rem;
+    padding-bottom: 0;
+  }
+}
+.login__container {
+  background: rgba(1, 1, 1, 0.6);
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+}
+@media (min-width: 60em) {
+  .login__container {
+    border: 1px solid #2D2D2D;
+    backdrop-filter: blur(4px);
+    border-radius: 6px;
+    max-width: 27.5rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+.login__headLine {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1.25rem;
+}
+@media (min-width: 60em) {
+  .login__headLine {
+    padding-top: 1.875rem;
+  }
+}
+
+/* Form --------------------------------------------------------------------- */
+.Form {
+  position: relative;
+}
+.Form label {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+  transition: all 0.2s ease;
+}
+.Form input {
+  width: 100%;
+  border: 0;
+  /* main과 값이 다름 */
+  border-radius: 5px;
+  padding: 1.5625em 1.25em 0.875em;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.Form input:focus + label {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+}
+.Form input:valid {
+  color: #ffffff;
+}
+.Form input:invalid {
+  border-bottom: 3px solid #e50914;
+}
+.Form--dark label {
+  color: #b5b5b5;
+}
+.Form--dark input {
+  background: #303030;
+}
+
+.Form + [role=alert] {
+  display: block;
+  margin-top: 0.3125rem;
+  letter-spacing: -0.04em;
+  color: #e50914;
+  margin-left: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+.login__email {
+  margin-top: 1.875rem;
+}
+@media (min-width: 60em) {
+  .login__email {
+    margin-top: 1.25rem;
+  }
+}
+.login__password {
+  margin-top: 1.25rem;
+}
+
+/* login Link --------------------------------------------------------------- */
+.login .Link {
+  display: block;
+  border-radius: 4px;
+  line-height: 1;
+  font-weight: bold;
+  background: #e50914;
+  margin-top: 0.375rem;
+  padding: 0.9375em 9.1875em;
+  font-size: 1rem;
+}
+.login .Link:focus {
+  background: #ff000d;
+}
+@media (min-width: 60em) {
+  .login .Link {
+    margin-top: 1.875rem;
+    padding: 0.9375em 10.5em;
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */
