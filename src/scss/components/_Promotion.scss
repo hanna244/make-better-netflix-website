@@ -76,11 +76,10 @@
     }
 
     label {
-      line-height: 1.35;
       letter-spacing: -0.04em;
-      font-size: rem(13px);
       color: getColor(gray);
       transition: all 0.2s ease-out;
+      @include font-and-line-height(13px, null, 1.35);
       @include position(absolute, top 12px left 15px);
 
       @include media('>=lg') {
@@ -93,7 +92,6 @@
       width: 100%;
       border: 0;
       border-radius: rem(50px);
-      font-size: rem(13px);
       background: getColor(white);
       @include fzp(13px, 14px 20px 11px);
 
@@ -196,6 +194,7 @@
     @include media('>=lg') {
       + button {
         height: rem(60px);
+        align-self: flex-start;
       }
     }
   }

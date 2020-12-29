@@ -357,6 +357,7 @@
 @media (min-width: 60em) {
   .emailContainer__block--valid + button, .emailContainer__block--invalid + button {
     height: 3.75rem;
+    align-self: flex-start;
   }
 }
 
