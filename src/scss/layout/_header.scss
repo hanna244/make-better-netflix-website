@@ -2,6 +2,8 @@
 @import '../components/Link';
 
 .header {
+  @include position(fixed, top 0 right 0 left 0 z-index 100);
+
   .Container {
     display: grid;
     grid-template-columns: rem(74px) rem(46px);

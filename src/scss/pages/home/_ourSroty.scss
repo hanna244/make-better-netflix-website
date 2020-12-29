@@ -8,9 +8,10 @@
     justify-content: center;
     text-align: center;
     justify-items: center;
-    @include py(rem(20px));
+    @include py(rem(86px) rem(20px));
 
     @include media('>=lg') {
+      padding-top: rem(140px);
     }
   }
 
