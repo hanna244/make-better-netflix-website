@@ -1,0 +1,117 @@
+.main 
+  +media('>=lg')  
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.68%, rgba(0, 0, 0, 0.3) 42.95%, rgba(0, 0, 0, 0.8) 79.3%) center / auto, url('../../assets/Cover.jpg') center / cover no-repeat
+  
+.login
+  +Container(rem(375px), auto, rem(66px) 0)
+  +media('>=lg')
+    +Container(rem(440px), auto, rem(160px) 0)
+
+  &__container 
+    background: rgba(1, 1, 1, 0.6)
+    +px(rem(18px))
+    +media('>=lg')    
+      border: 1px solid #2D2D2D
+      backdrop-filter: blur(4px)
+      border-radius: 6px
+      max-width: rem(440px)
+      +px(rem(30px))
+
+  &__headLine 
+    +font-and-line-height(20px, bold, 1.2)
+    +my(0)
+    padding-top: rem(20px)
+    +media('>=lg')
+      padding-top: rem(30px)
+
+/* Form --------------------------------------------------------------------- */
+
+.Form
+  position: relative
+  
+  label
+    +position(absolute, top 19px left 20px)
+    +font-and-line-height(16px, null, 1.35)
+    letter-spacing: -0.04em
+    transition: all 0.2s ease
+
+  input 
+    width: 100%
+    border: 0
+    /* main과 값이 다름 */
+    border-radius: 5px
+    +fzp(16px, 25px 20px 14px)
+    color: getColor(white)
+  
+  input:focus + label
+    font-size: rem(12px)
+    +position(absolute, top 7px left 20px)
+
+  input:valid
+    color: getColor(white)
+
+  input:invalid
+    border-bottom: 3px solid getColor(red)
+
+  &--dark
+    label
+      color: getColor(lightGray)
+
+    input 
+      background: getColor(darkGray)
+
+.Form + [role="alert"]
+  display: block
+  margin-top: rem(5px)
+  letter-spacing: -0.04em
+  color: getColor(red)
+  margin-left: rem(20px)
+  +font-and-line-height(14px, bold, 1.35)
+    
+.login
+  &__email 
+    margin-top: rem(30px)
+    +media('>=lg')
+      margin-top: rem(20px)
+      
+
+  &__password 
+    margin-top: rem(20px)
+
+/* login Link --------------------------------------------------------------- */
+
+.login
+  .Link 
+    display: block
+    border-radius: 4px
+    line-height: 1
+    font-weight: bold
+    background: getColor(red)
+    margin-top: rem(6px)
+    @include fzp(16px, 15px 147px)
+
+    &:focus 
+      background: getColor(vividRed)
+    
+
+    +media('>=lg') 
+      margin-top: rem(30px)
+      +fzp(16px, 15px 168px)
+  
+
+  
+
+        
+
+
+// $OurStory-mx: 30px    
+// $OurStory-py: 20px    
+// $Intro-mx: 10px    
+// $Intro-py: 15px    
+
+
+
+// 변수로 제어하는 것은 좋은데 과연 자주 변경되는 값인가? 
+// 데이터를 분리해서 생각하는 것은 좋다, 하지만 데이터를 분리할 이유가 있을까? 
+// 데이터를 분리한다는 것은 자주 값이 변경되기 때문이다. 
+// 문제 → 만약 회사가 Pure CSS를 사용한다면 이런 방식을 사용할 수 없다. 
