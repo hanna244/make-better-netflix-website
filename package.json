@@ -15,7 +15,7 @@
   "author": "hannakim <hanna244@euid.dev>",
   "license": "ISC",
   "dependencies": {
-    "@euid/scss-mixins": "0.0.5",
+    "@euid/scss-mixins": "0.0.7",
     "include-media": "^1.4.9",
     "sass": "^1.30.0"
   }
