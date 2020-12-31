@@ -1,7 +1,7 @@
 /* Section 스타일링 ------------------------------------------------------------ */
 
 .Section {
-  @include mx(rem(18px));
+  @include m(x rem(18));
 
   @include media('>=lg') {
     max-width: 92vw;
@@ -9,7 +9,7 @@
   }
 
   @include media('>=x-lg') {
-    max-width: rem(1200px);
+    max-width: rem(1200);
   }
 }
 
@@ -17,32 +17,27 @@
 
 .Section {
   &__contents {
-    margin-top: rem(60px);
-    margin-bottom: 0;
     text-align: center;
+    @include my(rem(60) 0);
   }
 
   &__title {
     margin: 0;
-    line-height: 1.2;
-    font-size: rem(24px);
-    font-weight: bold;
+    @include font(lh 1.2 size rem(24) weight bold);
 
     @include media('>=lg') {
-      font-size: rem(48px);
+      font-size: rem(48);
     }
   }
 
   &__description {
-    margin-top: rem(30px);
-    margin-bottom: 0;
-    line-height: 1.5;
     letter-spacing: -0.04em;
-    font-size: rem(16px);
+    @include my(rem(30) 0);
+    @include font(lh 1.5 size rem(16));
 
     @include media('>=lg') {
-      margin-top: rem(20px);
-      font-size: rem(22px);
+      font-size: rem(22);
+      @include m(t rem(20));
     }
   }
 }
@@ -51,11 +46,10 @@
 
 .Section {
   &__media {
-    position: relative;
+    max-width: rem(337);
     margin: rem(10px) 0 0;
-    max-width: rem(337px);
-    left: 50%;
     transform: translateX(-50%);
+    @include position(relative, left 50%);
   }
 }
 
@@ -63,14 +57,13 @@
 
 .Section--row {
   @include media('>=lg') {
-    display: grid;
     justify-content: space-between;
-    grid-template-columns: rem(423px) rem(464px);
-    padding-bottom: rem(70px);
+    padding-bottom: rem(70);
+    @include grid($cols: rem(530) rem(464));
   }
 
   @include media('>=x-lg') {
-    grid-template-columns: rem(530px) rem(480px);
+    @include grid-append($cols: rem(530) rem(480));
   }
 
   /* Section--row → Contents --------------- */
@@ -86,7 +79,7 @@
 
   .Section__media {
     @include media('>=lg') {
-      max-width: rem(480px);
+      max-width: rem(480);
       margin: 0;
     }
   }
@@ -95,18 +88,18 @@
 /* Section--reverse 스타일링 ---------------------------------------------------- */
 
 .Section--reverse {
-  grid-template-columns: rem(368px) rem(516px);
+  @include grid-append($cols: rem(368) rem(516));
 
   @include media('>=x-lg') {
-    grid-template-columns: rem(480px) rem(530px);
+    @include grid-append($cols: rem(480) rem(530));
   }
 
   .Section__contents {
-    grid-column: 2;
+    @include col(2);
   }
 
   .Section__media {
-    grid-row: 1;
-    grid-column: 1;
+    @include col(1);
+    @include row(1);
   }
 }

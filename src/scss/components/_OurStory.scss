@@ -1,10 +1,13 @@
 .OurStory {
   background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.9) 5.68%,
-        rgba(0, 0, 0, 0.3) 42.95%,
-        rgba(0, 0, 0, 0.8) 79.3%
+        rgba(#000, 0.9) 5.68%,
+        rgba(#000, 0.3) 42.95%,
+        rgba(#000, 0.8) 79.3%
       )
       center / auto,
     url('../../assets/Cover.jpg') center / cover no-repeat;
 }
+
+// rgba(get-colorolor(black), 0.9) 5.68%,
+// rgba(#000, 0.9) 5.68%,

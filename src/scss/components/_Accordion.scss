@@ -1,41 +1,35 @@
 .Accordion {
-  max-width: 90rem;
-  background: getColor(darkGray);
+  max-width: rem(1440);
+  background: get-color(darkGray);
 
   .AccordionHead {
     position: relative;
-    // @include flex-c(justify-between items-center);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     line-height: 1.2;
-    @include fzp(15px, 11px 12px);
+    @include flex-c(row nowrap justify-between items-center);
+    @include fsp(15, 11 12);
 
     @include media('>=lg') {
-      font-size: rem(32px);
-      border-bottom: 3px solid getColor(black);
+      border-bottom: 3px solid get-color(black);
+      font-size: rem(32);
     }
   }
 
   .AccordionButton {
-    display: flex;
-    // padding: em(3.5px);
-    justify-content: flex-end;
-    align-items: center;
-    background: inherit;
+    @include flex-c(row nowrap justify-end items-center);
     width: 100%;
+    background: inherit;
     @include position(absolute, top 0 right 0 bottom 0 z-index 100);
 
     img {
-      margin-right: rem(9px);
       pointer-events: none;
       width: rem(9px);
       height: auto;
+      margin-right: rem(9px);
       transition: all 0.3s ease;
 
       @include media('>=lg') {
-        margin-right: rem(32px);
         width: rem(22.5px);
+        margin-right: rem(32px);
       }
     }
   }
@@ -43,11 +37,15 @@
   .AccordionBody {
     overflow: hidden;
     height: 0;
-    border-top: 2px solid getColor(black);
-    border-bottom: 5px solid getColor(black);
+    border-top: 2px solid get-color(black);
+    border-bottom: 5px solid get-color(black);
     padding: 0;
     transition: all 0.3s ease;
     @include font-and-line-height(13px, $line-height: 1.7);
+
+    @include media('>=lg') {
+      font-size: rem(26px);
+    }
 
     p {
       margin-bottom: 0;
@@ -55,10 +53,6 @@
 
     P:first-child {
       margin-top: 0;
-    }
-
-    @include media('>=lg') {
-      font-size: rem(26px);
     }
   }
 
@@ -68,9 +62,9 @@
     }
 
     .AccordionBody {
+      height: 100%;
       @include px(12px);
       @include py(11px);
-      height: 100%;
 
       @include media('>=lg') {
         @include px(30px);

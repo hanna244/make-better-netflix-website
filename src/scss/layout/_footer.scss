@@ -2,21 +2,21 @@
 @import '../components/Dropdown';
 
 .netflixFooter {
-  @include py(rem(20px) rem(60px));
+  @include py(rem(20) rem(60));
 
   @include media('>=lg') {
-    @include py(rem(50px));
+    @include py(rem(50));
   }
 
   a:hover {
-    color: getColor(white);
+    color: get-color(white);
   }
 
   .question,
   .phoneNumber {
-    @include my(rem(40px) 0);
-    @include font-and-line-height(20px, bold, 1.4);
-    color: getColor(gray);
+    @include my(rem(40) 0);
+    @include font-and-line-height(20, 1.4, bold);
+    color: get-color(gray);
 
     @include media('>=md') {
       line-height: 1.2;
@@ -26,30 +26,29 @@
 
   .Info {
     width: 100%;
-    margin-top: rem(30px);
+    margin-top: rem(30);
   }
 
   .addressInfoHead {
-    @include a11yHidden();
-    @include my(rem(30px) 0);
-    @include font-and-line-height(16px, $line-height: 1.2);
-    color: getColor(gray);
+    @include my(rem(30) 0);
+    @include font-and-line-height(16, 1.2);
+    color: get-color(gray);
 
     @include media('>=md') {
-      margin-top: rem(40px);
-      font-size: rem(22px);
+      margin-top: rem(40);
+      font-size: rem(22);
     }
   }
 
   .addressInfo {
     width: 79%;
-    margin-top: rem(20px);
-    @include font-and-line-height(13px, $line-height: 2);
-    color: getColor(gray);
+    margin-top: rem(20);
+    @include font-and-line-height(13, 2);
+    color: get-color(gray);
 
     @include media('>=md') {
-      margin-top: rem(16px);
-      font-size: rem(15px);
+      margin-top: rem(16);
+      font-size: rem(15);
     }
   }
 }

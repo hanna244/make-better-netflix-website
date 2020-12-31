@@ -1,67 +1,64 @@
 .Promotion {
   // OurStory grid 레이아웃에 대한 속성
-  grid-row: 3;
-  grid-column: 1 / -1;
-
+  @include row(3);
+  @include col('1/-1');
+  // @include col(se, 1 -1);
   @include media('>=lg') {
-    padding-bottom: rem(40px);
+    @include p(b rem(40));
   }
 
   // Promotion__description
   &__description {
     // emailContainer--row 설정시 가운데로 위치를 잡기 위해 mx에 auto 설정
-    margin: 0 auto;
+    @include m(y 0 x auto);
     text-align: center; // 컴포넌트 자체에서 가운데 정렬될 수 있도록 설정
-    line-height: 1.35;
-    font-size: rem(13px);
+    @include font(lh 1.35 size rem(13));
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
 
     @include media('>=lg') {
-      font-size: rem(16px);
-      font-weight: bold;
+      @include font(size rem(16) weight bold);
     }
   }
 
   &__description--lineBreak {
-    max-width: rem(240px);
+    max-width: rem(240);
 
     @include media('>=lg') {
-      max-width: rem(288px);
+      max-width: rem(288);
     }
   }
 
   // Promotion__guide
   &__guide {
-    margin-top: rem(15px);
-    margin-bottom: 0;
-    line-height: 1.35;
-    font-size: rem(12px);
-    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+    @include my(rem(15) 0);
+    @include font(lh 1.35 size rem(12));
+    text-shadow: 0px 2px 6px rgba(get-color(black), 0.55);
 
     @include media('>=lg') {
-      font-size: rem(16px);
-      font-weight: bold;
+      @include font(weight bold size rem(16));
     }
   }
 
   &__guide--noShow {
-    display: none;
+    @include hide();
   }
 }
 
 //* -------------------------------------------------------------------------- */
 
 .emailContainer {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  @include flex-center();
+  @include flex-c(column wrap justify-content items-center);
+  // display: flex;
+  // flex-flow: column wrap;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .emailContainer--row {
   @include media('>=lg') {
-    flex-flow: row nowrap;
-    margin-top: rem(30px);
+    @include flex-c-a(row nowrap);
+    @include m(t rem(30));
   }
 }
 
@@ -69,58 +66,58 @@
 .emailContainer {
   &__block {
     position: relative;
-    width: rem(228px);
+    width: rem(228);
 
     @include media('>=lg') {
-      width: rem(540px);
+      width: rem(540);
     }
 
     label {
       letter-spacing: -0.04em;
-      color: getColor(gray);
-      transition: all 0.2s ease-out;
-      @include font-and-line-height(13px, null, 1.35);
+      color: get-color(gray);
+      transition: all 0.2s ease(out-expo);
+      @include font-and-line-height(13px, 1.35);
       @include position(absolute, top 12px left 15px);
 
       @include media('>=lg') {
         top: 18px;
-        font-size: rem(16px);
+        font-size: rem(16);
       }
     }
 
     input {
       width: 100%;
       border: 0;
-      border-radius: rem(50px);
-      background: getColor(white);
-      @include fzp(13px, 14px 20px 11px);
+      border-radius: rem(50);
+      background: get-color(white);
+      @include fsp(13, 14 20 11);
 
       @include media('>=lg') {
         border-radius: 0;
-        font-size: rem(16px);
-        @include fzp(16px, 19px 20px);
+        font-size: rem(16);
+        @include fsp(16, 19 20);
       }
     }
 
     input:focus + label {
       top: 3px;
       left: 20px;
-      font-size: rem(11px);
+      font-size: rem(11);
 
       @include media('>=lg') {
         top: 5px;
         left: 19px;
-        font-size: rem(12px);
+        font-size: rem(12);
       }
     }
 
     input:valid {
-      color: getColor(black);
+      color: get-color(black);
     }
 
     input:invalid {
-      border-bottom: 3px solid getColor(red);
-      color: getColor(red);
+      border-bottom: 3px solid get-color(red);
+      color: get-color(red);
     }
 
     [role='alert'] {
@@ -130,7 +127,7 @@
       letter-spacing: -0.04em;
       font-size: rem(14px);
       font-weight: bold;
-      color: getColor(red);
+      color: get-color(red);
     }
   }
 
@@ -158,32 +155,31 @@
 
 .emailContainer {
   button {
-    margin-top: rem(10px);
-    margin-bottom: 0;
+    @include my(rem(10) 0);
     border-radius: 50px;
     line-height: 1.35;
     letter-spacing: -0.04em;
-    background: getColor(red);
-    color: getColor(white);
-    @include fzp(12px, 10px 14px 8px);
+    background: get-color(red);
+    color: get-color(white);
+    @include fsp(12, 10 14 8);
 
     @include media('>=lg') {
       cursor: pointer;
       margin-top: 0;
       border-radius: 0;
-      @include fzp(22px, 13.8px 20px);
+      @include fsp(22, 13.8 20);
     }
 
     &:hover {
-      background: getColor(vividRed);
+      background: get-color(vividRed);
     }
 
     img {
-      width: rem(11.14px);
-      margin-left: rem(10px);
+      width: rem(11.14);
+      margin-left: rem(10);
 
       @include media('>=lg') {
-        width: rem(20px);
+        width: rem(20);
       }
     }
   }
@@ -193,7 +189,7 @@
   &__block--invalid {
     @include media('>=lg') {
       + button {
-        height: rem(60px);
+        height: rem(60);
         align-self: flex-start;
       }
     }

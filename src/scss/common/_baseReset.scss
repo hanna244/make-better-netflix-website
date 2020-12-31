@@ -7,36 +7,32 @@
 }
 
 .resetImg {
-  border: 0;
-  vertical-align: middle;
+  @include reset-img();
 }
 
 .rwdContent {
-  width: 100%;
-  height: auto;
+  @include rwd-content();
 }
 
 .resetList {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+  @include reset-list();
+}
+
+.resetButton {
+  @include reset-button();
+}
+
+.resetLink {
+  @include reset-link();
+}
+
+.resetAbbr {
+  @include reset-abbr();
 }
 
 .resetDl dt,
 .resetDl dd {
   margin-left: 0;
-}
-
-.resetButton {
-  user-select: none;
-  cursor: pointer;
-  border: 0;
-}
-
-.resetLink {
-  text-decoration: none;
-  color: inherit;
 }
 
 .resetAddress {

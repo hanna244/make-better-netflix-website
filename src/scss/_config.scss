@@ -1,11 +1,5 @@
-// em, rem 단위 기본 값 설정
-$base-em-size: 16px;
-$base-rem-size: 16px;
+@import '@euid/scss-mixins';
 
-// true 값일 경우, rem의 하위 호환성을 위한 px 대체 코드 추가
-$polyfill: false;
-
-//* -------------------------------------------------------------------------- */
 // 컬러 스킴 설정 (`컬러-이름: 값`을 임의로 추가해 사용)
 $colors: (
   red: #e50914,
@@ -21,8 +15,6 @@ $colors: (
   yellow: #f2ea17,
 );
 
-//* -------------------------------------------------------------------------- */
-
 // 중단점 설계 (import-media 라이브러리 활용) → 임의의 키워드 사용 가능
 $breakpoints: (
   md: em(640px),
@@ -30,3 +22,20 @@ $breakpoints: (
   x-lg: em(1300px),
   // lg에서 컨테이너의 너비가 1200px일 때 브라우저의 너비가 1300px이다. (style_report 참고)
 );
+
+/* custom mixin ------------------------------------------------------------- */
+@mixin font-and-line-height($size, $line-height: null, $weight: null) {
+  @include font(size $size weight $weight lh $line-height);
+}
+
+@mixin hide() {
+  display: none;
+}
+
+@mixin show($mode: block) {
+  display: $mode;
+}
+
+@mixin flex-center() {
+  @include flex-c(column wrap justify-content items-center);
+}

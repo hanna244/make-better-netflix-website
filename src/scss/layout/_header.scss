@@ -5,17 +5,18 @@
   @include position(fixed, top 0 right 0 left 0 z-index 100);
 
   .Container {
-    display: grid;
-    grid-template-columns: rem(74px) rem(46px);
-    justify-content: space-between;
-    align-items: center;
+    @include grid($cols: rem(74) rem(46));
+    @include content(space-between);
+    // justify-content: space-between;
+    @include items($align: center);
+    // align-items: center;
     text-align: center;
-    @include py(rem(22px));
+    @include p(y rem(22));
 
     @include media('>=lg') {
-      grid-template-columns: rem(140px) rem(85px);
-      @include my(rem(40px));
-      @include py(rem(11px));
+      grid-template-columns: rem(140) rem(85);
+      @include m(y rem(40));
+      @include p(y rem(11));
     }
   }
 }

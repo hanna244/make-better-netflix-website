@@ -1,12 +1,12 @@
 .HomeLink {
   @include my(0);
-  width: rem(74px);
-  height: rem(20px);
-  font-size: rem(10px);
+  width: rem(74);
+  height: rem(20);
+  font-size: rem(10);
 
   @include media('>=lg') {
-    width: rem(140px);
-    height: rem(38px);
+    width: rem(140);
+    height: rem(38);
   }
 
   a {

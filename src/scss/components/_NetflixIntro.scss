@@ -1,10 +1,9 @@
 .NetflixIntro {
   .Section {
-    padding-top: rem(20px);
-    padding-bottom: rem(80px);
+    @include py(rem(20) rem(80));
 
     @include media('>=lg') {
-      padding-top: rem(50px);
+      @include p(t rem(50));
     }
   }
 }

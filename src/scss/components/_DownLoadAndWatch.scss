@@ -1,77 +1,71 @@
 .downloadContent {
-  display: grid;
   position: absolute;
-  bottom: rem(16px);
+  bottom: 16px;
   left: 50%;
   width: rem(212px);
-  border: 1px solid getColor(gray);
+  border: 1px solid get-color(gray);
   border-radius: 5px;
-  background: getColor(black);
+  background: get-color(black);
   transform: translateX(-50%);
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr rem(113px) 1fr;
-  @include py(rem(6px));
-  @include px(rem(12px));
+  @include grid(1, 1fr rem(113) 1fr);
+  @include p(y rem(6) x rem(12));
 
   @include media('>=x-lg') {
-    width: rem(302px);
-    grid-template-columns: 1fr rem(147px) 1fr;
-    @include py(rem(12px));
-    @include px(rem(16px));
+    width: rem(302);
+    @include grid-append($cols: 1fr rem(147) 1fr);
+    @include p(y rem(12) x rem(16));
   }
 
   .Section__title {
     @include media('>=lg') {
-      max-width: rem(530px);
+      max-width: rem(530);
     }
 
     @include media('>=x-lg') {
-      max-width: rem(1200px);
+      max-width: rem(1200);
     }
   }
 
   .posterStrangerThings {
-    width: rem(30px);
+    width: rem(30);
     height: auto;
-    margin-right: rem(11px);
+    @include m(r rem(11));
 
     @include media('>=x-lg') {
-      width: rem(60px);
-      margin-right: rem(16px);
+      width: rem(60);
+      @include m(r rem(16));
     }
   }
 
   .downloadMessage {
-    margin-top: rem(8px);
-    margin-bottom: 0;
-    font-size: rem(10px);
-    font-weight: bold;
+    @include my(rem(8) 0);
+    @include font(size rem(10) weight bold);
 
     @include media('>=x-lg') {
-      margin-top: rem(24px);
+      @include m(t rem(24));
       font-size: rem(14px);
     }
   }
 
   .stateMessage {
-    margin-top: rem(1px);
+    @include m(t rem(1));
     letter-spacing: -0.04em;
-    color: getColor(blue);
-    @include font-and-line-height(8px, $line-height: 1.5);
+    color: get-color(blue);
+    @include font(size rem(8) weight 1.5);
 
     @include media('>=x-lg') {
-      margin-top: rem(2px);
-      font-size: rem(12px);
+      @include m(t rem(2));
+      font-size: rem(12);
     }
   }
 
   .downloadIcon {
-    margin-top: rem(5px);
+    @include m(t rem(5));
 
     @include media('>=x-lg') {
-      width: rem(47px);
+      width: rem(47);
       height: auto;
-      margin-top: rem(19px);
+      @include m(t rem(19));
     }
   }
 }

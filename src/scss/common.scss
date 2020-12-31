@@ -1,8 +1,11 @@
+@import './config';
+
 /* Modules, Base, App --------------------------------------------------------------------- */
 
-@import './modules/index';
-@include normalize;
+// @import './modules/index';
+// @include normalize;
 
+// euid 믹스인을 사용해도 되지만 현재 클래스 이름으로 각각의 공용 파일을 설정했기 때문에 common/index가 필요하다
 @import './common/index';
 
 @import './app';

@@ -8,21 +8,21 @@
     }
 
     @include media('>=lg') {
-      @include grid-append($cols: repeat(4, minmax(auto, rem(280px))));
+      @include grid-append($cols: repeat(4, minmax(auto, rem(280))));
     }
   }
 
   .InfoItem {
-    padding-bottom: em(13px);
-    color: getColor(gray);
+    padding-bottom: em(13);
+    color: get-color(gray);
 
     a {
       display: inline-block;
-      @include fzp(13px, 3px);
+      @include fsp(13, 3);
       line-height: 1.2;
 
       @include media('>=lg') {
-        font-size: rem(16px);
+        font-size: rem(16);
       }
     }
   }

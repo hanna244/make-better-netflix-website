@@ -2,18 +2,20 @@
   // select 네이티브 스타일 초기화
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  margin-top: rem(30px);
+
+  // @include appearance(none); none 기본값
+  @include appearance();
+  margin-top: rem(30);
   border: 1px solid #454545;
   border-radius: 2px;
-  @include fzp(16px, 12px 32px);
+  @include fsp(16, 12 32);
   line-height: 1.2;
-  background: url('../../assets/select_global.svg') no-repeat rem(8px) center,
-    url('../../assets/select_arrow.svg') no-repeat rem(84px) center,
-    getColor(black);
-  color: getColor(gray);
+  background: url('../../assets/select_global.svg') no-repeat rem(8) center,
+    url('../../assets/select_arrow.svg') no-repeat rem(84) center,
+    get-color(black);
+  color: get-color(gray);
 
   @include media('>=lg') {
-    margin-top: rem(80px);
+    margin-top: rem(80);
   }
 }

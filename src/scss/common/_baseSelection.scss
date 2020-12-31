@@ -1,10 +1,14 @@
-::selection {
-  background: getColor(darkgray);
-  color: getColor(yellow);
+@include selection() {
+  background: get-color(darkgray);
+  color: get-color(yellow);
 }
 
-img::selection,
-.Link::selection {
+@include selection(img) {
+  background: transparent;
+  color: inherit;
+}
+
+@include selection('.Link') {
   background: transparent;
   color: inherit;
 }

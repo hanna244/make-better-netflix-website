@@ -47,7 +47,7 @@
     /* main과 값이 다름 */
     border-radius: 5px
     color: getColor(white)
-    +fzp(16px, 25px 20px 14px)
+    +fsp(16px, 25px 20px 14px)
   
   input:focus + label
     font-size: rem(12px)
@@ -100,7 +100,7 @@
     line-height: 1
     font-weight: bold
     background: getColor(red)
-    @include fzp(16px, 15px 20px)
+    @include fsp(16px, 15px 20px)
 
     &:focus 
       background: getColor(vividRed)
@@ -108,7 +108,7 @@
 
     +media('>=lg') 
       margin-top: rem(30px)
-      +fzp(16px, 15px 168px)
+      +fsp(16px, 15px 168px)
 
 /* check box ---------------------------------------------------------------- */
 
