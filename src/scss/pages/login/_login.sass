@@ -1,15 +1,20 @@
+.body 
+  position: relative
+
 .main 
   +media('>=lg')  
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.68%, rgba(0, 0, 0, 0.3) 42.95%, rgba(0, 0, 0, 0.8) 79.3%) center / auto, url('../../assets/Cover.jpg') center / cover no-repeat
   
 .login
-  +Container(rem(375px), auto, rem(66px) 0)
+  +Container(rem(375px), auto, rem(66px) rem(40px))
+
   +media('>=lg')
-    +Container(rem(440px), auto, rem(160px) 0)
+    +Container(rem(440px), auto, rem(160px) rem(673px))
 
   &__container 
     background: rgba(1, 1, 1, 0.6)
     +px(rem(18px))
+
     +media('>=lg')    
       border: 1px solid #2D2D2D
       backdrop-filter: blur(4px)
@@ -18,9 +23,10 @@
       +px(rem(30px))
 
   &__headLine 
-    +font-and-line-height(20px, bold, 1.2)
-    +my(0)
     padding-top: rem(20px)
+    +my(0)
+    +font-and-line-height(20px, bold, 1.2)
+
     +media('>=lg')
       padding-top: rem(30px)
 
@@ -30,18 +36,18 @@
   position: relative
   
   label
+    transition: all 0.2s ease
+    letter-spacing: -0.04em
     +position(absolute, top 19px left 20px)
     +font-and-line-height(16px, null, 1.35)
-    letter-spacing: -0.04em
-    transition: all 0.2s ease
 
   input 
     width: 100%
     border: 0
     /* main과 값이 다름 */
     border-radius: 5px
-    +fzp(16px, 25px 20px 14px)
     color: getColor(white)
+    +fzp(16px, 25px 20px 14px)
   
   input:focus + label
     font-size: rem(12px)
@@ -52,6 +58,7 @@
 
   input:invalid
     border-bottom: 3px solid getColor(red)
+    color: getColor(red)
 
   &--dark
     label
@@ -61,12 +68,16 @@
       background: getColor(darkGray)
 
 .Form + [role="alert"]
+  display: none
+
+.Form--invalid + [role="alert"]
   display: block
   margin-top: rem(5px)
+  margin-left: rem(20px)
   letter-spacing: -0.04em
   color: getColor(red)
-  margin-left: rem(20px)
   +font-and-line-height(14px, bold, 1.35)
+
     
 .login
   &__email 
@@ -83,12 +94,13 @@
 .login
   .Link 
     display: block
+    margin-top: rem(6px)
     border-radius: 4px
+    text-align: center
     line-height: 1
     font-weight: bold
     background: getColor(red)
-    margin-top: rem(6px)
-    @include fzp(16px, 15px 147px)
+    @include fzp(16px, 15px 20px)
 
     &:focus 
       background: getColor(vividRed)
@@ -97,21 +109,164 @@
     +media('>=lg') 
       margin-top: rem(30px)
       +fzp(16px, 15px 168px)
+
+/* check box ---------------------------------------------------------------- */
+
+.CheckBox
+  position: relative
+
+  input
+    opacity: 0
+    height: rem(16px)
+    width: rem(16px)
+    left: 0
+    position: absolute
+    top: 0
   
+  label 
+    margin-left: rem(21px)
+
+  label::before 
+    content: ""
+    height: rem(16px)
+    width: rem(16px)
+    left: 0
+    position: absolute
+    top: 0
+    background: getColor(white)
+
+  label::after
+    content: ""
+    border: 4px solid getColor(darkGray)
+    border-left: 0
+    border-top: 0
+    border-radius: 3px
+    height: rem(13px)
+    left: 4px
+    opacity: 0
+    position: absolute
+    top: 0px
+    transform: rotate(45deg)
+    transition: opacity 0.2s ease-in-out
+    width: rem(8px)
+
+  input:checked + label::after 
+    opacity: 1
+
+  input:focus + label::before 
+    outline: none
+    box-shadow: 0 0 0 rem(3px) getColor(focus)
+
+/* saveAndHelp -------------------------------------------------------------- */
+
+.saveAndHelp
+  letter-spacing: -0.04em
+  color: getColor(lightGray)
+  +flex-container(row nowrap justify-between)
+  +py(rem(5px) 0)
+  +font-and-line-height(13px, $line-height: 1.35)
+
+  a:hover 
+    color: getColor(white)
+
+  +media('>=lg')
+    +py(rem(10px) 0)
+
+/* Info --------------------------------------------------------------------- */
+
+.loginInfo
+  color: getColor(lightGray)
+  +my(rem(20px) 0)
+  +font(size rem(12px) lh 1.75)
+
+  &__facebook
+    display: flex
+    color: getColor(gray)
+
+    img
+      margin-right: rem(4px)
+    
+    a
+      align-self: center
+      letter-spacing: -0.04em
+      line-height: 1.75
+      cursor: pointer
+      +my(0)
+
+    a:hover 
+      color: getColor(white)
+
+  &__signup 
+    a
+      margin-left: rem(3px)
+      color: getColor(white)
+      cursor: pointer
+    
+    a:hover 
+      text-decoration: underline
+
+  &__captcha 
+    padding-bottom: rem(20px)
+    +media('>=lg')
+      padding-bottom: rem(30px)
+      
+
+    .lgLineBreak 
+      display: none
+      +media('>=lg')
+        display: block
+    
+    .mdLineBreak
+      +media('>=lg')
+        display: none
+    
+    .captchaButton
+      border: 0
+      background: inherit
+      color: getColor(blue)
+      padding: 0
+      cursor: help
+    
+    .captchaButton:hover
+      text-decoration: underline
 
   
+.netflixFooter 
+  +Container(null, rem(18px), rem(20px))
+  +media('>=lg')
+    +px(rem(18px))
+    +position(absolute, right 0 bottom 0 left 0 z-index 100)
+    position: absolute !important
+    background: rgba(1, 1, 1, 0.5)
+    backdrop-filter: blur(4px)
 
+    
+  .addressInfo
+    width: 75%
+  
+  .Info 
+    .InfoList
+      +grid($cols: repeat(2, minmax(0, rem(149px))))
+
+      +media('>=md')
+        +grid-append($cols: repeat(4, minmax(0, rem(150px))))
+
+  .Dropdown
+    +media('>=lg')
+      margin-top: rem(50px)
+
+  .addressInfo 
+    +media('>=lg')
+      margin-top: rem(40px)
+      
+    
+      
+    
+      
+
+
+  
         
+      
 
 
-// $OurStory-mx: 30px    
-// $OurStory-py: 20px    
-// $Intro-mx: 10px    
-// $Intro-py: 15px    
-
-
-
-// 변수로 제어하는 것은 좋은데 과연 자주 변경되는 값인가? 
-// 데이터를 분리해서 생각하는 것은 좋다, 하지만 데이터를 분리할 이유가 있을까? 
-// 데이터를 분리한다는 것은 자주 값이 변경되기 때문이다. 
-// 문제 → 만약 회사가 Pure CSS를 사용한다면 이런 방식을 사용할 수 없다. 

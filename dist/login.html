@@ -15,8 +15,8 @@
     <script src="../src/utils/validStateDetection.js" defer></script>
     <!-- <script src="./javascript/dev.js" defer></script> -->
 </head>
-<body> 
-  <header class="header">
+<body class="body"> 
+  <header class="header header--fixed">
     <div class="Container">
       <h1 class="brand HomeLink"><a class="resetLink" href="/"><img class="resetImg rwdContent" src="./assets/Logo.svg" alt="홈링크" width="870" height="236" /></a></h1>
       <a class="Link resetLink" href="#-로그인">로그인</a>
@@ -28,8 +28,10 @@
       <div class="login__container">
         <h2 class="login__headLine">로그인</h2>
         <!-- form 경고 메세지의 공간을 확보하기 위해서 container로 묶음 -->
+        <!-- Form--valid 상태 또는 invalid 상태 클래스 존재 -->
         <div class="login__email Form__container">
           <div class="Form__email Form Form--dark">
+          <!-- <div class="emailContainer__block"> -->
             <input type="email" id="userEmail" />
             <label for="userEmail__login">이메일 주소 또는 폰 번호</label>
           </div>
@@ -68,8 +70,7 @@
   </main>
   <!-- main에서 사용하던 Section 컴포넌트를 제거하고 Container 믹스인으로 블럭의 공간을 적용 -->
   <footer class="netflixFooter">
-    <p class="question">질문이 있으신가요?</p>
-    <span class="phoneNumber"><b>문의 전화</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span>
+    <p class="question" role="text">질문이 있으신가요?<br /><b> 문의 전화</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></p>
     <nav class="Info">
       <h2 class="a11yHidden">넷플릭스 서비스</h2>
       <ul class="InfoList resetList">
@@ -87,14 +88,14 @@
       <option class="DropdownItem" value="english">English</option>
       <option class="DropdownItem" value="chinese">中文</option>
     </select>
-    <h2 class="addressInfoHead">Netflix 대한민국 <span class="a11yHidden">연락 정보</span></h2>
+    <h2 class="addressInfoHead a11yHidden">연락 정보</h2>
     <address class="addressInfo resetAddress">
       <span>넷플릭스서비시스코리아 유한회사</span><br />
       <span><b>통신판매업신고번호</b>: 제2018-서울종로-0426호</span><br />
       <span><b>전화번호</b>: <a class="resetLink" href="tel:00-308-321-0058">00-308-321-0058</a></span><br />
       <span><b>대표</b>: 레지널드 숀 톰프슨</span><br />
       <span><b>이메일 주소</b>: <a class="resetLink" href="mailto:korea@netflix.com">korea@netflix.com</a></span><br />
-      <span><b>주소</b>: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</span><br />
+      <span><b>주소</b>: 대한민국 서울특별시 종로구 우정국로 26,<br /> 센트로폴리스 A동 20층 우편번호 03161</span><br />
       <span><b>클라우드 호스팅</b>: Amazon Web Services Inc.</span><br />
       <a class="resetLink" href="http://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2018300016930200431&pageUnit=10&searchCnd=bup_nm&searchKrwd=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4&pageIndex=1"
         target="_blank" rel="noopener noreferrer">공정거래위원회 통신 판매사업자 정보 보기</a>
