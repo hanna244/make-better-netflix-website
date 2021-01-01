@@ -643,4 +643,138 @@
   grid-row: 1;
 }
 
+.Accordion {
+  max-width: 90rem;
+  background: #303030;
+}
+.Accordion .AccordionHead {
+  position: relative;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7333333333em 0.8em;
+  font-size: 0.9375rem;
+}
+@media (min-width: 60em) {
+  .Accordion .AccordionHead {
+    border-bottom: 3px solid #010101;
+    font-size: 2rem;
+  }
+}
+.Accordion .AccordionButton {
+  width: 100%;
+  background: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+.Accordion .AccordionButton img {
+  pointer-events: none;
+  width: 0.5625rem;
+  height: auto;
+  margin-right: 0.5625rem;
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+@media (min-width: 60em) {
+  .Accordion .AccordionButton img {
+    width: 1.40625rem;
+    margin-right: 2rem;
+  }
+}
+.Accordion .AccordionBody {
+  overflow: hidden;
+  height: 0;
+  border-top: 2px solid #010101;
+  border-bottom: 5px solid #010101;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+@media (min-width: 60em) {
+  .Accordion .AccordionBody {
+    font-size: 1.625rem;
+  }
+}
+.Accordion .AccordionBody p {
+  margin-bottom: 0px;
+}
+.Accordion .AccordionBody P:first-child {
+  margin-top: 0px;
+}
+.Accordion .AccordionItem--open img {
+  transform: rotate(45deg);
+}
+.Accordion .AccordionItem--open .AccordionBody {
+  height: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+@media (min-width: 60em) {
+  .Accordion .AccordionItem--open .AccordionBody {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+.NetflixFAQ {
+  padding-top: 1.25rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 60em) {
+  .NetflixFAQ {
+    padding-top: 3.125rem;
+    padding-bottom: 5.875rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.NetflixFAQ__title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-top: 3.75rem;
+  margin-bottom: 0px;
+}
+@media (min-width: 60em) {
+  .NetflixFAQ__title {
+    font-size: 3rem;
+    margin-top: 3.375rem;
+  }
+}
+.NetflixFAQ__contianer {
+  margin-top: 1.875rem;
+  margin-bottom: 0px;
+}
+.NetflixFAQ .Promotion {
+  margin-top: 1.4375rem;
+}
+@media (min-width: 60em) {
+  .NetflixFAQ .Promotion {
+    margin-top: 3.75rem;
+  }
+}
+.NetflixFAQ .Promotion__description {
+  font-weight: normal;
+}
+.NetflixFAQ .Promotion .emailContainer {
+  margin-top: 1.625rem;
+  margin-bottom: 0px;
+}
+
 /*# sourceMappingURL=home.css.map */

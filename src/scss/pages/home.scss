@@ -1,7 +1,5 @@
-@import '../config';
-
 //* Module, Config ----------------------------------------------------------- */
-// @import '../modules/index';
+@import '../config';
 
 //* Layout ------------------------------------------------------------------- */
 @import '../layout/header';
@@ -10,4 +8,4 @@
 //* Section ------------------------------------------------------------------ */
 @import './home/ourSroty';
 @import './home/netflixIntro';
-// @import './home/netflixFAQ';
+@import './home/netflixFAQ';

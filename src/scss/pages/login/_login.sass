@@ -6,29 +6,29 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.68%, rgba(0, 0, 0, 0.3) 42.95%, rgba(0, 0, 0, 0.8) 79.3%) center / auto, url('../../assets/Cover.jpg') center / cover no-repeat
   
 .login
-  +Container(rem(375px), auto, rem(66px) rem(40px))
+  +Container(rem(375), auto, rem(66) rem(40))
 
   +media('>=lg')
-    +Container(rem(440px), auto, rem(160px) rem(673px))
+    +Container(rem(440), auto, rem(160) rem(673))
 
   &__container 
     background: rgba(1, 1, 1, 0.6)
-    +px(rem(18px))
+    +p(x rem(18))
 
     +media('>=lg')    
       border: 1px solid #2D2D2D
       backdrop-filter: blur(4px)
       border-radius: 6px
-      max-width: rem(440px)
-      +px(rem(30px))
+      max-width: rem(440)
+      +p(x rem(30))
 
   &__headLine 
-    padding-top: rem(20px)
+    +p(t rem(20px))
     +my(0)
-    +font-and-line-height(20px, bold, 1.2)
+    +font(size rem(20) weight bold lh 1.2)
 
     +media('>=lg')
-      padding-top: rem(30px)
+      +p(t rem(30))
 
 /* Form --------------------------------------------------------------------- */
 
@@ -36,79 +36,77 @@
   position: relative
   
   label
-    transition: all 0.2s ease
+    transition: all 0.2s ease(in-sine)
     letter-spacing: -0.04em
     +position(absolute, top 19px left 20px)
-    +font-and-line-height(16px, null, 1.35)
+    +font(size rem(16) lh 1.35)
 
   input 
     width: 100%
     border: 0
     /* main과 값이 다름 */
     border-radius: 5px
-    color: getColor(white)
-    +fsp(16px, 25px 20px 14px)
+    color: get-color(white)
+    +fsp(16, 25 20 14)
   
   input:focus + label
-    font-size: rem(12px)
     +position(absolute, top 7px left 20px)
+    +font(size rem(12))
 
   input:valid
-    color: getColor(white)
+    color: get-color(white)
 
   input:invalid
-    border-bottom: 3px solid getColor(red)
-    color: getColor(red)
+    border-bottom: 3px solid get-color(red)
+    color: get-color(red)
 
   &--dark
     label
-      color: getColor(lightGray)
+      color: get-color(lightGray)
 
     input 
-      background: getColor(darkGray)
+      background: get-color(darkGray)
 
 .Form + [role="alert"]
   display: none
 
 .Form--invalid + [role="alert"]
   display: block
-  margin-top: rem(5px)
-  margin-left: rem(20px)
   letter-spacing: -0.04em
-  color: getColor(red)
-  +font-and-line-height(14px, bold, 1.35)
+  color: get-color(red)
+  +m(t rem(5) l rem(20))
+  +font(size rem(14) weight bold lh 1.35)
 
     
 .login
   &__email 
-    margin-top: rem(30px)
+    +m(t rem(30))
     +media('>=lg')
-      margin-top: rem(20px)
+      +m(t rem(20))
       
 
   &__password 
-    margin-top: rem(20px)
+    +m(t rem(20))
 
 /* login Link --------------------------------------------------------------- */
 
 .login
   .Link 
     display: block
-    margin-top: rem(6px)
     border-radius: 4px
-    text-align: center
-    line-height: 1
-    font-weight: bold
-    background: getColor(red)
-    @include fsp(16px, 15px 20px)
+    background: get-color(red)
+    +m(t rem(6))
+    +fsp(16, 15 20)
+    +font(lh 1 weight bold)
+    +text(align center)
 
     &:focus 
-      background: getColor(vividRed)
+      background: get-color(vividRed)
     
 
     +media('>=lg') 
-      margin-top: rem(30px)
-      +fsp(16px, 15px 168px)
+      +m(t rem(30))
+      +fsp(16, 15 168)
 
 /* check box ---------------------------------------------------------------- */
 
@@ -116,99 +114,94 @@
   position: relative
 
   input
-    opacity: 0
-    height: rem(16px)
-    width: rem(16px)
-    left: 0
     position: absolute
-    top: 0
+    height: rem(16)
+    width: rem(16)
+    opacity: 0
+    +position(absolute, top 0 left 0)
   
   label 
-    margin-left: rem(21px)
+    +m(l rem(21))
 
   label::before 
     content: ""
-    height: rem(16px)
-    width: rem(16px)
-    left: 0
-    position: absolute
-    top: 0
-    background: getColor(white)
+    height: rem(16)
+    width: rem(16)
+    background: get-color(white)
+    +position(absolute, top 0 left 0)
 
   label::after
     content: ""
-    border: 4px solid getColor(darkGray)
+    border: 4px solid get-color(darkGray)
     border-left: 0
     border-top: 0
     border-radius: 3px
-    height: rem(13px)
-    left: 4px
-    opacity: 0
-    position: absolute
-    top: 0px
-    transform: rotate(45deg)
-    transition: opacity 0.2s ease-in-out
+    height: rem(13)
     width: rem(8px)
+    opacity: 0
+    transform: rotate(45deg)
+    transition: opacity 0.2s ease(inout-sine)
+    +position(absolute, top 0 left 4px)
 
   input:checked + label::after 
     opacity: 1
 
   input:focus + label::before 
     outline: none
-    box-shadow: 0 0 0 rem(3px) getColor(focus)
+    box-shadow: 0 0 0 rem(3) get-color(focus)
 
 /* saveAndHelp -------------------------------------------------------------- */
 
 .saveAndHelp
-  letter-spacing: -0.04em
-  color: getColor(lightGray)
+  color: get-color(lightGray)
   +flex-container(row nowrap justify-between)
   +py(rem(5px) 0)
-  +font-and-line-height(13px, $line-height: 1.35)
+  +text(ls -0.04em)
+  +font(size rem(13) lh 1.35)
 
   a:hover 
-    color: getColor(white)
+    color: get-color(white)
 
   +media('>=lg')
-    +py(rem(10px) 0)
+    +py(rem(10) 0)
 
 /* Info --------------------------------------------------------------------- */
 
 .loginInfo
-  color: getColor(lightGray)
-  +my(rem(20px) 0)
-  +font(size rem(12px) lh 1.75)
+  color: get-color(lightGray)
+  +my(rem(20) 0)
+  +font(size rem(12) lh 1.75)
 
   &__facebook
     display: flex
-    color: getColor(gray)
+    color: get-color(gray)
 
     img
-      margin-right: rem(4px)
+      +m(r rem(4))
     
     a
       align-self: center
-      letter-spacing: -0.04em
-      line-height: 1.75
       cursor: pointer
+      +text(ls -0.04em)
+      +font(lh 1.75)
       +my(0)
 
     a:hover 
-      color: getColor(white)
+      color: get-color(white)
 
   &__signup 
     a
-      margin-left: rem(3px)
-      color: getColor(white)
       cursor: pointer
+      color: get-color(white)
+      +m(l rem(3))
     
     a:hover 
       text-decoration: underline
 
   &__captcha 
-    padding-bottom: rem(20px)
+    +p(b rem(20))
     +media('>=lg')
-      padding-bottom: rem(30px)
+      +p(b rem(30))
       
 
     .lgLineBreak 
@@ -221,24 +214,24 @@
         display: none
     
     .captchaButton
-      border: 0
-      background: inherit
-      color: getColor(blue)
       padding: 0
+      border: 0
       cursor: help
+      color: get-color(blue)
+      background: inherit
     
     .captchaButton:hover
       text-decoration: underline
 
-  
+// backdrop-filter 속성 참고 https://developer.mozilla.org/ko/docs/Web/CSS/backdrop-filter
 .netflixFooter 
-  +Container(null, rem(18px), rem(20px))
+  +Container(null, rem(18), rem(20))
   +media('>=lg')
-    +px(rem(18px))
-    +position(absolute, right 0 bottom 0 left 0 z-index 100)
-    position: absolute !important
-    background: rgba(1, 1, 1, 0.5)
+    position: absolute
     backdrop-filter: blur(4px)
+    background: rgba(1, 1, 1, 0.5)
+    +px(rem(18))
+    +position(absolute, right 0 bottom 0 left 0 z-index 100)
 
     
   .addressInfo
@@ -246,18 +239,18 @@
   
   .Info 
     .InfoList
-      +grid($cols: repeat(2, minmax(0, rem(149px))))
+      +grid($cols: repeat(2, minmax(0, rem(149))))
 
       +media('>=md')
-        +grid-append($cols: repeat(4, minmax(0, rem(150px))))
+        +grid-append($cols: repeat(4, minmax(0, rem(150))))
 
   .Dropdown
     +media('>=lg')
-      margin-top: rem(50px)
+      +m(t rem(50))
 
   .addressInfo 
     +media('>=lg')
-      margin-top: rem(40px)
+      +m(t rem(40))
       
     
       

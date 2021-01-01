@@ -15,21 +15,21 @@
   }
 
   .AccordionButton {
-    @include flex-c(row nowrap justify-end items-center);
     width: 100%;
     background: inherit;
+    @include flex-c(row nowrap justify-end items-center);
     @include position(absolute, top 0 right 0 bottom 0 z-index 100);
 
     img {
       pointer-events: none;
-      width: rem(9px);
+      width: rem(9);
       height: auto;
-      margin-right: rem(9px);
-      transition: all 0.3s ease;
+      margin-right: rem(9);
+      transition: all 0.3s ease(in-sine);
 
       @include media('>=lg') {
-        width: rem(22.5px);
-        margin-right: rem(32px);
+        width: rem(22.5);
+        @include m(r rem(32));
       }
     }
   }
@@ -40,19 +40,19 @@
     border-top: 2px solid get-color(black);
     border-bottom: 5px solid get-color(black);
     padding: 0;
-    transition: all 0.3s ease;
-    @include font-and-line-height(13px, $line-height: 1.7);
+    transition: all 0.3s ease(in-sine);
+    @include font(size rem(13) lh 1.7);
 
     @include media('>=lg') {
-      font-size: rem(26px);
+      font-size: rem(26);
     }
 
     p {
-      margin-bottom: 0;
+      @include m(b 0);
     }
 
     P:first-child {
-      margin-top: 0;
+      @include m(t 0);
     }
   }
 
@@ -63,12 +63,12 @@
 
     .AccordionBody {
       height: 100%;
-      @include px(12px);
-      @include py(11px);
+      @include px(12);
+      @include py(11);
 
       @include media('>=lg') {
-        @include px(30px);
-        @include py(21px);
+        @include px(30);
+        @include py(21);
       }
     }
   }
