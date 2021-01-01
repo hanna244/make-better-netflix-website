@@ -39,3 +39,9 @@ $breakpoints: (
 @mixin flex-center() {
   @include flex-c(column wrap justify-content items-center);
 }
+
+@mixin Container($width: null, $mx-value: null, $py-value: null) {
+  max-width: $width;
+  @include mx($mx-value);
+  @include py($py-value);
+}
