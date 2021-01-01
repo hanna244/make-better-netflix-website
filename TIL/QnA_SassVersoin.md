@@ -15,7 +15,7 @@
 
 ## Q5. 질문
 
-`fzp` `mixin`을 사용할 때 `padding`에 `소수점px`을 입력해도 괜찮나요? 
+`fsp` `mixin`을 사용할 때 `padding`에 `소수점px`을 입력해도 괜찮나요? 
 
 <details>
   <summary>A5. 답변</summary>

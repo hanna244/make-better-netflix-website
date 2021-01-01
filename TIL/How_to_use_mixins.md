@@ -2,7 +2,7 @@
 포트폴리오에 사용된 mixin 라이브러리의 사용 방법을 정리합니다.
 
 
-## fzp (fontsize-padding)
+## fsp (fontsize-padding)
 
 `link`와 같이 `padding`을 `fontsize`에 따라 가변되게 하기 위해 `em`단위를 사용해야 한다.
 
