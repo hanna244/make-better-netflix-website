@@ -17,6 +17,7 @@
   .AccordionButton {
     width: 100%;
     background: inherit;
+    border: 0;
     @include flex-c(row nowrap justify-end items-center);
     @include position(absolute, top 0 right 0 bottom 0 z-index 100);
 

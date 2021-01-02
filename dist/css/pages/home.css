@@ -667,6 +667,7 @@
 .Accordion .AccordionButton {
   width: 100%;
   background: inherit;
+  border: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
