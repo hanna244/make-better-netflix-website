@@ -1,9 +1,0 @@
-// 리스트 유틸리티
-
-@function first($list) {
-  @return nth($list, 1);
-}
-
-@function last($list) {
-  @return nth($list, length($list));
-}
