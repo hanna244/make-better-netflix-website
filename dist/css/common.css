@@ -1,7 +1,5 @@
-@charset "UTF-8";
 /* Modules, Base, App --------------------------------------------------------------------- */
 /* custom mixin ------------------------------------------------------------- */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -182,36 +180,6 @@ template {
   display: none;
 }
 
-/* 접근성 ---------------------------------------------------------------------- */
-.a11yHidden {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  clip-path: circle(0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-/* 위의 요소가 보이지 않더라도 포커스가 되었을 때 보인다. */
-.a11yHidden.focusable:focus {
-  overflow: visible;
-  position: static;
-  clip: auto;
-  width: auto;
-  height: auto;
-  margin: 0;
-  white-space: normal;
-}
-
-/* 박스 크기 조정 ----------------------------------------------------------------- */
-:root {
-  box-sizing: border-box;
-}
-
 body {
   box-sizing: border-box;
 }
@@ -225,54 +193,29 @@ body *::before, body *::after {
   box-sizing: inherit;
 }
 
-/* 포커스 적용한 경우 */
-:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.1875rem #2ede75;
+html {
+  font-size: 16px;
 }
 
-/* 마우스로 클릭했을 때 */
-:focus:not(:focus-visible) {
-  box-shadow: none;
-}
-
-/* 키보드로 포커싱 되어 화면에 표시 되어야 하는 경우 */
-:focus-visible {
-  box-shadow: 0 0 0 0.1875rem #2ede75;
-}
-
-button:focus-visible {
-  position: relative;
-  z-index: 100;
-}
-
-/* 사용자 정의 초기화 (reset) ------------------------------------------------------- */
-.resetBox {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-
-.resetImg {
+img {
   border: 0;
   vertical-align: middle;
 }
 
-.rwdContent {
-  max-width: 100%;
-  height: auto;
-}
-
-.resetList {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.resetButton {
+button {
   user-select: none;
   cursor: pointer;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}
+
+.resetBox {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 .resetLink {
@@ -280,29 +223,70 @@ button:focus-visible {
   color: inherit;
 }
 
-.resetAbbr {
-  cursor: help;
-  text-decoration: none;
+.restList {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
-.resetDl dt,
+.resetDl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .resetDl dd {
   margin-left: 0;
 }
 
-.resetAddress {
-  font-style: normal;
+.rwdImg {
+  max-width: 100%;
+  height: auto;
 }
 
-::-webkit-scrollbar {
-  cursor: pointer;
-  width: 0.625rem;
-  background: #010101;
+.rwdVideo {
+  max-width: 100%;
+  height: auto;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 3.125rem;
-  background: linear-gradient(90deg, transparent 0%, #e50914 40%, #e50914 20%, transparent);
+.rwdIframeWrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.rwdIframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.focusVisible:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 222, 117, 0.7);
+}
+.focusVisible:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+.focusVisible:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 222, 117, 0.7);
 }
 
 ::-moz-selection {
@@ -335,12 +319,52 @@ img::selection {
   color: inherit;
 }
 
+.resetAddress {
+  font-style: normal;
+}
+
+button:focus-visible {
+  position: relative;
+  z-index: 100;
+}
+
+body *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1875rem rgba(46, 222, 117, 0.7);
+}
+body *:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+body *:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.1875rem rgba(46, 222, 117, 0.7);
+}
+body * {
+  scrollbar-face-color: linear-gradient(90deg, transparent 0%, #e50914 40%, #e50914 20%, transparent);
+  scrollbar-track-color: #010101;
+}
+body * {
+  scrollbar-width: thin;
+  scrollbar-color: linear-gradient(90deg, transparent 0%, #e50914 40%, #e50914 20%, transparent) #010101;
+}
+body *::-webkit-scrollbar {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+body *::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, transparent 0%, #e50914 40%, #e50914 20%, transparent);
+  border-radius: 3.125rem;
+}
+body *::-webkit-scrollbar-track {
+  background: #010101;
+}
+
 body {
   background: #010101;
   color: #ffffff;
 }
 
-/* Global Components -------------------------------------------------------- */
 .Container {
   margin-right: 4.8%;
   margin-left: 4.8%;

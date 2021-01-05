@@ -1,12 +1,45 @@
 /* Modules, Base, App --------------------------------------------------------------------- */
 @import './config';
-@include normalize;
+@include initialize(true);
+
+@include selection() {
+  background: get-color(darkgray);
+  color: get-color(state-select);
+}
+
+@include selection('img, .Link') {
+  background: transparent;
+  color: inherit;
+}
+
+.resetAddress {
+  font-style: normal;
+}
+
+button:focus-visible {
+  @include relative(z 100);
+}
+
+body * {
+  @include focus-visible($thickness: rem(3));
+  @include scrollbar(
+    rem(10),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      get-color(red) 40%,
+      get-color(red) 20%,
+      transparent
+    ),
+    rem(50),
+    get-color(black)
+  );
+}
 
 // euid 믹스인을 사용해도 되지만 현재 클래스 이름으로 각각의 공용 파일을 설정했기 때문에 common/index가 필요하다
-@import './common/index';
 
 @import './app';
 
-/* Global Components -------------------------------------------------------- */
+// /* Global Components -------------------------------------------------------- */
 @import './components/Container';
 @import './components/Divider';

@@ -10,30 +10,21 @@ $colors: (
   gray: #757575,
   lightGray: #b5b5b5,
   white: #ffffff,
-  focus: #2ede75,
-  // select color
-  yellow: #f2ea17,
+  state-focus: #2ede75,
+  state-select: #f2ea17,
 );
 
 // 중단점 설계 (import-media 라이브러리 활용) → 임의의 키워드 사용 가능
 $breakpoints: (
-  md: em(640px),
-  lg: em(960px),
-  x-lg: em(1300px),
+  md: em(640),
+  lg: em(960),
+  x-lg: em(1300),
   // lg에서 컨테이너의 너비가 1200px일 때 브라우저의 너비가 1300px이다. (style_report 참고)
 );
 
 /* custom mixin ------------------------------------------------------------- */
 @mixin font-and-line-height($size, $line-height: null, $weight: null) {
   @include font(size $size weight $weight lh $line-height);
-}
-
-@mixin hide() {
-  display: none;
-}
-
-@mixin show($mode: block) {
-  display: $mode;
 }
 
 @mixin flex-center() {

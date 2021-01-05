@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* custom mixin ------------------------------------------------------------- */
 .HomeLink {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   width: 4.625rem;
   height: 1.25rem;
   font-size: 0.625rem;
@@ -37,10 +37,10 @@
 
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .header .Container {
   display: grid;
@@ -125,7 +125,7 @@
 .netflixFooter .question,
 .netflixFooter .phoneNumber {
   margin-top: 2.5rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 20;
   line-height: 1.4;
@@ -144,7 +144,7 @@
 }
 .netflixFooter .addressInfoHead {
   margin-top: 1.875rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 16;
   line-height: 1.2;
   color: #757575;
@@ -212,8 +212,8 @@
 }
 .login__headLine {
   padding-top: 1.25rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -375,7 +375,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 0.3125rem;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   word-break: keep-all;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -389,7 +389,7 @@
 @media (min-width: 60em) {
   .saveAndHelp {
     padding-top: 0.625rem;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
@@ -397,7 +397,7 @@
 .loginInfo {
   color: #b5b5b5;
   margin-top: 1.25rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 0.75rem;
   line-height: 1.75;
 }
@@ -416,8 +416,8 @@
   overflow-wrap: break-word;
   letter-spacing: -0.04em;
   line-height: 1.75;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .loginInfo__facebook a:hover {
   color: #ffffff;
@@ -476,10 +476,10 @@
     padding-right: 1.125rem;
     padding-left: 1.125rem;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
     z-index: 100;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 .netflixFooter .addressInfo {
