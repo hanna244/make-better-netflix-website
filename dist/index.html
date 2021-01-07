@@ -14,6 +14,7 @@
     <script src="./polyfill/Array.from.js"></script>
     <script src="./polyfill/Element.closest.js"></script>
     <script src="../src/js/accodionControl.js" defer></script>
+    <script src="../src/js/detectScrollPosition.js" defer></script>
     <!-- <script src="../src/utils/validStateDetection.js" defer></script> -->
     <!-- 사용자가 작성하는 로직 코드가 라이브러리에 의존한다면? 라이브러리 코드를 먼저 호출해야 한다. -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -22,7 +23,7 @@
     <script src="../src/utils/validStateDetection_jQuery.js" defer></script>
 </head>
 <body> 
-  <header class="header">
+  <header class="header header--fixed">
     <div class="Container">
       <h1 class="brand HomeLink"><a class="resetLink" href="/"><img class="resetImg rwdImg" src="./assets/Logo.svg" alt="홈링크" width="870" height="236" /></a></h1>
       <a class="Link resetLink" href="./login.html">로그인</a>
