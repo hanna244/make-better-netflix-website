@@ -1,6 +1,8 @@
 /* Section 스타일링 ------------------------------------------------------------ */
 
 .Section {
+  position: relative; // Divider 적용을 위한 코드
+
   @include m(x rem(18));
 
   @include media('>=lg') {

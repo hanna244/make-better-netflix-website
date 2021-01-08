@@ -1,3 +1,4 @@
-.Divider {
-  border-bottom: solid rem(4) get-color(DarkGray);
+.Divider::before {
+  content: '';
+  border-top: solid rem(4) get-color(DarkGray);
 }

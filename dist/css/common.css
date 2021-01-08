@@ -319,6 +319,10 @@ img::selection {
   color: inherit;
 }
 
+.resetButton {
+  border: 0;
+}
+
 .resetAddress {
   font-style: normal;
 }
@@ -382,8 +386,18 @@ body {
   }
 }
 
-.Divider {
-  border-bottom: solid 0.25rem #303030;
+.Divider::before {
+  content: "";
+  border-top: solid 0.25rem #303030;
+}
+
+.Divider::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-right: -70%;
+  margin-left: -70%;
 }
 
 /*# sourceMappingURL=common.css.map */
