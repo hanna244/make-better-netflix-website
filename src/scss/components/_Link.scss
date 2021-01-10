@@ -1,6 +1,6 @@
 .Link {
   border-radius: 3px;
-  background: grid-template-columns(red);
+  background: get-color(red);
   @include font(lh 1 weight bold);
   @include fsp(11, 5.5 7.5);
 
