@@ -12,6 +12,10 @@
   color: inherit;
 }
 
+.resetButton {
+  border: 0;
+}
+
 .resetAddress {
   font-style: normal;
 }
@@ -43,3 +47,10 @@ body * {
 // /* Global Components -------------------------------------------------------- */
 @import './components/Container';
 @import './components/Divider';
+
+// conponent
+
+.Divider::before {
+  @include absolute(top 0 right 0 left 0);
+  @include mx(-70%);
+}
