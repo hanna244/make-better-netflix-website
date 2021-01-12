@@ -19,7 +19,7 @@
 
 .Link {
   border-radius: 3px;
-  background: grid-template-columns(red);
+  background: #e50914;
   font-weight: bold;
   line-height: 1;
   padding: 0.5em 0.6818181818em;
@@ -35,13 +35,6 @@
   background: #ff000d;
 }
 
-.header {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  left: 0;
-}
 .header .Container {
   display: grid;
   grid-template-columns: 4.625rem 2.875rem;
@@ -59,6 +52,29 @@
     padding-top: 0.6875rem;
     padding-bottom: 0.6875rem;
   }
+}
+.header--fixed {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header--fixed::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: -3rem;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 55%, rgba(0, 0, 0, 0) 90%);
+  transition: opacity 0.4s ease-out;
+}
+
+.scrolling--show::before {
+  opacity: 1;
 }
 
 .Info .InfoList {
@@ -538,6 +554,7 @@
 
 /* Section 스타일링 ------------------------------------------------------------ */
 .Section {
+  position: relative;
   margin-left: 1.125rem;
   margin-right: 1.125rem;
 }
