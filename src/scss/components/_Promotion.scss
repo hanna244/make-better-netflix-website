@@ -1,8 +1,10 @@
 .Promotion {
   // OurStory grid 레이아웃에 대한 속성
-  @include row(3);
-  @include col('1/-1');
-  // @include col(se, 1 -1);
+  @include grid-item(3, span full);
+  // 다시 보기
+  // @include row(3);
+  // @include col('1/-1');
+  // // @include col(se, 1 -1);
   @include media('>=lg') {
     @include p(b rem(40));
   }

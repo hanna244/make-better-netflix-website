@@ -1,14 +1,16 @@
 .Info {
   .InfoList {
-    @include grid($cols: 2);
+    @include grid-c($cols: 2);
     @include auto-cols(fr); /* 유지 보수를 위해 설정 */
 
     @include media('>=md') {
-      @include grid-append($cols: 3);
+      @include grid-container-append($cols: 3);
     }
 
     @include media('>=lg') {
-      @include grid-append($cols: repeat(4, minmax(auto, rem(280))));
+      // 다시 보기
+      @include grid-container-append($cols: 4);
+      // @include grid-container-append($cols: repeat(4, minmax(auto, rem(280))));
     }
   }
 

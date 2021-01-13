@@ -7,12 +7,14 @@
   border-radius: 5px;
   background: get-color(black);
   transform: translateX(-50%);
-  @include grid(1, 1fr rem(113) 1fr);
+  // 다시 보기
+  // @include grid-c(1, 1fr rem(113) 1fr);
   @include p(y rem(6) x rem(12));
 
   @include media('>=x-lg') {
     width: rem(302);
-    @include grid-append($cols: 1fr rem(147) 1fr);
+    // 다시 보기
+    // @include grid-container-append($cols: 1fr rem(147) 1fr);
     @include p(y rem(12) x rem(16));
   }
 

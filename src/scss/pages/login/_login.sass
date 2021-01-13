@@ -239,10 +239,14 @@
   
   .Info 
     .InfoList
-      +grid($cols: repeat(2, minmax(0, rem(149))))
+      // 다시 보기
+      +grid-c($cols: 2)
+      /* +grid-c($cols: repeat(2, minmax(0, rem(149)))) */
 
       +media('>=md')
-        +grid-append($cols: repeat(4, minmax(0, rem(150))))
+        // 다시 보기 
+        +grid-container-append($cols: 4)
+        /* +grid-container-append($cols: repeat(4, minmax(0, rem(150)))) */
 
   .Dropdown
     +media('>=lg')
