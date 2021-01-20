@@ -7,8 +7,8 @@
   border-radius: 5px;
   background: get-color(black);
   transform: translateX(-50%);
-  // 다시 보기
-  // @include grid-c(1, 1fr rem(113) 1fr);
+  display: flex;
+  align-items: center;
   @include p(y rem(6) x rem(12));
 
   @include media('>=x-lg') {
@@ -40,11 +40,12 @@
   }
 
   .downloadMessage {
-    @include my(rem(8) 0);
+    flex: 1;
+    // @include my(rem(8) 0);
     @include font(size rem(10) weight bold);
 
     @include media('>=x-lg') {
-      @include m(t rem(24));
+      // @include m(t rem(24));
       font-size: rem(14px);
     }
   }
@@ -62,12 +63,12 @@
   }
 
   .downloadIcon {
-    @include m(t rem(5));
+    // @include m(t rem(5));
 
     @include media('>=x-lg') {
       width: rem(47);
       height: auto;
-      @include m(t rem(19));
+      // @include m(t rem(19));
     }
   }
 }
