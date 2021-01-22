@@ -12,6 +12,12 @@
   color: inherit;
 }
 
+.resetList {
+  list-style: none;
+  padding-left: 0;
+  @include m(y 0);
+}
+
 .resetButton {
   border: 0;
 }
