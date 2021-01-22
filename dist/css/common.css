@@ -230,10 +230,6 @@ abbr[title] {
   list-style-type: none;
 }
 
-.resetDl {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 .resetDl dd {
   margin-left: 0;
 }
@@ -384,11 +380,6 @@ body {
   .Container {
     max-width: 75rem;
   }
-}
-
-.Divider::before {
-  content: "";
-  border-top: solid 0.25rem #303030;
 }
 
 .Divider::before {
