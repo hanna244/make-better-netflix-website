@@ -2,7 +2,7 @@
   @include my(0);
   width: rem(74);
   height: rem(20);
-  font-size: rem(10);
+  font-size: rem(20);
 
   @include media('>=lg') {
     width: rem(140);

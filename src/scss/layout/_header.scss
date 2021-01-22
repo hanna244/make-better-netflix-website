@@ -3,13 +3,9 @@
 
 .header {
   .Container {
-    // 다시 확인
-    @include grid-c($cols: rem(74));
-    // @include grid-c($cols: rem(74) rem(46));
-    @include content(space-between);
-    // justify-content: space-between;
-    @include items($align: center);
-    // align-items: center;
+    @include flex-container(row nowrap justify-between);
+    // @include items($align: center);
+    align-items: center !important;
     text-align: center;
     @include p(y rem(22));
 
@@ -41,18 +37,6 @@
     );
     transition: opacity 0.4s ease-out;
   }
-
-  // &--fixed::before {
-  //   content: '';
-  //   @include absolute(top 0 right 0 left 0 z-index -1);
-  //   background: linear-gradient(
-  //     180deg,
-  //     rgba(0, 0, 0, 0.8) 10%,
-  //     rgba(0, 0, 0, 0.6) 50%,
-  //     rgba(0, 0, 0, 0) 90%
-  //   );
-  //   opacity: 0;
-  // }
 }
 
 .scrolling--show::before {
