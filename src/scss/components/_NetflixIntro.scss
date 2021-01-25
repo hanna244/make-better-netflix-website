@@ -1,8 +1,11 @@
 .NetflixIntro {
   .Section {
+    display: flex;
+    flex-flow: column nowrap;
     @include py(rem(20) rem(80));
 
     @include media('>=lg') {
+      flex-flow: row nowrap;
       @include p(t rem(50));
     }
   }

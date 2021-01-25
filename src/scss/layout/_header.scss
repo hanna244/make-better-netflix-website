@@ -3,16 +3,12 @@
 
 .header {
   .Container {
-    @include flex-container(row nowrap justify-between);
-    // @include items($align: center);
-    align-items: center !important;
-    text-align: center;
+    @include flex-container(row nowrap justify-between items-center);
     @include p(y rem(22));
 
     @include media('>=lg') {
-      grid-template-columns: rem(140) rem(85);
-      @include m(y rem(40));
-      @include p(y rem(11));
+      @include m(x auto);
+      @include p(y rem(50));
     }
   }
 

@@ -4,7 +4,7 @@
   // 다시 보기
   // @include row(3);
   // @include col('1/-1');
-  // // @include col(se, 1 -1);
+  // @include col(se, 1 -1);
   @include media('>=lg') {
     @include p(b rem(40));
   }
@@ -51,10 +51,6 @@
 .emailContainer {
   @include flex-center();
   @include flex-c(column wrap justify-content items-center);
-  // display: flex;
-  // flex-flow: column wrap;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .emailContainer--row {
@@ -97,7 +93,8 @@
       @include media('>=lg') {
         border-radius: 0;
         font-size: rem(16);
-        @include fsp(16, 19 20);
+        @include fsp(16, 23 20 16);
+        // padding: 23px 1.25em 16px;
       }
     }
 
@@ -136,7 +133,11 @@
   // emailContainer____block--valid (--nvalid)
   &__block--invalid [role='alert'] {
     display: block;
-    text-align: center;
+
+    @include media('>=lg') {
+      text-align: left;
+      @include p(l rem(20));
+    }
   }
 
   &__block--valid label,
