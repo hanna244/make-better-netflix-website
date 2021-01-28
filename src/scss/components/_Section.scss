@@ -1,7 +1,7 @@
 /* Section 스타일링 ------------------------------------------------------------ */
 
 .Section {
-  position: relative; // Divider 적용을 위한 코드
+  position: relative; // 구분선 적용을 위한 코드
 
   @include m(x rem(18));
 
@@ -19,29 +19,42 @@
 
 .Section {
   &__contents {
-    text-align: center;
-    @include my(rem(60) 0);
+    @include text(align center);
+
+    @include media('>=lg') {
+      @include flex-container(column nowrap justify-center);
+      @include text(align left);
+    }
   }
 
   &__title {
-    margin: 0;
-    @include font(lh 1.2 size rem(24) weight bold);
+    @include font(size rem(24) lh 1.2 weight bold);
+    @include my(0);
 
     @include media('>=lg') {
-      font-size: rem(48);
+      @include font(size rem(48));
     }
   }
 
   &__description {
-    letter-spacing: -0.04em;
+    @include text(ls -0.04em);
+    @include font(size rem(16) lh 1.5);
     @include my(rem(30) 0);
-    @include font(lh 1.5 size rem(16));
 
     @include media('>=lg') {
-      font-size: rem(22);
+      max-width: 450px;
+      @include font(size rem(26));
       @include m(t rem(20));
+      br {
+        display: none;
+      }
     }
   }
+}
+
+// 마지막 섹션 타이틀이 줄바꿈이 되어있어서 width 값으로 설정
+.WatchOnDevice .Section__title {
+  max-width: rem(500);
 }
 
 /* Section → Media 스타일링 --------------- */
@@ -52,6 +65,13 @@
     margin: rem(10px) 0 0;
     transform: translateX(-50%);
     @include position(relative, left 50%);
+
+    @include media('>=lg') {
+      // 와이드 스크린이 되었을 때 media 컨텐츠가 section 밖으로 나가버리는 이슈가 발생해서 left, transition 값을 초기화
+      left: initial;
+      max-width: rem(480);
+      transform: initial;
+    }
   }
 }
 
@@ -61,53 +81,32 @@
   @include media('>=lg') {
     justify-content: space-between;
     padding-bottom: rem(70);
-    // 다시 보기
-    // @include grid-c($cols: rem(530) rem(464));
-  }
-
-  @include media('>=x-lg') {
-    // 다시 보기
-    // @include grid-container-append($cols: rem(530) rem(480));
-  }
-
-  /* Section--row → Contents --------------- */
-
-  .Section__contents {
-    @include media('>=lg') {
-      text-align: left;
-      @include my(auto);
-    }
   }
 
   /* Section--row → Media --------------- */
 
   .Section__media {
     @include media('>=lg') {
-      max-width: rem(480);
       margin: 0;
     }
   }
 }
 
-/* Section--reverse 스타일링 ---------------------------------------------------- */
+.Section::before {
+  content: '';
+  border-bottom: 4px solid get-color(darkgray);
+  position: absolute;
+  top: 0;
+  left: -16px;
+  right: -16px;
 
-.Section--reverse {
-  // 다시 보기
-  // @include grid-container-append($cols: rem(368) rem(516));
+  @include media('>=lg') {
+    left: calc((100vw - 92vw) / 2 * -1);
+    width: 100vw;
+  }
 
   @include media('>=x-lg') {
-    // 다시 보기
-    // @include grid-container-append($cols: rem(480) rem(530));
-  }
-
-  .Section__contents {
-    grid-column: 2;
-  }
-
-  .Section__media {
-    @include grid-item((1, 1));
-    // 다시 보기
-    // @include col(1);
-    // @include row(1);
+    left: calc((100vw - 75rem) / 2 * -1);
+    width: 100vw;
   }
 }
