@@ -9,7 +9,7 @@
     @include fsp(15, 11 12);
 
     @include media('>=lg') {
-      border-bottom: 3px solid get-color(black);
+      border-bottom: 3.3px solid get-color(black);
       font-size: rem(32);
     }
   }
@@ -38,13 +38,13 @@
   .AccordionBody {
     overflow: hidden;
     height: 0;
-    border-top: 2px solid get-color(black);
     border-bottom: 5px solid get-color(black);
     padding: 0;
     transition: all 0.3s ease(in-sine);
     @include font(size rem(13) lh 1.7);
 
     @include media('>=lg') {
+      border-bottom: 7px solid get-color(black);
       font-size: rem(26);
     }
 
