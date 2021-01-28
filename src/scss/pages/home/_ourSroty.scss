@@ -3,15 +3,13 @@
 
 .OurStory {
   .Container {
-    display: grid;
-    // text 가운데 정렬을 위한 설정
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
+    @include flex-container(column nowrap items-center);
+    @include text(align center);
     @include py(rem(86) rem(20));
 
     @include media('>=lg') {
-      @include p(t rem(140));
+      @include py(rem(140) rem(83));
+      // @include p(t rem(140));
     }
   }
 
@@ -32,7 +30,7 @@
     @include my(rem(30) 0);
 
     @include media('>=lg') {
-      max-width: rem(260);
+      max-width: rem(550);
       @include font(size rem(20) lh 1.2);
     }
   }

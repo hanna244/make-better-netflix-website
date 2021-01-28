@@ -8,9 +8,7 @@
     }
 
     @include media('>=lg') {
-      // 다시 보기
       @include grid-container-append($cols: 4);
-      // @include grid-container-append($cols: repeat(4, minmax(auto, rem(280))));
     }
   }
 

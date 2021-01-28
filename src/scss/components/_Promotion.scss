@@ -1,18 +1,10 @@
 .Promotion {
-  // OurStory grid 레이아웃에 대한 속성
-  @include grid-item(3, span full);
-  // 다시 보기
-  // @include row(3);
-  // @include col('1/-1');
-  // @include col(se, 1 -1);
   @include media('>=lg') {
     @include p(b rem(40));
   }
 
   // Promotion__description
   &__description {
-    // emailContainer--row 설정시 가운데로 위치를 잡기 위해 mx에 auto 설정
-    @include m(y 0 x auto);
     text-align: center; // 컴포넌트 자체에서 가운데 정렬될 수 있도록 설정
     @include font(lh 1.35 size rem(13));
     text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
@@ -22,11 +14,11 @@
     }
   }
 
-  &__description--lineBreak {
-    max-width: rem(240);
-
-    @include media('>=lg') {
-      max-width: rem(288);
+  &__description--noBr {
+    br {
+      @include media('>=lg') {
+        display: none;
+      }
     }
   }
 
@@ -94,7 +86,6 @@
         border-radius: 0;
         font-size: rem(16);
         @include fsp(16, 23 20 16);
-        // padding: 23px 1.25em 16px;
       }
     }
 
@@ -133,6 +124,7 @@
   // emailContainer____block--valid (--nvalid)
   &__block--invalid [role='alert'] {
     display: block;
+    @include text(align center);
 
     @include media('>=lg') {
       text-align: left;

@@ -1,4 +1,6 @@
 .NetflixIntro {
+  // Section 컴포넌트를 footer와 FAQ에도 적용 되어 있어서
+  // flex 속성을 Section 컴포넌트에 적용하면 다른 부분의 레이아웃도 무너지기 때문에 이 곳에 flex 속성 적용
   .Section {
     display: flex;
     flex-flow: column nowrap;
@@ -7,6 +9,10 @@
     @include media('>=lg') {
       flex-flow: row nowrap;
       @include p(t rem(50));
+
+      &--reverse {
+        @include flex-container-append(direction row-reverse);
+      }
     }
   }
 }
