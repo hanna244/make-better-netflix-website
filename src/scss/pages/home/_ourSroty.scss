@@ -9,7 +9,6 @@
 
     @include media('>=lg') {
       @include py(rem(140) rem(83));
-      // @include p(t rem(140));
     }
   }
 
