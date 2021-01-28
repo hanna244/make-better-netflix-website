@@ -15,7 +15,7 @@
   .question,
   .phoneNumber {
     @include my(rem(40) 0);
-    @include font-and-line-height(20, 1.4, bold);
+    @include font-and-line-height(rem(20), 1.4, bold);
     color: get-color(gray);
 
     @include media('>=md') {
@@ -29,9 +29,22 @@
     margin-top: rem(30);
   }
 
+  .InfoItem {
+    &:last-child {
+      // 인포 리스트와 드롭다운 메뉴 사이의 공간을 시안과 맞추기 위해 패딩 값 제거
+      padding-bottom: 0;
+    }
+
+    @include media('>=lg') {
+      &:nth-child(n + 13) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   .addressInfoHead {
     @include my(rem(30) 0);
-    @include font-and-line-height(16, 1.2);
+    @include font-and-line-height(rem(16), 1.2);
     color: get-color(gray);
 
     @include media('>=md') {
@@ -43,7 +56,7 @@
   .addressInfo {
     width: 79%;
     margin-top: rem(20);
-    @include font-and-line-height(13, 2);
+    @include font-and-line-height(rem(13), 2);
     color: get-color(gray);
 
     @include media('>=md') {
