@@ -40,18 +40,16 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center !important;
-  text-align: center;
+  align-items: center;
   padding-top: 1.375rem;
   padding-bottom: 1.375rem;
 }
 @media (min-width: 60em) {
   .header .Container {
-    grid-template-columns: 8.75rem 5.3125rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    padding-top: 0.6875rem;
-    padding-bottom: 0.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
   }
 }
 .header--fixed {
@@ -149,7 +147,7 @@
   margin-top: 2.5rem;
   margin-bottom: 0;
   font-weight: bold;
-  font-size: 20;
+  font-size: 1.25rem;
   line-height: 1.4;
   color: #757575;
 }
@@ -164,10 +162,18 @@
   width: 100%;
   margin-top: 1.875rem;
 }
+.netflixFooter .InfoItem:last-child {
+  padding-bottom: 0;
+}
+@media (min-width: 60em) {
+  .netflixFooter .InfoItem:nth-child(n+13) {
+    padding-bottom: 0;
+  }
+}
 .netflixFooter .addressInfoHead {
   margin-top: 1.875rem;
   margin-bottom: 0;
-  font-size: 16;
+  font-size: 1rem;
   line-height: 1.2;
   color: #757575;
 }
@@ -180,7 +186,7 @@
 .netflixFooter .addressInfo {
   width: 79%;
   margin-top: 1.25rem;
-  font-size: 13;
+  font-size: 0.8125rem;
   line-height: 2;
   color: #757575;
 }
@@ -201,10 +207,6 @@
   }
 }
 .Promotion__description {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
   text-align: center;
   font-size: 0.8125rem;
   line-height: 1.35;
@@ -216,12 +218,9 @@
     font-size: 1rem;
   }
 }
-.Promotion__description--lineBreak {
-  max-width: 15rem;
-}
 @media (min-width: 60em) {
-  .Promotion__description--lineBreak {
-    max-width: 18rem;
+  .Promotion__description--noBr br {
+    display: none;
   }
 }
 .Promotion__guide {
@@ -298,7 +297,7 @@
   .emailContainer__block input {
     border-radius: 0;
     font-size: 1rem;
-    padding: 1.1875em 1.25em;
+    padding: 1.4375em 1.25em 1em;
     font-size: 1rem;
   }
 }
@@ -332,7 +331,16 @@
 }
 .emailContainer__block--invalid [role=alert] {
   display: block;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-align: center;
+}
+@media (min-width: 60em) {
+  .emailContainer__block--invalid [role=alert] {
+    text-align: left;
+    padding-left: 1.25rem;
+  }
 }
 .emailContainer__block--valid label, .emailContainer__block--invalid label {
   top: 3px;
@@ -388,16 +396,21 @@
 }
 
 .OurStory .Container {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-align: center;
-  justify-items: center;
   padding-top: 5.375rem;
   padding-bottom: 1.25rem;
 }
 @media (min-width: 60em) {
   .OurStory .Container {
     padding-top: 8.75rem;
+    padding-bottom: 5.1875rem;
   }
 }
 .OurStory__headline {
@@ -423,7 +436,7 @@
 }
 @media (min-width: 60em) {
   .OurStory__description {
-    max-width: 16.25rem;
+    max-width: 34.375rem;
     font-size: 1.25rem;
     line-height: 1.2;
   }
@@ -445,12 +458,18 @@
 }
 
 .NetflixIntro .Section {
+  display: flex;
+  flex-flow: column nowrap;
   padding-top: 1.25rem;
   padding-bottom: 5rem;
 }
 @media (min-width: 60em) {
   .NetflixIntro .Section {
+    flex-flow: row nowrap;
     padding-top: 3.125rem;
+  }
+  .NetflixIntro .Section--reverse {
+    flex-direction: row-reverse;
   }
 }
 
@@ -478,7 +497,7 @@
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
-@media (min-width: 81.25em) {
+@media (min-width: 60em) {
   .downloadContent {
     width: 18.875rem;
     padding-left: 1rem;
@@ -502,7 +521,7 @@
   height: auto;
   margin-right: 0.6875rem;
 }
-@media (min-width: 81.25em) {
+@media (min-width: 60em) {
   .downloadContent .posterStrangerThings {
     width: 3.75rem;
     margin-right: 1rem;
@@ -510,28 +529,31 @@
 }
 .downloadContent .downloadMessage {
   flex: 1;
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 0.625rem;
 }
-@media (min-width: 81.25em) {
+@media (min-width: 60em) {
   .downloadContent .downloadMessage {
     font-size: 0.875rem;
   }
 }
 .downloadContent .stateMessage {
+  display: block;
   margin-top: 0.0625rem;
   letter-spacing: -0.04em;
   color: #0071eb;
   font-weight: 1.5;
   font-size: 0.5rem;
 }
-@media (min-width: 81.25em) {
+@media (min-width: 60em) {
   .downloadContent .stateMessage {
-    margin-top: 0.125rem;
+    margin-top: 0.25rem;
     font-size: 0.75rem;
   }
 }
-@media (min-width: 81.25em) {
+@media (min-width: 60em) {
   .downloadContent .downloadIcon {
     width: 2.9375rem;
     height: auto;
@@ -567,15 +589,29 @@
 
 /* Section → Contents 스타일링 --------------- */
 .Section__contents {
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-align: center;
-  margin-top: 3.75rem;
-  margin-bottom: 0;
+}
+@media (min-width: 60em) {
+  .Section__contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
 }
 .Section__title {
-  margin: 0;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 60em) {
   .Section__title {
@@ -583,17 +619,28 @@
   }
 }
 .Section__description {
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   letter-spacing: -0.04em;
-  margin-top: 1.875rem;
-  margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: 1.875rem;
+  margin-bottom: 0;
 }
 @media (min-width: 60em) {
   .Section__description {
-    font-size: 1.375rem;
+    max-width: 450px;
+    font-size: 1.625rem;
     margin-top: 1.25rem;
   }
+  .Section__description br {
+    display: none;
+  }
+}
+
+.WatchOnDevice .Section__title {
+  max-width: 31.25rem;
 }
 
 /* Section → Media 스타일링 --------------- */
@@ -604,10 +651,16 @@
   position: relative;
   left: 50%;
 }
+@media (min-width: 60em) {
+  .Section__media {
+    left: initial;
+    max-width: 30rem;
+    transform: initial;
+  }
+}
 
 /* Section--row 스타일링 -------------------------------------------------------- */
 .Section--row {
-  /* Section--row → Contents --------------- */
   /* Section--row → Media --------------- */
 }
 @media (min-width: 60em) {
@@ -617,26 +670,30 @@
   }
 }
 @media (min-width: 60em) {
-  .Section--row .Section__contents {
-    text-align: left;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-}
-@media (min-width: 60em) {
   .Section--row .Section__media {
-    max-width: 30rem;
     margin: 0;
   }
 }
 
-/* Section--reverse 스타일링 ---------------------------------------------------- */
-.Section--reverse .Section__contents {
-  grid-column: 2;
+.Section::before {
+  content: "";
+  border-bottom: 4px solid #303030;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  right: -16px;
 }
-.Section--reverse .Section__media {
-  grid-row: 1;
-  grid-column: 1;
+@media (min-width: 60em) {
+  .Section::before {
+    left: calc((100vw - 92vw) / 2 * -1);
+    width: 100vw;
+  }
+}
+@media (min-width: 81.25em) {
+  .Section::before {
+    left: calc((100vw - 75rem) / 2 * -1);
+    width: 100vw;
+  }
 }
 
 .Accordion {
@@ -656,7 +713,7 @@
 }
 @media (min-width: 60em) {
   .Accordion .AccordionHead {
-    border-bottom: 3px solid #010101;
+    border-bottom: 3.3px solid #010101;
     font-size: 2rem;
   }
 }
@@ -691,7 +748,6 @@
 .Accordion .AccordionBody {
   overflow: hidden;
   height: 0;
-  border-top: 2px solid #010101;
   border-bottom: 5px solid #010101;
   padding: 0;
   transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -700,6 +756,7 @@
 }
 @media (min-width: 60em) {
   .Accordion .AccordionBody {
+    border-bottom: 7px solid #010101;
     font-size: 1.625rem;
   }
 }
@@ -758,6 +815,12 @@
   margin-top: 1.875rem;
   margin-bottom: 0;
 }
+@media (min-width: 60em) {
+  .NetflixFAQ__contianer {
+    margin-top: 3.125rem;
+    margin-bottom: 0;
+  }
+}
 .NetflixFAQ .Promotion {
   margin-top: 1.4375rem;
 }
@@ -770,6 +833,8 @@
   font-weight: normal;
 }
 .NetflixFAQ .Promotion .emailContainer {
+  display: flex;
+  justify-content: center;
   margin-top: 1.625rem;
   margin-bottom: 0;
 }

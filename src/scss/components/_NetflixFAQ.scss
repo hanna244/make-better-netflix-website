@@ -20,6 +20,10 @@
 
   &__contianer {
     @include my(rem(30) 0);
+
+    @include media('>=lg') {
+      @include my(rem(50) 0);
+    }
   }
 
   .Promotion {
@@ -35,6 +39,7 @@
     }
 
     .emailContainer {
+      @include flex-container(justify-center);
       @include my(rem(26) 0);
     }
   }

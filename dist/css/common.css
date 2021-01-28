@@ -389,13 +389,4 @@ body {
   }
 }
 
-.Divider::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-right: -70%;
-  margin-left: -70%;
-}
-
 /*# sourceMappingURL=common.css.map */
