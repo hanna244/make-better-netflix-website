@@ -12,36 +12,28 @@
     <link rel="stylesheet" href="./css/pages/login.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="icon" href="../src/assets/Favicon.png" />
-    <script src="../src/utils/validStateDetection.js" defer></script>
-    <!-- <script src="./javascript/dev.js" defer></script> -->
+    <script src="../src/js/emailValidationControl.js" defer></script>
 </head>
-<body class="body"> 
+<body class="login__body"> 
   <header class="header header--fixed">
     <div class="Container">
       <h1 class="brand HomeLink"><a class="resetLink" href="/"><img class="resetImg rwdImg" src="./assets/Logo.svg" alt="홈링크" width="870" height="236" /></a></h1>
-      <a class="Link resetLink" href="#-로그인">로그인</a>
     </div>
   </header>
   <!-- OurStory의 배경이 적용이 안됐던 것은 sass에서는 개행이 안됨! -->
-  <main class="main OurStory">
+  <main class="login__main OurStory">
     <section class="login">
       <div class="login__container">
         <h2 class="login__headLine">로그인</h2>
-        <!-- form 경고 메세지의 공간을 확보하기 위해서 container로 묶음 -->
-        <!-- Form--valid 상태 또는 invalid 상태 클래스 존재 -->
-        <div class="login__email Form__container">
-          <div class="Form__email Form Form--dark">
-          <!-- <div class="emailContainer__block"> -->
-            <input type="email" id="userEmail" />
-            <label for="userEmail__login">이메일 주소 또는 폰 번호</label>
-          </div>
+        <!-- invalid, valid 상태  -->
+        <div class="emailContainer__block darkMode">
+          <input type="email" id="userEmail" />
+          <label for="userEmail__login">이메일 주소 또는 폰 번호</label>
           <span role="alert" aria-live="off">정확한 이메일 주소 또는 폰 번호를 입력하세요.</span>
         </div>
-        <div class="login__password Form__contianer">
-          <div class="Form__password Form Form--dark">
-            <input type="password" id="userPassword" />
-            <label for="userPassword">비밀번호</label>
-          </div>
+        <div class="emailContainer__block darkMode passwordContainer">
+          <input type="password" id="userPassword" minlength="4" maxlength="60" />
+          <label for="userPassword">비밀번호</label>
           <span role="alert" aria-live="off">비밀번호는 4 - 60자 사이여야 합니다.</span>
         </div>
         <a class="Link resetLink" href="#-로그인">로그인</a>
