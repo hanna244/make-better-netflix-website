@@ -1,9 +1,7 @@
-jQuery &&
-  jQuery(function (e) {
-    const $accordion = $('.Accordion')
+// Accordion 컨트롤 with jQuery 라이브러리
 
-    $accordion.click(function (e) {
-      const accordion = e.target.closest('.AccordionItem')
-      $(accordion).toggleClass('AccordionItem--open')
-    })
+jQuery(function ($) {
+  $('.Accordion').click(function (e) {
+    $(e.target).closest('.AccordionItem').toggleClass('AccordionItem--open')
   })
+})
