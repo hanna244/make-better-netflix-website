@@ -80,7 +80,7 @@
       border: 0;
       border-radius: rem(50);
       background: get-color(white);
-      @include fsp(13, 14 20 11);
+      @include fsp(13, 18 20 7);
 
       @include media('>=lg') {
         border-radius: 0;
