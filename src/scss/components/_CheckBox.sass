@@ -1,0 +1,39 @@
+.CheckBox
+  position: relative
+
+  input
+    position: absolute
+    height: rem(16)
+    width: rem(16)
+    opacity: 0
+    +position(absolute, top 0 left 0)
+  
+  label 
+    +m(l rem(21))
+
+  label::before 
+    content: ""
+    height: rem(16)
+    width: rem(16)
+    background: get-color(white)
+    +position(absolute, top 0 left 0)
+
+  label::after
+    content: ""
+    border: 4px solid get-color(darkGray)
+    border-left: 0
+    border-top: 0
+    border-radius: 3px
+    height: rem(13)
+    width: rem(8px)
+    opacity: 0
+    transform: rotate(45deg)
+    transition: opacity 0.2s ease(inout-sine)
+    +position(absolute, top 0 left 4px)
+
+  input:checked + label::after 
+    opacity: 1
+
+  input:focus + label::before 
+    outline: none
+    box-shadow: 0 0 0 rem(3) get-color(state-focus)

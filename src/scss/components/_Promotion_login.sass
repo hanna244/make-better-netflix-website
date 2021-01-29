@@ -1,0 +1,57 @@
+.emailContainer
+  &__block
+    position: relative
+    +m(t rem(30))
+    +media('>=lg')
+      +m(t rem(20))
+
+    label
+      transition: all 0.2s ease(in-sine)
+      color: get-color(gray)
+      letter-spacing: -0.04em
+      +position(absolute, top 19px left 20px)
+      +font(size rem(16) lh 1.35)
+
+    input 
+      width: 100%
+      border: 0
+      /* main과 값이 다름 */
+      border-radius: 5px
+      color: get-color(white)
+      +fsp(16, 26 20 14)
+    
+    input:focus + label
+      +position(absolute, top 7px left 20px)
+      +font(size rem(12))
+
+    input:valid
+      color: get-color(white)
+
+    input:invalid
+      border-bottom: 3px solid get-color(red)
+      color: get-color(red)
+
+    [role="alert"]
+      display: none
+      letter-spacing: -0.04em
+      color: get-color(red)
+      +m(t rem(5) l rem(20))
+      +font(size rem(14) weight bold lh 1.35)
+
+    &--invalid [role="alert"]
+      display: block
+
+    &--valid label, &--invalid label
+      +position(absolute, top 7px left 20px)
+      +font(size rem(12))
+
+
+.darkMode
+  label
+    color: get-color(lightGray)
+
+  input 
+    background: get-color(darkGray)
+    
+.passwordContainer 
+  +m(t rem(44))

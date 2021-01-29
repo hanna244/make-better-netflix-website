@@ -1,0 +1,80 @@
+@import '../../components/Promotion_login'
+@import '../../components/Link_login'
+@import '../../components/_CheckBox'
+  
+.login__main 
+  +media('>=lg')  
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5.68%, rgba(0, 0, 0, 0.3) 42.95%, rgba(0, 0, 0, 0.8) 79.3%) center / auto, url('../../assets/Cover.jpg') center / cover no-repeat
+
+/* saveAndHelp -------------------------------------------------------------- */
+
+.saveAndHelp
+  color: get-color(lightGray)
+  +flex-container(row nowrap justify-between)
+  +my(rem(10) 0)
+  +text(ls -0.04em)
+  +font(size rem(13) lh 1.35)
+
+  a:hover 
+    color: get-color(white)
+
+  +media('>=lg')
+    +my(rem(10) 0)
+
+/* Info --------------------------------------------------------------------- */
+
+.loginInfo
+  color: get-color(lightGray)
+  +my(rem(20) 0)
+  +font(size rem(12) lh 1.75)
+
+  &__facebook
+    display: flex
+    color: get-color(gray)
+
+    img
+      +m(r rem(4))
+    
+    a
+      align-self: center
+      cursor: pointer
+      +text(ls -0.04em)
+      +font(lh 1.75)
+      +my(0)
+
+    a:hover 
+      color: get-color(white)
+
+  &__signup 
+    a
+      cursor: pointer
+      color: get-color(white)
+      +m(l rem(3))
+    
+    a:hover 
+      text-decoration: underline
+
+  &__captcha 
+    +p(b rem(20))
+    +media('>=lg')
+      +p(b rem(30))
+      
+
+    .lgLineBreak 
+      display: none
+      +media('>=lg')
+        display: block
+    
+    .mdLineBreak
+      +media('>=lg')
+        display: none
+    
+    .captchaButton
+      padding: 0
+      border: 0
+      cursor: help
+      color: get-color(blue)
+      background: inherit
+    
+    .captchaButton:hover
+      text-decoration: underline

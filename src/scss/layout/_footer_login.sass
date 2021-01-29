@@ -1,0 +1,31 @@
+.netflixFooter 
+  +Container(null, rem(18), rem(20))
+  +media('>=lg')
+    position: absolute
+    backdrop-filter: blur(4px)
+    background: rgba(1, 1, 1, 0.5)
+    +px(rem(18))
+    +position(absolute, right 0 bottom 0 left 0 z-index 100)
+
+    
+  .addressInfo
+    width: 75%
+  
+  .Info 
+    .InfoList
+      // 다시 보기
+      +grid-c($cols: 2)
+      /* +grid-c($cols: repeat(2, minmax(0, rem(149)))) */
+
+      +media('>=md')
+        // 다시 보기 
+        +grid-container-append($cols: 4)
+        /* +grid-container-append($cols: repeat(4, minmax(0, rem(150)))) */
+
+  .Dropdown
+    +media('>=lg')
+      +m(t rem(50))
+
+  .addressInfo 
+    +media('>=lg')
+      +m(t rem(40))
