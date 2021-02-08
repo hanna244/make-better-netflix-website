@@ -1,4 +1,14 @@
+.DownLoadAndWatch {
+  .Section__media {
+    background-color: aqua;
+    // 디자인 시안에 따라 마진 음수 값으로 위치 설정
+    @include m(l rem(-88));
+  }
+}
+
 .downloadContent {
+  display: flex;
+  align-items: center;
   position: absolute;
   bottom: 16px;
   left: 50%;
@@ -7,23 +17,11 @@
   border-radius: 5px;
   background: get-color(black);
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
   @include p(y rem(6) x rem(12));
 
   @include media('>=lg') {
     width: rem(302);
     @include p(y rem(12) x rem(16));
-  }
-
-  .Section__title {
-    @include media('>=lg') {
-      max-width: rem(530);
-    }
-
-    @include media('>=x-lg') {
-      max-width: rem(1200);
-    }
   }
 
   .posterStrangerThings {
@@ -49,14 +47,14 @@
 
   .stateMessage {
     display: block;
-    @include m(t rem(1));
     letter-spacing: -0.04em;
     color: get-color(blue);
+    @include m(t rem(1));
     @include font(size rem(8) weight 1.5);
 
     @include media('>=lg') {
-      @include m(t rem(4));
       font-size: rem(12);
+      @include m(t rem(4));
     }
   }
 
