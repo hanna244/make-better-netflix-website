@@ -20,10 +20,12 @@
 .Section {
   &__contents {
     @include text(align center);
+    @include m(t rem(60));
 
     @include media('>=lg') {
       @include flex-container(column nowrap justify-center);
       @include text(align left);
+      @include my(auto);
     }
   }
 
@@ -54,7 +56,9 @@
 
 // 마지막 섹션 타이틀이 줄바꿈이 되어있어서 width 값으로 설정
 .WatchOnDevice .Section__title {
-  max-width: rem(500);
+  @include media('>=lg') {
+    max-width: rem(500);
+  }
 }
 
 /* Section → Media 스타일링 --------------- */
@@ -87,7 +91,7 @@
 
   .Section__media {
     @include media('>=lg') {
-      margin: 0;
+      @include m(t 0);
     }
   }
 }
