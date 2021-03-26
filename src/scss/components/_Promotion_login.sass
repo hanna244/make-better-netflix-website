@@ -9,6 +9,8 @@
       transition: all 0.2s ease(in-sine)
       color: get-color(gray)
       letter-spacing: -0.04em
+      // 포커스 시 input보다 label에 먼저 포커스 되는 현상 때문에 input 클릭 시 바로 value 입력할 수 없는 문제 해결을 위한 속성 
+      pointer-events: none
       +position(absolute, top 19px left 20px)
       +font(size rem(16) lh 1.35)
 
