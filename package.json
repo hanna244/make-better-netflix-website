@@ -1,7 +1,7 @@
 {
   "name": "make-better-netflix-website",
   "version": "1.0.0",
-  "description": "Netflix 개선 프로젝트 Sass 버전", 
+  "description": "Netflix 개선 프로젝트 Sass 버전",
   "scripts": {
     "start": "npm run compile:watch",
     "compile": "sass -I node_modules src/scss:dist/css",
@@ -13,8 +13,8 @@
   },
   "author": "hannakim <hanna244@euid.dev>",
   "license": "ISC",
-  "devDependencies": { 
-    "@euid/scss-mixins": "^0.1.1",
+  "devDependencies": {
+    "@euid/scss-mixins": "^0.2.0",
     "sass": "^1.30.0"
   }
 }
