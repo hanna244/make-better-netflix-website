@@ -329,7 +329,7 @@
   color: #e50914;
 }
 .emailContainer__block [role=alert] {
-  display: none;
+  visibility: hidden;
   letter-spacing: -0.04em;
   color: #e50914;
   margin-top: 0.3125rem;
@@ -339,7 +339,7 @@
   line-height: 1.35;
 }
 .emailContainer__block--invalid [role=alert] {
-  display: block;
+  visibility: visible;
 }
 .emailContainer__block--valid label, .emailContainer__block--invalid label {
   position: absolute;
@@ -356,14 +356,14 @@
 }
 
 .passwordContainer {
-  margin-top: 2.75rem;
+  margin-top: 2.4375rem;
 }
 
 .login .Link {
   display: block;
   border-radius: 4px;
   background: #e50914;
-  margin-top: 1.875rem;
+  margin-top: 1.5625rem;
   padding: 0.9375em 1.25em;
   font-size: 1rem;
   font-weight: bold;

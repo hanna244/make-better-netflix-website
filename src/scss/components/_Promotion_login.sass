@@ -34,14 +34,16 @@
       color: get-color(red)
 
     [role="alert"]
-      display: none
+      // display:none을 레이아웃에서도 제외되어 block 상태가 되면 갑자기 레이아웃이 생겨 페이지가 전체적으로 움직이는 현상이 발생되어 
+      // 이를 방지하기 위해 visibility: hidden을 사용해서 레이아웃을 변경하지 않고 요소를 숨긴다. 
+      visibility: hidden
       letter-spacing: -0.04em
       color: get-color(red)
       +m(t rem(5) l rem(20))
       +font(size rem(14) weight bold lh 1.35)
 
     &--invalid [role="alert"]
-      display: block
+      visibility: visible
 
     &--valid label, &--invalid label
       +position(absolute, top 7px left 20px)
@@ -56,4 +58,4 @@
     background: get-color(darkGray)
     
 .passwordContainer 
-  +m(t rem(44))
+  +m(t rem(39))
