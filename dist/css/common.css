@@ -230,6 +230,10 @@ abbr[title] {
   list-style-type: none;
 }
 
+.resetDl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .resetDl dd {
   margin-left: 0;
 }
